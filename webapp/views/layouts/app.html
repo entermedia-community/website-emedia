@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Open Source Media Collaboration - EnterMediaDB</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" href="$apphome/assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="$apphome/assets/css/font-awesome/all.min.css" />
+  <link rel="stylesheet" href="$apphome/assets/css/hs-mega-menu.min.css" />
+  <link rel="stylesheet" href="$apphome/assets/css/slick.css" />
+  <link rel="stylesheet" href="$apphome/assets/css/theme.css" />
+  <link rel="stylesheet" href="$apphome/assets/css/custom.css" />
+</head>
+
+<body>
+  $pages.include("$apphome/views/header.html")
+  $pages.include("$apphome/views/index.html")
+  $pages.include("$apphome/views/footer.html")
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden"
+    data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": 15
+         },
+         "show": {
+           "bottom": 15
+         },
+         "hide": {
+           "bottom": -15
+         }
+       }
+     }'>
+    <i class="fas fa-angle-up"></i>
+  </a>
+  <script src="$apphome/assets/js/jquery.min.js"></script>
+  <script src="$apphome/assets/js/jquery-migrate.min.js"></script>
+  <script src="$apphome/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="$apphome/assets/js/hs.core.js"></script>   
+  <script src="$apphome/assets/js/hs-header.min.js"></script>
+  <script src="$apphome/assets/js/hs-go-to.min.js"></script>
+  <script src="$apphome/assets/js/hs-unfold.min.js"></script>
+  <script src="$apphome/assets/js/hs-mega-menu.min.js"></script>
+  <script src="$apphome/assets/js/jquery.validate.min.js"></script>
+  <script src="$apphome/assets/js/slick.js"></script>
+  <script src="$apphome/assets/js/hs.validation.js"></script>
+  <script src="$apphome/assets/js/hs.slick-carousel.js"></script>
+  <script src="$apphome/assets/js/hs-video-player.min.js"></script>
+  <script>
+    $(document).on("ready", function() {
+      var header = new HSHeader($("#header")).init();
+      var megaMenu = new HSMegaMenu($(".js-mega-menu"), {
+        desktop: {
+          position: "left",
+        },
+      }).init();
+      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
+      $(".js-validate").each(function() {
+        var validation = $.HSCore.components.HSValidation.init($(this));
+      });
+      $(".js-slick-carousel").each(function() {
+        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+      });
+      $(".js-go-to").each(function() {
+        var goTo = new HSGoTo($(this)).init();
+      });
+      $('.js-validate').each(function() {
+        var validation = $.HSCore.components.HSValidation.init($(this));
+      });
+      $('.js-inline-video-player').each(function() {
+        var videoPlayer = new HSVideoPlayer($(this)).init();
+      });
+    });
+  </script>
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+      document.write('<script src="$apphome/assets/js/polifills.js"><\/script>');
+  </script>
+</body>
+
+</html>
