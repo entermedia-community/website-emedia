@@ -1,0 +1,13 @@
+<page>
+	<property name="eclipsepath">/home/cristobal/eclipse/eclipse</property>
+	<property name="local">true</property>
+
+
+  <path-action name="MediaArchiveModule.loadApplicationId" />
+  <property name="siteid">site</property>
+  <property name="catalogid">finder/catalog</property>
+  <property name="applicationid">site</property>
+  
+  
+  <inner-layout>/${siteid}/views/layouts/app.html</inner-layout>
+</page>
