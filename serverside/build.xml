@@ -80,13 +80,6 @@
 			<!-- publish results to anthill -->
 		 	<copy file="${deployDir}/builds/${ant.project.name}.zip" overwrite="true"
 		        tofile="${deployDir}/${ant.project.name}.zip"/>
-			
-		 	<copy file="${etc}/${ant.project.name}.xml" overwrite="true"
-					        tofile="${deployDir}/${ant.project.name}.xml">
-					 <filterset>
-					      <filter token="BRANCH" value="${branch}"/>
-				    </filterset>
-			</copy>
 		
 	</target>
 
