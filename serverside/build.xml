@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="default" name="website-emedia">
 
-  <target name="default" depends="clean, update-dependencies, zip, publish"/>
-  <target name="dependency" depends="default"/>
+  <target name="default" depends="clean, zip, publish"/>
    
     <property name="appname" value="${ant.project.name}"/>
     <property name="org" value="OpenEdit, Inc."/>
     <property name="build" location="${basedir}/build"/>
 	<property name="compiled" location="${basedir}/build/compiled"/>
-	
+    <property name="etc" location="${basedir}/etc"/>
     <property name="wardir" location="${build}/wartmp"/>
     <property name="webapp" location="${basedir}/webapp"/>
 	<property name="webinf" location="${webapp}/WEB-INF"/>
@@ -33,38 +32,12 @@
 	  	<zip destfile="${deployDir}/builds/${appname}-${version}-src.zip"  basedir="." excludes="deploy/**, build/**" />
 	  </target>
 	
-	<target name="update-dependencies" depends="clean">
-	    <mkdir dir="${build}"/>
-	    <mkdir dir="${wardir}/WEB-INF/" />
-		<get dest="${build}/install.xml" src="http://dev.entermediadb.org/jenkins/job/em11_entermedia-server/lastSuccessfulBuild/artifact/deploy/install.xml"/>
-		<ant antfile="${build}/install.xml" inheritAll="false" dir="${wardir}/WEB-INF/" target="default"/> 
-	</target>
   
     <target name="compile" depends="clean">
 	    <mkdir dir="${compiled}"/>
 	    
-	  </target>
-  
-  	<!-- 
-		========================================================================
-		Jar classes for the main app, excluding unit tests.
-		========================================================================
-	-->	  
-	<target name="jar" depends="compile">
-		<mkdir dir="${deployDir}/builds/"/>
-		<jar jarfile="${deployDir}/builds/${branch}${appname}-${version}.jar" basedir="${compiled}" >
-			<exclude name="**/*Test*"/>
-			<manifest>
-		    	<attribute name="Built-By" value="${user.name}"/>
-			    <attribute name="Implementation-Title" value="${appname}"/>
-			    <attribute name="Implementation-Version" value="${version}"/>
-			    <attribute name="Implementation-Vendor" value="${org}"/>
-		    </manifest>
-		</jar>
-  </target>
-    
-    
-	
+	</target>
+  	
 	<target name="zip" depends="compile">
 		<mkdir dir="${deployDir}/builds/"/>
 		<zip destfile="${deployDir}/builds/${appname}.zip" >			
