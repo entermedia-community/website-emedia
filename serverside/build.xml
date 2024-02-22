@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="default" name="website-emedia">
 
-  <target name="default" depends="clean, update-dependencies, compile,  jar, zip, publish"/>
+  <target name="default" depends="clean, update-dependencies, zip, publish"/>
   <target name="dependency" depends="default"/>
    
     <property name="appname" value="${ant.project.name}"/>
@@ -68,8 +68,7 @@
 	<target name="zip" depends="compile">
 		<mkdir dir="${deployDir}/builds/"/>
 		<zip destfile="${deployDir}/builds/${appname}.zip" >			
-			<zipfileset dir="${deployDir}/builds/" includes="${branch}${appname}-${version}.jar" prefix="lib"/>
-			<zipfileset dir="${webapp}/site" prefix="site" />		
+			<zipfileset dir="${webapp}/WEB-INF/base/website" prefix="base/website" />		
 		</zip>
   </target>
 	    
