@@ -49,7 +49,7 @@
   <target name="extend">
   	<echo>Reinstall plugin(s)</echo>
  	<delete failonerror="false">
-       <fileset dir="${dockerwebapp}/WEB-INF/base/website/"/>
+       <fileset dir="${dockerwebapp}/WEB-INF/base/website"/>
      </delete>
      <copy todir="${dockerwebapp}/WEB-INF/base/website" preservelastmodified="true">
        <fileset dir="${basedir}/base/website"/>

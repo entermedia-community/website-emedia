@@ -68,7 +68,8 @@
 	<target name="zip" depends="compile">
 		<mkdir dir="${deployDir}/builds/"/>
 		<zip destfile="${deployDir}/builds/${appname}.zip" >			
-			<zipfileset dir="${webapp}/WEB-INF/base/website" prefix="base/website" />		
+			<zipfileset dir="${webapp}/WEB-INF/base/website" prefix="base/website" />	
+            <zipfileset dir="${etc}" includes="install.xml"/>			
 		</zip>
   </target>
 	    
