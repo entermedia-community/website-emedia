@@ -224,3 +224,34 @@ footer {
 .custom-control input:checked ~ .custom-control-label {
   color: #377dff;
 }
+.navbar-promo-link .media {
+  min-height: 70px;
+}
+.nav-link.active {
+  color: #377dff;
+  position: relative;
+}
+.nav-link.active::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 1rem;
+  transform: translateY(65%);
+  width: 100%;
+  height: 2px;
+  background-color: #377dff;
+}
+.modal.show {
+  backdrop-filter: blur(10px);
+}
+.partners {
+  width: 100%;
+  min-width: 576px;
+  overflow-x: hidden;
+}
+.partners .js-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 105px;
+}

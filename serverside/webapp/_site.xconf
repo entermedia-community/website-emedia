@@ -9,5 +9,5 @@
   <property name="applicationid">site</property>
   
   
-  <inner-layout>/${siteid}/views/layouts/app.html</inner-layout>
+  <inner-layout>/${siteid}/innerlayout.html</inner-layout>
 </page>
