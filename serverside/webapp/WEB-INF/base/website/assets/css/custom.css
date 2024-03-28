@@ -160,7 +160,7 @@ footer {
 
 .main-hero img {
   width: 100px;
-  border: 5px solid #9acfe0;
+  border: 5px solid #68afc9;
   border-radius: 50%;
 }
 
@@ -177,7 +177,7 @@ footer {
   height: 65px;
   background-color: transparent;
   border-radius: 50%;
-  border: 20px solid #3696b2;
+  border: 20px solid #247d9d;
 }
 
 .shape-2 {
@@ -189,7 +189,7 @@ footer {
   height: 32.5px;
   background: transparent;
   border-radius: 50%;
-  border: 20px solid #9acfe0;
+  border: 20px solid #3696b2;
 }
 
 .shape-3 {
@@ -201,7 +201,7 @@ footer {
   height: 65px;
   background-color: transparent;
   border-radius: 50%;
-  border: 20px solid #3696b2;
+  border: 20px solid #247d9d;
 }
 
 .shape-4 {
@@ -213,7 +213,7 @@ footer {
   height: 32.5px;
   background: transparent;
   border-radius: 50%;
-  border: 20px solid #9acfe0;
+  border: 20px solid #3696b2;
 }
 
 .has-circle {
