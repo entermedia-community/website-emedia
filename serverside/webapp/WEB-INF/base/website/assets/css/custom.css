@@ -78,7 +78,7 @@ footer {
   box-shadow: 0 1px 10px rgb(11 23 44);
 }
 .hero-container .container {
-  min-height: 800px;
+  min-height: 850px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +155,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(5px);
   padding: 40px;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .main-hero img {
