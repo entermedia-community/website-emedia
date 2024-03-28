@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="$apphome/assets/css/hs-mega-menu.min.css" />
   <link rel="stylesheet" href="$apphome/assets/css/slick.css" />
   <link rel="stylesheet" href="$apphome/assets/css/theme.css" />
+	<link rel="stylesheet" href="$apphome/assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="$apphome/assets/css/custom.css" />
 </head>
 
@@ -37,9 +38,10 @@
      }'>
     <i class="fas fa-angle-up"></i>
   </a>
-  <script src="$apphome/assets/js/jquery.min.js"></script>
+  <script src="$apphome/assets/js/jquery.min.js" onload="if (!window.jQuery) window.$ = window.jQuery = module.exports;"></script>
   <script src="$apphome/assets/js/jquery-migrate.min.js"></script>
   <script src="$apphome/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="$apphome/assets/js/datetimepicker.full.min.js"></script>
   <script src="$apphome/assets/js/hs.core.js"></script>   
   <script src="$apphome/assets/js/hs-header.min.js"></script>
   <script src="$apphome/assets/js/hs-go-to.min.js"></script>
@@ -73,6 +75,22 @@
       });
       $('.js-inline-video-player').each(function() {
         var videoPlayer = new HSVideoPlayer($(this)).init();
+      });
+      $("#datetimepicker").datetimepicker({
+        inline: true,
+        minDate: new Date(),
+        maxDate: new Date(new Date().setDate(new Date().getDate() + 30)),
+      });
+      $("input[name='meeting_method']").on("change", function() {
+        if ($(this).val() == "videoconference") {
+          $("#videoconference_message").collapse("show");
+          $("#phonecall_message").collapse("hide");
+          $("#phonenumber").prop("required", false);
+        } else {
+          $("#videoconference_message").collapse("hide");
+          $("#phonecall_message").collapse("show");
+          $("#phonenumber").prop("required", true);
+        }
       });
     });
   </script>
