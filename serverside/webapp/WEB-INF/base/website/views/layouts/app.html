@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="$apphome/assets/css/slick.css" />
   <link rel="stylesheet" href="$apphome/assets/css/theme.css" />
 	<link rel="stylesheet" href="$apphome/assets/css/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="$apphome/assets/css/aos.css" />
   <link rel="stylesheet" href="$apphome/assets/css/custom.css" />
 </head>
 
@@ -55,6 +56,7 @@
   <script src="$apphome/assets/js/hs.validation.js"></script>
   <script src="$apphome/assets/js/hs.slick-carousel.js"></script>
   <script src="$apphome/assets/js/hs-video-player.min.js"></script>
+  <script src="$apphome/assets/js/aos.js"></script>
   <script>
     $(document).on("ready", function() {
       var header = new HSHeader($("#header")).init();
@@ -94,6 +96,10 @@
           $("#phonecall_message").collapse("show");
           $("#phonenumber").prop("required", true);
         }
+      });
+      AOS.init({
+        duration: 600,
+        once: true,
       });
     });
   </script>
