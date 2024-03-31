@@ -258,3 +258,21 @@ footer {
   transition: opacity 2000s ease-in-out;
   opacity: 1;
 }
+.pitch-deck-slide {
+  height: 720px;
+}
+@media (max-width: 1280px) {
+  .pitch-deck-slide {
+    height: 500px;
+  }
+}
+@media (max-width: 912px) {
+  .pitch-deck-slide {
+    height: 300px;
+  }
+}
+@media (max-width: 550px) {
+  .pitch-deck-slide {
+    height: 200px;
+  }
+}
