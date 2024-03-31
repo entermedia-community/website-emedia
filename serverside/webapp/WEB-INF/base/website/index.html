@@ -3,11 +3,11 @@
     <div class="container space-top-1 space-top-lg-3">
       <div class="text-center main-hero" data-aos="fade-up" data-aos-duration="1500"> 
         <div class="mx-auto mb-3 position-relative">
-          <img src="$applink/assets/images/emedialogo.svg" alt="img">
-          <span class="shape shape-1"></span>
+          <img src="$applink/assets/images/emedialogo.png" alt="eMedia Logo">
+          <!-- <span class="shape shape-1"></span>
           <span class="shape shape-2"></span>
           <span class="shape shape-3"></span>
-          <span class="shape shape-4"></span>
+          <span class="shape shape-4"></span> -->
         </div>
         <p class="mb-4"></p>
         <h1 class="mb-4"><span id="organize">Organize</span> All Your Media Files</h1>
@@ -224,12 +224,8 @@
   <div class="container space-top-2 space-bottom-2">
     <div class="w-md-80 text-center mx-md-auto mb-5 mb-md-9 space-top-2">
       <h2 class="text-capitalize">
-        entermediadb integrates with your favorite technologies
-      </h2>
-      <p>
-        Manage your Digital Assets seamlessly with EMShare, our sleek, intuitive, and fully customizable
-        out-of-the-box Open Source DAM App.
-      </p>
+        Import and Export Media with Any Platform
+      </h2> 
     </div>
     <div class="js-slick-carousel slick slick-gutters-3 z-index-2"  data-aos="fade-up" data-aos-duration="1500"
       data-hs-slick-carousel-options='{
@@ -324,23 +320,57 @@
         </article>
       </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center space-2"  data-aos="fade-right" data-aos-duration="1500">
+    <p class="text-center" style="font-size: 1.2rem;">
+      and many more...
+    </p>
+  </div> 
+  <div class="bg-navy space-2">
+    <div class="position-relative">
+      <div class="js-slick-carousel slick"  data-aos="fade-left" data-aos-duration="1500"
+        data-hs-slick-carousel-options='{
+            "prevArrow": "<span class=\"fas fa-arrow-left d-none d-sm-inline-block slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4\"></span>",
+            "nextArrow": "<span class=\"fas fa-arrow-right d-none d-sm-inline-block slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4\"></span>",
+            "counterSelector": "#slickCounter",
+            "counterDivider": "/",
+            "slidesToShow": 1,
+            "slidesToScroll": 1,
+            "autoplay": true,
+            "autoplaySpeed": 5000,
+            "dots": true,
+            "dotsClass": "slick-pagination mt-3",
+            "cssEase": "linear",
+            "pauseOnFocus": true,
+            "pauseOnHover": true,
+            "fade": true
+        }'> 
+        #foreach($i in [1..18])
+          <div class="js-slide bg-img-hero-center">
+            <div style="height:720px;" class="d-flex align-items-center justify-content-center">
+              <img src="$applink/assets/images/pitch-deck/${i}.png" style="height: 100%;object-fit: contain;"/>
+            </div>
+          </div>
+        #end
+      </div>
+    </div>
+  </div>
+  <div class="space-2">
+    <div class="d-flex justify-content-center align-items-center space-2" data-aos="fade-right" data-aos-duration="1500">
       <div id="html5VideoPlayer"
         class="d-flex justify-content-center align-items-center flex-column bg-img-hero-center text-center rounded video-player bg-dark"
         style="width:800px;height: 450px;background-image: url($applink/assets/images/poster.png);">
         <a class="js-inline-video-player video-player-btn video-player-centered" href="javascript:;"
           data-hs-fancybox-options='{
-            "videoType": "html5",
-            "videoId": "$applink/assets/videos/video.mp4",
-            "parentSelector": "#html5VideoPlayer",
-            "targetSelector": "#html5VideoIframe",
-            "caption": "EnterMedia Library Overview",
-            "speed": 700,
-            "buttons": ["fullScreen", "close"],
-            "vimeo": {
-              "autoplay": 1
-            }
-         }'>
+                "videoType": "html5",
+                "videoId": "$applink/assets/videos/video.mp4",
+                "parentSelector": "#html5VideoPlayer",
+                "targetSelector": "#html5VideoIframe",
+                "caption": "EnterMedia Library Overview",
+                "speed": 700,
+                "buttons": ["fullScreen", "close"],
+                "vimeo": {
+                  "autoplay": 1
+                }
+              }'>
           <span class="video-player-icon">
             <i class="fas fa-play"></i>
           </span>
@@ -350,41 +380,10 @@
         </div>
       </div>
     </div>
-  </div> 
-  <div class="bg-navy space-2">
-    <div class="position-relative container">
-      <div class="w-md-80 text-center mx-md-auto mb-5 mb-md-9">
-        <h2 class="text-capitalize">
-          artificial intelligence
-        </h2>
-        <p>
-          Use our AI to do the heavy lifting for you with automatic tagging, video and audio transcription, and facial
-          recognition.
-        </p>
-      </div>
-      <div class="js-slick-carousel slick"  data-aos="fade-left" data-aos-duration="1500"
-        data-hs-slick-carousel-options='{
-            "prevArrow": "<span class=\"fas fa-arrow-left d-none d-sm-inline-block slick-arrow slick-arrow-soft-white slick-arrow-left slick-arrow-centered-y rounded-circle ml-sm-2 ml-xl-4\"></span>",
-            "nextArrow": "<span class=\"fas fa-arrow-right d-none d-sm-inline-block slick-arrow slick-arrow-soft-white slick-arrow-right slick-arrow-centered-y rounded-circle mr-sm-2 mr-xl-4\"></span>",
-            "counterSelector": "#slickCounter",
-            "counterDivider": "/",
-            "adaptiveWidth": true,
-            "dots": true,
-            "dotsClass": "slick-pagination mt-3"
-        }'>
-        <div class="js-slide bg-img-hero-center" style="background-image: url($applink/assets/images/featured-1.jpeg);">
-          <div class="space-5">
-          </div>
-        </div>
-        <div class="js-slide bg-img-hero-center" style="background-image: url($applink/assets/images/featured-1.jpeg);">
-          <div class="space-5">
-          </div>
-        </div>
-        <div class="js-slide bg-img-hero-center" style="background-image: url($applink/assets/images/featured-1.jpeg);">
-          <div class="space-5">
-          </div>
-        </div>
-      </div>
+    <div class="w-md-80 text-center mx-auto">
+      <h2 class="text-capitalize">
+        Product Overview
+      </h2>
     </div>
   </div>
   <!-- <div class="space-2" id="contact">
