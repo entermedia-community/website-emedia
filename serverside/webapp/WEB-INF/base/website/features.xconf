@@ -1,0 +1,4 @@
+<page>
+<property name="collectivesection">features</property>
+<inner-layout>/${siteid}/views/layouts/app.html</inner-layout>
+</page>

@@ -50,16 +50,16 @@
           <div class="navbar-body header-abs-top-inner">
             <ul class="navbar-nav">
               <li class="navbar-nav-item">
-                <a class="nav-link" href="javascript:;">Platform</a>
+                <a class="nav-link #if($collectivesection == 'features') active #end" href="$applink/features.html">Features</a>
               </li>
               <li class="navbar-nav-item">
                 <a class="nav-link #if($collectivesection == 'pricing') active #end" href="$applink/pricing.html">Pricing</a>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link" href="javascript:;">Documentation</a>
+                <a class="nav-link #if($collectivesection == 'documentation') active #end" href="$applink/documentation.html">Documentation</a>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link" href="javascript:;">Support</a>
+                <a class="nav-link #if($collectivesection == 'support') active #end" href="$applink/support.html">Support</a>
               </li>
               <li class="hs-has-mega-menu navbar-nav-item"
                 data-hs-mega-menu-item-options='{
