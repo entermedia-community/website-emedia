@@ -78,10 +78,16 @@ footer {
   box-shadow: 0 1px 10px rgb(11 23 44);
 }
 .hero-container .container {
-  min-height: 850px;
+  min-height: 800px;
   display: flex;
+  margin-top: 170px;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 991.98px) {
+  .hero-container .container {
+    margin-top: 0;
+  }
 }
 .hero-container video {
   top: 0;
@@ -116,7 +122,7 @@ footer {
     display: none;
   }
   .hero-container .container {
-    min-height: 600px;
+    min-height: 640px;
   }
   .divider::before,
   .divider::after {
@@ -152,7 +158,9 @@ footer {
 
 .main-hero {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.25);
+  max-width: 740px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(5px);
   padding: 40px;
   border-radius: 8px;
@@ -275,4 +283,57 @@ footer {
   .pitch-deck-slide {
     height: 200px;
   }
+}
+
+.features .row {
+  padding: 24px;
+}
+.features .row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+code {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+.navbar-nav .nav-link {
+  font-size: 20px;
+  font-weight: 300;
+}
+.navbar-brand,
+.navbar-brand > img {
+  width: 200px;
+  margin: 0;
+  padding: 4px 0;
+}
+.js-header-fix-moment .navbar-brand,
+.js-header-fix-moment .navbar-brand > img {
+  width: 150px;
+}
+.js-header-fix-moment .navbar-nav .nav-link {
+  font-size: 18px;
+}
+.js-header-fix-moment #logoAndNav {
+  background-color: #113366;
+}
+.platforms .card-header {
+  padding: 0;
+  background-color: #0c223b;
+}
+.platforms .card-body {
+  background-color: #113366;
+}
+.platforms .avatar {
+  width: 150px;
+  height: 150px;
+}
+.platforms .avatar-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+}
+.fw-thin {
+  font-weight: 300;
 }
