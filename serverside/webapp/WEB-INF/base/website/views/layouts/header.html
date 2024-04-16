@@ -7,30 +7,15 @@
         "fixEffect": "slide"
         }'>
   <div class="header-section">
-    <div class="py-2 header-hide-content" style="background-color: #091325;">
-    <div class="container-fluid">
-      <div class="d-flex align-items-center justify-cntent-end">
-        <ul class="list-inline ml-auto mb-0">
-          <li class="list-inline-item">
-            <button type="button" class="btn btn-xs btn-soft-secondary" data-toggle="modal" data-target="#meetingModal">
-              <i class="far fa-calendar-alt mr-1"></i>
-              Schedule a Meeting
-            </button>
-          </li>
-          <li class="list-inline-item">
-            <a class="btn btn-xs btn-soft-secondary" href="/login">
-              <i class="fas fa-user-circle mr-1"></i> Login
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    </div>
     <div id="logoAndNav" class="container-fluid">
       <nav class="js-mega-menu navbar navbar-expand-lg">
         <a class="navbar-brand" href="$applink/index.html" aria-label="Entermedia">
           <img src="$applink/assets/images/logo.png" alt="Entermedia" />
         </a>
+        <!-- <button type="button" class="btn btn-xs btn-soft-secondary text-white ml-3" data-toggle="modal" data-target="#meetingModal">
+          <i class="far fa-calendar-alt mr-1"></i>
+          Schedule a Meeting
+        </button>  -->
         <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle" aria-label="Toggle navigation"
           aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
           <span class="navbar-toggler-default">
@@ -121,6 +106,18 @@
                   </div>
                 </div>
               </li>
+              <li class="navbar-nav-item action-btn">
+                <div class="d-flex align-items-center">
+                  <button type="button" class="btn btn-xs btn-soft-secondary text-white mr-2" data-toggle="modal" data-target="#meetingModal">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Schedule a Meeting</span>                  
+                  </button> 
+                  <a class="btn btn-xs btn-soft-secondary text-white" href="/login">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Login</span>
+                  </a>
+                </div>
+              </li> 
             </ul>
           </div>
         </div>
