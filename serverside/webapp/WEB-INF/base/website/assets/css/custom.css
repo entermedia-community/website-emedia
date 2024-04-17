@@ -64,6 +64,9 @@ hr {
 .bg-navy {
   background-color: #0d2847 !important;
 }
+.text-navy {
+  color: #0d2847 !important;
+}
 .header-section,
 #contact,
 footer {
@@ -265,6 +268,15 @@ code {
 .js-header-fix-moment .action-btn i.fas {
   margin-right: 0;
 }
+main#documentation {
+  margin-top: 72px;
+}
+#sidebarNav .dropdown-item {
+  white-space: normal;
+}
+.key-ft h3 {
+  color: #2a5cab;
+}
 @media (max-width: 1280px) {
   .pitch-deck-slide {
     height: 500px;
@@ -311,6 +323,9 @@ code {
   }
   .action-btn {
     margin-top: 8px;
+  }
+  main#documentation {
+    margin-top: 0;
   }
 }
 @media (min-width: 992px) {
