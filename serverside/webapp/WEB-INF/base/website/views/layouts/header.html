@@ -38,13 +38,13 @@
                 <a class="nav-link #if($collectivesection == 'features') active #end" href="$applink/features.html">Features</a>
               </li>
               <li class="navbar-nav-item">
+                <a class="nav-link #if($collectivesection == 'hosting') active #end" href="$applink/hosting.html">Hosting</a>
+              </li>
+              <li class="navbar-nav-item">
                 <a class="nav-link #if($collectivesection == 'pricing') active #end" href="$applink/pricing.html">Pricing</a>
               </li>
               <li class="navbar-nav-item">
                 <a class="nav-link #if($collectivesection == 'documentation') active #end" href="$applink/documentation.html">Documentation</a>
-              </li>
-              <li class="navbar-nav-item">
-                <a class="nav-link #if($collectivesection == 'support') active #end" href="$applink/support.html">Support</a>
               </li>
               <li class="hs-has-mega-menu navbar-nav-item"
                 data-hs-mega-menu-item-options='{
@@ -112,11 +112,11 @@
                     <i class="far fa-calendar-alt"></i>
                     <span class="ml-1">Schedule a Meeting</span>                  
                   </button> 
-                  <a class="btn btn-xs btn-soft-secondary text-white m-1" href="$applink/login.html">
+                  <a class="btn btn-xs btn-soft-secondary text-white m-1 #if($collectivesection == 'login') active #end" href="$applink/login.html">
                     <i class="fas fa-user"></i>
                     <span>Login</span>
                   </a>
-                  <a class="btn btn-xs btn-soft-secondary text-white m-1" href="$applink/signup.html">
+                  <a class="btn btn-xs btn-soft-secondary text-white m-1 #if($collectivesection == 'signup') active #end" href="$applink/signup.html">
                     <i class="fas fa-user-plus"></i>
                     <span>Signup</span>
                   </a>
