@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Open Source Media Collaboration - EnterMediaDB</title>
+  <title>Smart File Organizer - eMediaLibray</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="shortcut icon" href="$apphome/assets/favicon.ico" />
@@ -125,13 +125,14 @@
         return array.join("");
       }
       function animateOrganize() {
-        var orgArr = ["O", "r", "g", "a", "n", "i", "z", "e"];
+    	var orig = $("#organize").text();
+        var orgArr = orig.split('');//["O", "r", "g", "a", "n", "i", "z", "e"];
         var int = setInterval(function() {
           $("#organize").text(shuffleArray(orgArr));
-        }, 150);
+        }, 200);
         setTimeout(function() {
           clearInterval(int);
-          $("#organize").text("Organize");
+          $("#organize").text(orig);
         }, 1500);
       }
       animateOrganize();
