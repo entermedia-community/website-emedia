@@ -13633,6 +13633,9 @@ button:focus {
   width: 100%;
   z-index: 1001;
 }
+header {
+  border-radius: 0 !important;
+}
 
 .header-section {
   position: relative;
