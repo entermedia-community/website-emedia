@@ -70,7 +70,7 @@
               y="78"
               width="75"
               height="75"
-              href="./podcast.svg"
+              href="$applink/animation/podcast.svg"
             />
             <image
               class="green"
@@ -78,7 +78,7 @@
               y="155"
               width="75"
               height="75"
-              href="./music.svg"
+              href="$applink/animation/music.svg"
             />
             <image
               class="blue"
@@ -86,7 +86,7 @@
               y="623"
               width="75"
               height="75"
-              href="./video.svg"
+              href="$applink/animation/video.svg"
             />
             <image
               class="yellow"
@@ -94,7 +94,7 @@
               y="390"
               width="75"
               height="75"
-              href="./image.svg"
+              href="$applink/animation/image.svg"
             />
           </g>
 
@@ -103,7 +103,7 @@
             y="328"
             width="150"
             height="150"
-            href="./media.svg"
+            href="$applink/animation/media.svg"
             class="purple"
           />
         </g>
@@ -113,7 +113,7 @@
           y="490"
           width="300"
           height="300"
-          href="./emedialogo.svg"
+          href="$applink/animation/emedialogo.svg"
         />
       </g>
     </svg>
@@ -289,6 +289,7 @@
           });
           gsap.to(nodeLine, {
             strokeDashoffset: -340,
+            repeat: -1,
             ease: "none",
             duration: SPEED,
           });
