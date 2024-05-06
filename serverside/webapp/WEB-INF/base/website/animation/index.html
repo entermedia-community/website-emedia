@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #0e223b;
+      }
+      circle {
+        fill: #ffffff;
+      }
+      path {
+        stroke: #ffffff;
+        fill: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg
+      x="0px"
+      y="0px"
+      viewBox="0 0 1920 1080"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <g id="main">
+        <path
+          d="M960 640 Q 1147 612 1371 420"
+          stroke-width="4"
+          stroke-dasharray="15 10 5 10"
+          id="purpleLine"
+        />
+        <g id="purple">
+          <g class="lines">
+            <path
+              d="M1261,113 L1396,403"
+              stroke-width="2"
+              stroke-dasharray="15 10 5 10"
+              class="red"
+            />
+            <path
+              d="M1567,155 L1396,403"
+              stroke-width="2"
+              stroke-dasharray="15 10 5 10"
+              class="green"
+            />
+            <path
+              d="M1617,623 L1396,403"
+              stroke-width="2"
+              stroke-dasharray="15 10 5 10"
+              class="blue"
+            />
+            <path
+              d="M1732,390 L1396,403"
+              stroke-width="2"
+              stroke-dasharray="15 10 5 10"
+              class="yellow"
+            />
+          </g>
+          <g class="circles">
+            <image
+              class="red"
+              x="1226"
+              y="78"
+              width="75"
+              height="75"
+              href="./podcast.svg"
+            />
+            <image
+              class="green"
+              x="1500"
+              y="155"
+              width="75"
+              height="75"
+              href="./music.svg"
+            />
+            <image
+              class="blue"
+              x="1617"
+              y="623"
+              width="75"
+              height="75"
+              href="./video.svg"
+            />
+            <image
+              class="yellow"
+              x="1732"
+              y="390"
+              width="75"
+              height="75"
+              href="./image.svg"
+            />
+          </g>
+
+          <image
+            x="1321"
+            y="328"
+            width="150"
+            height="150"
+            href="./media.svg"
+            class="purple"
+          />
+        </g>
+        <circle cx="960" cy="640" r="150" />
+        <image
+          x="810"
+          y="490"
+          width="300"
+          height="300"
+          href="./emedialogo.svg"
+        />
+      </g>
+    </svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+    <script>
+      // use a script tag or an external JS file
+      document.addEventListener("DOMContentLoaded", (event) => {
+        gsap.registerPlugin(MotionPathPlugin, CustomEase);
+
+        var SPEED = 8;
+
+        var main = document.querySelector("#main");
+
+        gsap.to(main, {
+          repeat: -1,
+          yoyo: true,
+          y: 50,
+          //ease in out
+          ease: "sine.inOut",
+          duration: SPEED / 2,
+        });
+
+        var pos = { x: 0, y: 0 };
+        var curveOffset = 50;
+
+        var purpleData = {
+          mPath: [
+            { x: 0, y: 120 },
+            {
+              x: -400,
+              y: 250,
+            },
+          ],
+          lineStart: {
+            x: 1396,
+            y: 403,
+          },
+          delay: SPEED,
+          children: {
+            red: {
+              mPath: [
+                { x: -50, y: -50 },
+                { x: 140, y: 280 },
+              ],
+            },
+            green: {
+              mPath: [
+                { x: -50, y: -80 },
+                { x: -150, y: 220 },
+              ],
+            },
+            blue: {
+              mPath: [
+                { x: -100, y: 50 },
+                { x: -240, y: -250 },
+              ],
+            },
+            yellow: {
+              mPath: [
+                { x: -100, y: -80 },
+                { x: -360, y: -30 },
+              ],
+            },
+          },
+        };
+
+        Object.keys(purpleData).forEach((key) => {
+          var id = "#purple";
+
+          var purple = document.querySelector(id);
+          var circle = document.querySelector(id + " .purple");
+          var attachedLine = document.querySelector(id + "Line");
+          var childLinesContainer = document.querySelector(id + " .lines");
+
+          var coordsData = {
+            fromNode: circle,
+            toNode: main,
+            lineStart: {
+              x: 960,
+              y: 640,
+            },
+          };
+
+          animateNode(
+            purple,
+            attachedLine,
+            purpleData.mPath,
+            SPEED,
+            coordsData,
+            { x: 0, y: 40 }
+          );
+
+          Object.keys(purpleData.children).forEach((child) => {
+            var childData = purpleData.children[child];
+            var childCircle = document.querySelector(
+              id + " .circles ." + child
+            );
+
+            var childLine = document.querySelector(id + " .lines ." + child);
+
+            var coordsData = {
+              fromNode: childCircle,
+              toNode: childLinesContainer,
+              lineStart: purpleData.lineStart,
+            };
+
+            animateNode(childCircle, childLine, childData.mPath, 0, coordsData);
+          });
+        });
+        function animateNode(
+          node,
+          nodeLine,
+          mPath,
+          delay = 0,
+          coordsData = null,
+          offset = { x: 0, y: 0 }
+        ) {
+          gsap.to(node, {
+            motionPath: {
+              path: mPath,
+            },
+            ease: CustomEase.create(
+              "custom",
+              "M0,0 C0.126,0.382 0.618,0.044 0.939,0.659 1.007,0.79 1,0.855 1,1 "
+            ),
+            duration: SPEED,
+            delay: delay,
+            onUpdate: function () {
+              if (!coordsData) return;
+              var lineStart = coordsData.lineStart;
+              var p = MotionPathPlugin.convertCoordinates(
+                coordsData.fromNode,
+                coordsData.toNode,
+                { x: offset.x, y: offset.y }
+              );
+              var lineEnd = {
+                x: p.x + 50,
+                y: p.y + 50,
+              };
+              var mpx = (lineStart.x + lineEnd.x) * 0.5;
+              var mpy = (lineStart.y + lineEnd.y) * 0.5;
+
+              var theta =
+                Math.atan2(lineEnd.y - lineStart.y, lineEnd.x - lineStart.x) -
+                Math.PI / 2;
+
+              var cx = mpx + curveOffset * Math.cos(theta);
+              var cy = mpy + curveOffset * Math.sin(theta);
+
+              var curve =
+                "M" +
+                lineStart.x +
+                " " +
+                lineStart.y +
+                " Q " +
+                cx +
+                " " +
+                cy +
+                " " +
+                lineEnd.x +
+                " " +
+                lineEnd.y;
+
+              nodeLine.setAttribute("d", curve);
+            },
+            onComplete: function () {
+              if (!coordsData) return;
+              nodeLine.style.display = "none";
+            },
+          });
+          gsap.to(nodeLine, {
+            strokeDashoffset: -340,
+            ease: "none",
+            duration: SPEED,
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
