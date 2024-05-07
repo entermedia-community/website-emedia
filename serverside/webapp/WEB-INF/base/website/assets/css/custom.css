@@ -78,12 +78,11 @@ footer {
 .hero-container .container {
   min-height: 800px;
   display: flex;
-  margin-top: 170px;
-  align-items: center;
+  margin-top: 120px;
   justify-content: center;
 }
-.hero-container video {
-  top: 0;
+.hero-container .animation {
+  top: 60px;
   left: 0;
   height: 100%;
   width: 100%;
@@ -121,6 +120,7 @@ footer {
 .main-hero {
   width: 100%;
   max-width: 740px;
+  max-height: 350px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(5px);
@@ -478,4 +478,8 @@ main#documentation {
   margin-left: auto;
   object-fit: contain;
   object-position: right;
+}
+
+.animation{
+	margin: 30px 0 0 0;
 }
