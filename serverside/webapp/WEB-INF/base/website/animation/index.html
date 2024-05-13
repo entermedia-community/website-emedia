@@ -1,6 +1,16 @@
 <div id="animation-container" style="display: none">
   <svg version="1.1" id="animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background: new 0 0 1920 1080" xml:space="preserve">
+    <!-- <filter id="blur" width="200%" height="200%" x="-50%" y="-50%"> 
+    <feFlood flood-color="#0005" result="neutral"/>
+    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blurred" />
+    <feMerge>
+      <feMergeNode in="neutral" />
+      <feMergeNode in="blurred" />
+    </feMerge>
+  </filter> -->
+   <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg1" />
+   <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg2" />
     <g id="spirals" transform="translate(0, -20)">
       <path id="f4" class="st0" d="M963.6,558c0,0,43.2-187.9-144.2-231.4S588.6,470.5,588.6,470.5" />
       <path id="f3" class="st0" d="M962.6,558.6c0,0-174.7-81.5-256.4,92.6s92.3,255.7,92.3,255.7" />
@@ -42,37 +52,10 @@
       <image id="location_6" x="920" y="500" width="80" height="80" href="$applink/animation/images/location-6.png" />
       <image id="product_6" x="900" y="480" width="120" height="120" href="$applink/animation/images/product-6.png" />
     </g>
+    <rect x="-480" y="-270" width="2880" height="1620" fill="#000" opacity="0.75" id="backdrop" />
+   
+    <!-- <use xlink:href="#backdrop" style="filter: url(#blur)" /> -->
     <g id="circles">
-      <circle id="img_1" fill="none" cx="300" cy="200" r="125" />
-      <circle id="img_2" fill="none" cx="1686" cy="488" r="125" />
-      <circle id="img_3" fill="none" cx="1729" cy="234" r="100" />
-      <circle id="img_4" fill="none" cx="579" cy="583" r="100" />
-      <circle id="img_5" fill="none" cx="177" cy="470" r="80" />
-      <circle id="img_6" fill="none" cx="490" cy="371" r="80" />
-      <circle id="img_7" fill="none" cx="117" cy="314" r="80" />
-      <circle id="img_8" fill="none" cx="1189" cy="959" r="80" />
-      <circle id="img_9" fill="none" cx="1221" cy="608" r="90" />
-      <circle id="img_10" fill="none" cx="1471" cy="564" r="90" />
-      <circle id="img_11" fill="none" cx="767" cy="287" r="90" />
-      <circle id="img_12" fill="none" cx="431" cy="851" r="180" />
-      <circle id="img_13" fill="none" cx="1659" cy="887" r="180" />
-      <circle id="img_14" fill="none" cx="1507" cy="286" r="60" />
-      <circle id="img_15" fill="none" cx="653" cy="761" r="60" />
-      <circle id="img_16" fill="none" cx="1393" cy="752" r="60" />
-      <circle id="img_17" fill="none" cx="1331" cy="271" r="60" />
-      <circle id="img_18" fill="none" cx="1173" cy="255" r="60" />
-      <circle id="img_19" fill="none" cx="112" cy="943" r="60" />
-      <circle id="img_20" fill="none" cx="360" cy="501" r="40" />
-      <circle id="img_21" fill="none" cx="719" cy="920" r="40" />
-      <circle id="img_22" fill="none" cx="814" cy="802" r="40" />
-      <circle id="img_23" fill="none" cx="1189" cy="818" r="40" />
-      <circle id="img_24" fill="none" cx="1372" cy="902" r="40" />
-      <circle id="img_25" fill="none" cx="1036" cy="973" r="40" />
-      <circle id="img_26" fill="none" cx="837" cy="113" r="40" />
-      <circle id="img_27" fill="none" cx="1423" cy="113" r="40" />
-      <circle id="img_28" fill="none" cx="684" cy="193" r="40" />
-      <circle id="img_29" fill="none" cx="551" cy="214" r="60" />
-      <circle id="center" fill="none" cx="960" cy="540" r="210" />
       <g id="folders">
         <image id="anEvents" href="$applink/animation/images/folders/events.png" x="860" y="490" width="200" height="200" />
         <image id="anLocations" href="$applink/animation/images/folders/locations.png" x="860" y="490" width="200" height="200" />

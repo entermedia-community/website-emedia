@@ -486,13 +486,20 @@ main#documentation {
   object-fit: contain;
   object-position: right;
 }
-
+#introDiv {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 100vh;
+}
 .animation {
   margin: 30px 0 0 0;
 }
 #animation-container {
   height: calc(100vh - 72px);
-  display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -506,7 +513,7 @@ main#documentation {
     #050c15 0,
     #050c15 50%
   );
-  animation: rotate 10s linear infinite alternate;
+  /* animation: rotate 10s linear infinite alternate; */
 }
 @keyframes rotate {
   from {
@@ -522,6 +529,7 @@ text#intro {
 }
 svg#animation {
   width: 100%;
+  min-width: 700px;
   height: 100%;
 }
 #emedia {

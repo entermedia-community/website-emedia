@@ -183,8 +183,9 @@ document.addEventListener("DOMContentLoaded", function () {
     display: "block",
   });
 
-  gsap.set("#images image", { scale: 0 });
   var imgTl = gsap.timeline({ ease: "none", delay: 1 });
+  imgTl.set("#images image", { scale: 0 });
+  // imgTl.set("#images", { opacity: 1 });
   images.forEach((image, i) => {
     image.classList.add("idx-" + i);
     var coords = imageCoords[i];
@@ -233,8 +234,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "-=4.75"
     );
   });
+  // gsap.to("#images", { duration: 1, opacity: 1, ease: "none" });
 
-  gsap.to("#backdrop", { opacity: 0, duration: 3, delay: 4.5 });
+  // gsap.to("#backdrop", { opacity: 0, duration: 3, delay: 4.5 });
   imgTl.addLabel("collapse", "-=0.5");
   Object.keys(collapseCoords).forEach((key) => {
     var img = document.querySelector(key);
@@ -298,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "<"
   );
   var endDelay = 17;
-  gsap.to("#backdrop", { opacity: 0.85, duration: 2, delay: endDelay });
+  // gsap.to("#backdrop", { opacity: 0.85, duration: 2, delay: endDelay });
   var introTl = gsap.timeline({ delay: endDelay });
   introTl.to("#folders image", {
     duration: 3,
@@ -331,8 +333,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     "<"
   );
-  gsap.to("#bg1", { opacity: 0.5, duration: 3, delay: endDelay + 1 });
-  gsap.to("#bg2", { opacity: 0.5, duration: 3, delay: endDelay + 1 });
+  gsap.to("#bg1", { opacity: 0.05, duration: 3, delay: endDelay + 1 });
+  gsap.to("#bg2", { opacity: 0.05, duration: 3, delay: endDelay + 1 });
   var bgTl = gsap.timeline({ delay: endDelay + 1, repeat: -1 });
   bgTl.fromTo(
     "#bg1",
