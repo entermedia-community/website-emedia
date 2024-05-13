@@ -1,0 +1,7 @@
+<node>
+
+    <property id="cluster.name">entermedia-em11website</property>
+    <property id="node.name">nodea</property>
+	  
+</node>
+
