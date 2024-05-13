@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<monitoredsitesdnsregions> 
+  <monitoredsitesdnsregion id="SV1"> 
+    <name><![CDATA[California, US]]></name> 
+  </monitoredsitesdnsregion>  
+  <monitoredsitesdnsregion id="ORD"> 
+    <name><![CDATA[Illinois, US]]></name> 
+  </monitoredsitesdnsregion>  
+  <monitoredsitesdnsregion id="IAD">
+    <name><![CDATA[Virginia, US]]></name>
+  </monitoredsitesdnsregion>
+  <monitoredsitesdnsregion id="AMS">
+    <name><![CDATA[Amsterdam, NL]]></name>
+  </monitoredsitesdnsregion>
+  <monitoredsitesdnsregion id="TKO">
+    <name><![CDATA[Tokyo, JP]]></name>
+  </monitoredsitesdnsregion>
+  <monitoredsitesdnsregion id="SYD">
+    <name><![CDATA[Sydney, AU]]></name>
+  </monitoredsitesdnsregion>
+</monitoredsitesdnsregions>

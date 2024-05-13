@@ -11,20 +11,20 @@
           style="right: 8px;top:8px;position: absolute;">
           <i class="fas fa-times"></i>
         </button>
-        <form class="container js-validate">
+        <form class="container js-validate" action="/website/app/components/schedulemeeting/save.html">
           <div class="w-md-80 mx-md-auto">
             <div class="row mx-n2 mb-3">
               <div class="col-sm-6 px-2">
                 <div class="js-form-message form-group">
                   <label class="sr-only" for="firstName">First name</label>
-                  <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First name"
+                  <input type="text" class="form-control" name="name" id="firstName" placeholder="First name"
                     aria-label="First name" required data-msg="Please enter first your name">
                 </div>
               </div>
               <div class="col-sm-6 px-2">
                 <div class="js-form-message form-group">
                   <label class="sr-only" for="lastName">Last name</label>
-                  <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last name"
+                  <input type="text" class="form-control" name="lastname" id="lastName" placeholder="Last name"
                     aria-label="Last name" required data-msg="Please enter last your name">
                 </div>
               </div>
@@ -38,7 +38,7 @@
               <div class="col-sm-12 px-2">
                 <div class="js-form-message form-group">
                   <label class="sr-only" for="aboutProject">Tell us about your project</label>
-                  <textarea class="form-control" rows="5" name="aboutProject" id="aboutProject"
+                  <textarea class="form-control" rows="5" name="notes" id="aboutProject"
                     placeholder="Tell us more about your project, needs, and timeline."
                     aria-label="Tell us more about your project, needs, and timeline." required
                     data-msg="Please enter a short details of your inquiry."></textarea>
@@ -51,14 +51,14 @@
                 <div class="form-group">
                   <div class="form-check form-check-inline">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="sales" class="custom-control-input" name="team" checked>
+                      <input type="radio" id="sales" class="custom-control-input" name="meetingdepartment" checked>
                       <label class="custom-control-label" for="sales" value="sales">Sales</label>
                     </div>
                   </div>
                   <div class="form-check form-check-inline">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="marketing" class="custom-control-input" name="team" value="marketing">
-                      <label class="custom-control-label" for="marketing">Marketing</label>
+                      <input type="radio" id="marketing" class="custom-control-input" name="meetingdepartment" value="marketing">
+                      <label class="custom-control-label" for="support">Support</label>
                     </div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@
                   Select a date and time for the meeting:
                 </p>
                 <div class="form-group"> 
-                  <select class="form-control custom-select" name="month" required
+                  <select class="form-control custom-select" name="time" required
                     data-msg="Please select a time slot." id="timeSlot">
                     <option value="2024-04-10T09:00:00">April 10, 2024 at 9:00 AM</option>
                     <option value="2024-04-10T10:00:00">April 10, 2024 at 10:00 AM</option>
@@ -92,6 +92,7 @@
             </div>
             <button type="submit" class="btn btn-sm btn-primary" style="width: 150px">Submit</button>
           </div>
+          <input name="save"  type="hidden" value="true" />
         </form>
       </div>
     </div>

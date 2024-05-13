@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties prefix="entermedia_instances" beanname="dataSearcher"> 
+  <property id="id" index="true" internalfield="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New 
+    <name> 
+      <language id="de"><![CDATA[Id]]></language>  
+      <language id="en"><![CDATA[Id]]></language>  
+      <language id="es"><![CDATA[Id]]></language>  
+      <language id="fr"><![CDATA[Id]]></language> 
+    </name> 
+  </property>  
+  <property id="name" index="true" multilanguage="false" editable="true" stored="true" sortable="true" filter="false" keyword="false">New 
+    <name> 
+      <language id="de"><![CDATA[Identität]]></language>  
+      <language id="en"><![CDATA[Name]]></language>  
+      <language id="es"><![CDATA[Nombre]]></language>  
+      <language id="fr"><![CDATA[Identité]]></language> 
+    </name> 
+  </property>  
+    <property id="librarycollection" required="true" index="true" stored="true" editable="true"  type="list" viewtype="autocomplete" listid="librarycollection" datatype="list" >Library 
+    <name> 
+      <language id="en"><![CDATA[Project]]></language>  
+    </name> 
+  </property>  
+  <property id="owner" index="true" viewtype="user" type="list" listcatalogid="system" listid="user" filter="true"  keyword="true" stored="true" editable="true" >Owner 
+    <name> 
+      <language id="de"><![CDATA[Owner]]></language>  
+      <language id="en"><![CDATA[Owner]]></language>  
+      <language id="es"><![CDATA[Propietario]]></language>  
+      <language id="fr"><![CDATA[Propriétaire]]></language> 
+    </name> 
+  </property>  
+  
+  <property id="datestart" index="true" internalfield="false" editable="true" isbadge="false" viewtype="date" rendertype="date" required="false" multilanguage="false" filter="false" datatype="date" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[Start Date]]></language> 
+    </name> 
+  </property>  
+  <property id="dateend" index="true" internalfield="false" editable="true" isbadge="false" viewtype="date" rendertype="date" required="false" multilanguage="false" filter="false" datatype="date" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[End Date]]></language> 
+    </name> 
+  </property>  
+  <property id="lastlogin" index="true" internalfield="false" editable="true" isbadge="false" viewtype="date" rendertype="date" required="false" multilanguage="false" filter="false" datatype="date" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[Last Login]]></language> 
+    </name> 
+  </property>
+    <property id="instance_status" index="true" internalfield="false" isbadge="false" required="false" listid="entermedia_instance_status" multilanguage="false" highlight="false" deleted="false" stored="true" autocreatefromexif="false" writenametoexif="false" searchcomponent="list" editable="true" datatype="list" filter="false" keyword="false">New 
+    <name>
+      <language id="en"><![CDATA[Instance Status]]></language>
+    </name>
+  </property>   
+  <property id="istrial" index="true" internalfield="false" editable="true" isbadge="false" required="false" multilanguage="false" filter="false" datatype="boolean" viewtype="boolean" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[Trial Site]]></language> 
+    </name> 
+  </property>  
+    <property id="instanceurl" index="true" editable="true"  viewtype="url" rendertype="url" isbadge="false" required="false" filter="false" multilanguage="false" stored="true" keyword="false"> 
+    <name> 
+      <language id="en"><![CDATA[Instance URL]]></language> 
+    </name> 
+  </property>
+  <property id="instanceprefix" index="true" internalfield="false" editable="true" isbadge="false" required="false" filter="false" multilanguage="false" stored="true" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[URL Prefix]]></language> 
+    </name> 
+  </property>  
+  <property id="instancename" index="true" internalfield="false" editable="true" isbadge="false" required="false" filter="false" multilanguage="false" stored="true" autocreatefromexif="false" keyword="false" writenametoexif="false"> 
+    <name> 
+      <language id="en"><![CDATA[Docker Instance Name]]></language> 
+    </name> 
+  </property>
+  <property id="instancenode" index="true" internalfield="false" editable="true" isbadge="false" required="false" filter="false" multilanguage="false" stored="true" autocreatefromexif="false" keyword="false" writenametoexif="false"> 
+    <name> 
+      <language id="en"><![CDATA[Docker Instance Node]]></language> 
+    </name> 
+  </property>
+  <property id="entermedia_servers" listid="entermedia_servers" index="true" internalfield="false" editable="true" isbadge="false" required="false" multilanguage="false" filter="false" datatype="list" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[Server]]></language> 
+    </name> 
+  </property>
+    <property id="monitoringstatus" index="true" internalfield="false" datatype="list" editable="true" stored="true" searchtype="monitoredsites" viewtype="tageditor" rendertype="tageditor"> 
+    <name> 
+      <language id="en"><![CDATA[Monitoring Status]]></language> 
+    </name> 
+  </property>  
+    <property id="notes" index="true" editable="true" isbadge="false" required="false" filter="false" multilanguage="false" stored="true"> 
+    <name> 
+      <language id="en"><![CDATA[Notes]]></language> 
+    </name> 
+  </property>
+    <property id="googletokenkey" index="true" editable="true" stored="true">New 
+    <name> 
+      <language id="en"><![CDATA[Google Token Key]]></language> 
+    </name> 
+  </property>   
+    <property id="sync_notes" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="textarea" rendertype="textarea" required="false" filter="false" multilanguage="false" highlight="false" deleted="false" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Sync Notes]]></language> 
+    </name> 
+  </property> 
+    <property id="inbackuppc" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="boolean" rendertype="boolean" required="false" filter="false" multilanguage="false" highlight="false" deleted="false" datatype="boolean" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Enabled in Backuppc]]></language> 
+    </name> 
+  </property> 
+  <property id="synctargetdate" index="true" editable="true" stored="true" deleted="true">New 
+    <name> 
+      <language id="en"><![CDATA[Sync Target Date]]></language> 
+    </name> 
+  </property>  
+  <property id="syncpriority" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" highlight="false" deleted="false" datatype="number" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
+    <name> 
+      <language id="en"><![CDATA[Sync Priority]]></language> 
+    </name> 
+  </property>
+  <property id="instanceplugins" index="true" editable="true" stored="true">New 
+    <name> 
+      <language id="en"><![CDATA[Plugins]]></language> 
+    </name> 
+  </property>
+  <property id="instance_reindex_status" index="true" internalfield="false" isbadge="false" required="false" listid="entermedia_instance_reindex_status" multilanguage="false" highlight="false" deleted="false" stored="true" autocreatefromexif="false" writenametoexif="false" searchcomponent="list" editable="true" datatype="list" filter="false" keyword="false">New 
+    <name>
+      <language id="en"><![CDATA[Reindex Status]]></language>
+    </name>
+  </property>
+  <property id="lastreindexdate" index="true" internalfield="false" editable="true" isbadge="false" viewtype="date" rendertype="date" required="false" multilanguage="false" filter="false" datatype="date" stored="true" autocreatefromexif="false" writenametoexif="false" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[Last Reindex Date]]></language> 
+    </name> 
+  </property>
+</properties>
