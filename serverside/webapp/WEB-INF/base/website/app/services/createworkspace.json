@@ -1,0 +1,20 @@
+{
+  "response":
+      {
+        "status": "$status"
+        #if($status=="ok")
+        ,"id":"$!instanceid"
+        #else
+        ,"error": "$!error"
+        #end
+      }
+  #if($status=="ok")
+  ,
+  "data":
+  {
+  		"organizationid" : "$organizationid",
+  		"instanceid": "$instanceid",
+  		"instanceurl":"$instanceurl"
+  }
+  #end
+}

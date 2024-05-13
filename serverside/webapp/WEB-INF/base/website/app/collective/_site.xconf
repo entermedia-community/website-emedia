@@ -1,0 +1,16 @@
+<page>
+	
+	<property name="rootactionscategory">tasksAWRM2oX3va5wQ64TVecZ</property>
+	
+	<permission name="view">
+		<or>
+			<pagevalue name="caneditcollection" equals="true"/>
+			<action name="ProjectModule.checkViewCollection" />
+		</or>
+	</permission>
+	
+		<inner-layout>/${applicationid}/theme/layouts/collectivelayout.html</inner-layout>
+
+	
+	
+</page>

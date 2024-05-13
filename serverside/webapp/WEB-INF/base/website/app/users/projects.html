@@ -1,0 +1,115 @@
+
+##Verify if user was tracked
+#if( !$selecteduser)
+	#set($selecteduser = $user)
+#end
+
+#set ($usertracked = $selecteduser.getValue("gatracked"))
+
+#if(!$usertracked)
+	#set( $usersearcher = $mediaarchive.getSearcher("user") )
+	$!user.setValue("gatracked", "true")
+	$!usersearcher.saveData($user,null)
+
+	$content.setValue("GAtrakingcode", "GA-conversionuser.html")
+#else
+	$content.setValue("GAtrakingcode", "")
+#end
+
+#set( $organizationsuser = $mediaarchive.query("librarycollectionusers").exact("followeruser",$selecteduser.getId()).exact("ontheteam","true").hitsPerPage(200).search() )
+#set($oids = [])
+#foreach( $ohit in $organizationsuser )
+	#set($x = $oids.add($ohit.collectionid))
+#end
+
+
+
+
+<div style="margin:0 auto;">
+	
+		#if(!$oids)
+		<h3>[[Welcome to Entermedia]]</h3>	
+		<p>
+		Welcome to EnterMedia! To start, click <strong>Add a Project</strong> on the left or below. Next, DEPLOY INSTANCE. If you have questions or require support and would like to direct chat with one of our agents, click here.
+		</p>
+		
+		#end
+
+   #if( $selecteduser.getId() == $user.getId()) 
+   <h3 	> [[Active Workspaces]]</h3>
+   #else
+   <h3 	> [[Common Workspaces]]</h3>
+   #end
+
+<div class="project-grid ">
+ #if( $selecteduser.getId() == $user.getId()) 
+	<div class="project-item project-item-add">
+	<a href="$apphome/site/sitedeployer/add/addorganization.html" class="emdialog project-add" title="[[Add a Project]]">
+	<i class="fas fa-plus" style="font-size:.8em;"></i> [[Add a Workspace]]</a>
+	</div>
+#end
+
+	#if($oids)
+		#set( $organizations = $mediaarchive.query("librarycollection").exact("organizationstatus","active").ids($oids).sort("name").hitsPerPage(200).search($context) )
+		
+		#set( $modcollections = $chatManager.loadCollectionsModified($organizations,$user.getId() ) )
+		#foreach( $ohit in $organizations )
+			#set($link = false)
+			#if($ohit.assetportrait)
+				#set($asset = $mediaarchive.getAsset($ohit.assetportrait))
+				#set($link = $mediaarchive.asLinkToPreview($asset,"image200x200.jpg"))
+			#end
+			<div class="project-item " style='border:2px solid #01b34f; #if($link) background-image: url("#urlencode($link)");#else background-image: url($apphome/theme/images/emprojectdefault.png); #end'>
+			<div class="project-item-box ">	
+			<a href="$applink/collective/community/index.html?collectionid=$ohit.id&goaltrackerstaff=*" 
+				class="project-item-box-title #if($selectedproject==$ohit.id) active #end">
+			$ohit.name
+			#if( $modcollections.contains($ohit.getId())) * #end
+			</a>
+			</div>
+			</div>
+		#end
+	#end
+	<div class="clearfix"></div>
+</div>
+
+#set( $organizationsuser = $mediaarchive.query("librarycollectionusers").exact("followeruser",$selecteduser.getId()).exact("ontheteam","true").hitsPerPage(200).search() )
+#set($doids = [])
+#foreach( $dohit in $organizationsuser )
+	#set($x = $doids.add($dohit.collectionid))
+#end
+#if($doids)
+<hr>
+<h3>[[Closed/Disabled Workspaces]]</h3>
+		#set( $organizations = $mediaarchive.query("librarycollection").ids($doids).orgroup("organizationstatus","disabled|closed").sort("name").hitsPerPage(200).search($context) )
+		#set( $modcollections = $chatManager.loadCollectionsModified($organizations,$user.getId() ) )
+		#foreach( $ohit in $organizations )
+			<a href="$applink/collective/community/index.html?collectionid=$ohit.id&goaltrackerstaff=*" 
+				class="project-title #if($selectedproject==$ohit.id) active #end">
+			$ohit.name
+			#if( $modcollections.contains($ohit.getId())) * #end
+			($ohit.organizationstatus)
+			</a><br>
+			
+			
+		#end
+#end
+</div>
+  
+	
+#if ($organizations.size() == 1)
+	#set($collection = $organizations.get(0))
+	#set($collectionid = $collection.collectionid)
+	#set( $instances = $mediaarchive.query("entermedia_instances").match("librarycollection", $collectionid).search() )
+	#if ($collectionid && $instances.isEmpty())
+	
+	<a href="/entermediadb/app/site/sitedeployer/createsite.html?organizationid=$collectionid" class="btn btn-secondary btn-sm">[[Deploy New Server]]</a>
+	
+	#end
+#end
+
+
+
+
+
+
