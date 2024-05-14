@@ -22,7 +22,7 @@
       <language id="en"><![CDATA[Last Name]]></language>  
     </name> 
   </property> 
-    <property id="email" index="true" multilanguage="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New
+    <property id="email" index="true" multilanguage="true" editable="true" indextype="not_analyzed">New
     <name> 
       <language id="en"><![CDATA[Email]]></language>  
     </name> 
