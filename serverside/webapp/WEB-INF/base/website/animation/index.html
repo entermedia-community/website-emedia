@@ -1,71 +1,87 @@
-<div id="animation-container" style="display: none">
-  <svg version="1.1" id="animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background: new 0 0 1920 1080" xml:space="preserve">
-    <!-- <filter id="blur" width="200%" height="200%" x="-50%" y="-50%"> 
-    <feFlood flood-color="#0005" result="neutral"/>
-    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blurred" />
-    <feMerge>
-      <feMergeNode in="neutral" />
-      <feMergeNode in="blurred" />
-    </feMerge>
-  </filter> -->
-   <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg1" />
-   <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg2" />
-    <g id="spirals" transform="translate(0, -20)">
+<div id="animation-container" >
+  <svg version="1.1" id="animation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background: new 0 0 1920 1080" xml:space="preserve">
+
+    <!-- <defs>
+      <filter id="shadow" width="133%" height="133%">
+        <feOffset in="SourceGraphic" dx="0" dy="0" />
+        <feGaussianBlur stdDeviation="10" />
+        <feBlend in="SourceGraphic" in2="offOut" />
+      </filter>
+    </defs> -->
+
+    <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg1" />
+    <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg2" />
+
+    <g id="spirals" >
       <path id="f4" class="st0" d="M963.6,558c0,0,43.2-187.9-144.2-231.4S588.6,470.5,588.6,470.5" />
       <path id="f3" class="st0" d="M962.6,558.6c0,0-174.7-81.5-256.4,92.6s92.3,255.7,92.3,255.7" />
       <path id="f2" class="st0" d="M963.3,559.6c0,0-129.9,142.4,11.9,272.3s271.6-11.8,271.6-11.8" />
       <path id="f1" class="st0" d="M963.4,558.9c0,0,82.1,174.4,256.3,92.9s92.6-255.6,92.6-255.6" />
       <path id="f0" class="st0" d="M963.6,558.1c0,0,192.8-0.8,192.4-193.1S963.4,173.1,963.4,173.1" />
     </g>
+    <g id="images" opacity="0.5">
+      <image class="event_img" id="event_1" x="835" y="415" width="250" height="250" href="$applink/animation/images/event-1.png" />
+      <image class="people_img" id="people_1" x="835" y="415" width="250" height="250" href="$applink/animation/images/people-1.png" />
+      <image class="location_img" id="location_1" x="860" y="440" width="200" height="200" href="$applink/animation/images/location-1.png" />
+      <image class="product_img" id="product_1" x="860" y="440" width="200" height="200" href="$applink/animation/images/product-1.png" />
+      <image class="project_img" id="project_1" x="880" y="460" width="160" height="160" href="$applink/animation/images/project-1.png" />
+      <image class="event_img" id="event_2" x="880" y="460" width="160" height="160" href="$applink/animation/images/event-2.png" />
+      <image class="people_img" id="people_2" x="880" y="460" width="160" height="160" href="$applink/animation/images/people-2.png" />
+      <image class="product_img" id="product_2" x="870" y="450" width="180" height="180" href="$applink/animation/images/product-2.png" />
+      <image class="location_img" id="location_2" x="880" y="460" width="160" height="160" href="$applink/animation/images/location-2.png" />
+      <image class="project_img" id="project_2" x="870" y="450" width="180" height="180" href="$applink/animation/images/project-2.png" />
+      <image class="event_img" id="event_3" x="870" y="450" width="180" height="180" href="$applink/animation/images/event-3.png" />
 
-    <g id="images">
-      <image id="event_1" x="835" y="415" width="250" height="250" href="$applink/animation/images/event-1.png" />
-      <image id="people_1" x="835" y="415" width="250" height="250" href="$applink/animation/images/people-1.png" />
-      <image id="location_1" x="860" y="440" width="200" height="200" href="$applink/animation/images/location-1.png" />
-      <image id="product_1" x="860" y="440" width="200" height="200" href="$applink/animation/images/product-1.png" />
-      <image id="project_1" x="880" y="460" width="160" height="160" href="$applink/animation/images/project-1.png" />
-      <image id="event_2" x="880" y="460" width="160" height="160" href="$applink/animation/images/event-2.png" />
-      <image id="people_2" x="880" y="460" width="160" height="160" href="$applink/animation/images/people-2.png" />
-      <image id="product_2" x="870" y="450" width="180" height="180" href="$applink/animation/images/product-2.png" />
-      <image id="location_2" x="880" y="460" width="160" height="160" href="$applink/animation/images/location-2.png" />
-      <image id="project_2" x="870" y="450" width="180" height="180" href="$applink/animation/images/project-2.png" />
-      <image id="event_3" x="870" y="450" width="180" height="180" href="$applink/animation/images/event-3.png" />
+      <image class="product_img" id="product_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/product-4.png" />
 
-      <image id="product_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/product-4.png" />
-
-      <image id="location_3" x="780" y="360" width="360" height="360" href="$applink/animation/images/location-3.png" />
-      <image id="product_3" x="900" y="480" width="120" height="120" href="$applink/animation/images/product-3.png" />
-      <image id="project_3" x="900" y="480" width="120" height="120" href="$applink/animation/images/project-3.png" />
-      <image id="event_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/event-4.png" />
-      <image id="people_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/people-4.png" />
-      <image id="location_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/location-4.png" />
-      <image id="people_3" x="780" y="360" width="360" height="360" href="$applink/animation/images/people-3.png" />
-      <image id="project_4" x="920" y="500" width="80" height="80" href="$applink/animation/images/project-4.png" />
-      <image id="project_6" x="920" y="500" width="80" height="80" href="$applink/animation/images/project-6.png" />
-      <image id="people_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/people-5.png" />
-      <image id="location_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/location-5.png" />
-      <image id="product_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/product-5.png" />
-      <image id="project_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/project-5.png" />
-      <image id="people_7" x="920" y="500" width="80" height="80" href="$applink/animation/images/people-7.png" />
-      <image id="people_6" x="920" y="500" width="80" height="80" href="$applink/animation/images/people-6.png" />
-      <image id="location_6" x="920" y="500" width="80" height="80" href="$applink/animation/images/location-6.png" />
-      <image id="product_6" x="900" y="480" width="120" height="120" href="$applink/animation/images/product-6.png" />
+      <image class="location_img" id="location_3" x="780" y="360" width="360" height="360" href="$applink/animation/images/location-3.png" />
+      <image class="product_img" id="product_3" x="900" y="480" width="120" height="120" href="$applink/animation/images/product-3.png" />
+      <image class="project_img" id="project_3" x="900" y="480" width="120" height="120" href="$applink/animation/images/project-3.png" />
+      <image class="event_img" id="event_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/event-4.png" />
+      <image class="people_img" id="people_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/people-4.png" />
+      <image class="location_img" id="location_4" x="900" y="480" width="120" height="120" href="$applink/animation/images/location-4.png" />
+      <image class="people_img" id="people_3" x="780" y="360" width="360" height="360" href="$applink/animation/images/people-3.png" />
+      <image class="project_img" id="project_4" x="920" y="500" width="80" height="80" href="$applink/animation/images/project-4.png" />
+      <image class="project_img" id="project_6" x="920" y="500" width="80" height="80" href="$applink/animation/images/project-6.png" />
+      <image class="people_img" id="people_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/people-5.png" />
+      <image class="location_img" id="location_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/location-5.png" />
+      <image class="product_img" id="product_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/product-5.png" />
+      <image class="project_img" id="project_5" x="920" y="500" width="80" height="80" href="$applink/animation/images/project-5.png" />
+      <image class="people_img" id="people_7" x="920" y="500" width="80" height="80" href="$applink/animation/images/people-7.png" />
+      <image class="people_img" id="people_6" x="920" y="500" width="80" height="80" href="$applink/animation/images/people-6.png" />
+      <image class="location_img" id="location_6" x="920" y="500" width="80" height="80" href="$applink/animation/images/location-6.png" />
+      <image class="product_img" id="product_6" x="900" y="480" width="120" height="120" href="$applink/animation/images/product-6.png" />
     </g>
-    <rect x="-480" y="-270" width="2880" height="1620" fill="#000" opacity="0.75" id="backdrop" />
+
+    <!-- <rect x="-480" y="-270" width="2880" height="1620" fill="#000" opacity="0.75" id="backdrop" /> -->
    
     <!-- <use xlink:href="#backdrop" style="filter: url(#blur)" /> -->
-    <g id="circles">
-      <g id="folders">
-        <image id="anEvents" href="$applink/animation/images/folders/events.png" x="860" y="490" width="200" height="200" />
-        <image id="anLocations" href="$applink/animation/images/folders/locations.png" x="860" y="490" width="200" height="200" />
-        <image id="anPeople" href="$applink/animation/images/folders/people.png" x="860" y="490" width="200" height="200" />
-        <image id="anProducts" href="$applink/animation/images/folders/products.png" x="860" y="490" width="200" height="200" />
-        <image id="anProjects" href="$applink/animation/images/folders/projects.png" x="860" y="490" width="200" height="200" />
-      </g>
-    </g>
-    <image id="emlogo" href="$applink/animation/images/emedialogo.svg" x="960" y="540" width="400" height="400"
-      transform="translate(-200, -200)" />
-    <text id="intro" x="2100" y="565" opacity="0">eMedia Library</text>
+  
+    <g id="folders" opacity="0">
+      <image id="anEvents" href="$applink/animation/images/folders/events.png" x="860" y="490" width="200" height="200" />
+      <image id="anLocations" href="$applink/animation/images/folders/locations.png" x="860" y="490" width="200" height="200" />
+      <image id="anPeople" href="$applink/animation/images/folders/people.png" x="860" y="490" width="200" height="200" />
+      <image id="anProducts" href="$applink/animation/images/folders/products.png" x="860" y="490" width="200" height="200" />
+      <image id="anProjects" href="$applink/animation/images/folders/projects.png" x="860" y="490" width="200" height="200" />
+    </g> 
+
+    <image id="emlogo" href="$applink/animation/images/emedialogo.svg" x="960" y="540" width="400" height="400" transform="translate(-200, -200)" />
+
+    <g id="introHero" opacity="0"> 
+        <path d="M590,540 h740 a36,36 0 0 1 36,36 v340 a36,36 0 0 1 -36,36 h-740 a36,36 0 0 1 -36,-36 v-340 a36,36 0 0 1 36,-36 z" fill="rgba(32,97,172,0.05)" opacity="0.75"  />
+        <text x="680" y="640" fill="white" font-size="50" font-family="Roboto, Arial, sans-serif" font-weight="600">The Smart</text>
+        <text id="organize" x="930" y="640" fill="white" font-size="50" font-family="Roboto, Arial, sans-serif" font-weight="600">File Organizer</text>
+        <text x="590" y="720" fill="white" font-size="24" font-family="Roboto, Arial, sans-serif">Easy storing and searching of files helps everyone take control of their</text>
+        <text x="650" y="750" fill="white" font-size="24" font-family="Roboto, Arial, sans-serif">file storage with an easy to use platform and methodology</text>
+        <text x="600" y="850" fill="white" font-size="20" font-family="Roboto, Arial, sans-serif">We believe in autonomous ownership of media files. Protecting creative files from</text>
+        <text x="640" y="875" fill="white" font-size="20" font-family="Roboto, Arial, sans-serif">censorship or unauthorized use. See</text>
+        <a href="#" class=""><text x="968" y="875" fill="#377dff" font-size="20" font-family="Roboto, Arial, sans-serif">Community Projects</text></a>
+        <text x="1153" y="875" fill="white" font-size="20" font-family="Roboto, Arial, sans-serif">in action</text>
+    </g> 
+    <!-- <circle cx="588" cy="470" r="10" fill="#377dff" />
+    <circle cx="1320" cy="395" r="10" fill="#ff7d37" />
+    <circle cx="1250" cy="830" r="10" fill="#37ff7d" />
+    <circle cx="963" cy="175" r="10" fill="#ff7dff" id="top" />
+    <circle cx="800" cy="920" r="10" fill="#37ffff" /> -->
   </svg>
 </div>

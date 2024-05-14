@@ -31,162 +31,55 @@ document.addEventListener("DOMContentLoaded", function () {
     27: [-280, -350],
     28: [-410, -330],
   };
-  var collapseCoords = {
-    "#event_1": {
-      x: -190,
-      y: -60,
-      d: "",
+
+  var initTL = gsap.timeline({ delay: 1 });
+  initTL.fromTo(
+    "#emlogo",
+    { y: -800 },
+    {
+      y: -500,
+      scale: 0.8,
+      transformOrigin: "center",
+      duration: 1,
+      ease: "bounce.out",
+    }
+  );
+  initTL.fromTo(
+    "#introHero",
+    { y: -100, opacity: 0 },
+    { y: -50, opacity: 1, duration: 1 },
+    "<"
+  );
+  initTL.fromTo(
+    "#introHero text",
+    { opacity: 0 },
+    { opacity: 1, stagger: 0.1, duration: 0.25 },
+    "<"
+  );
+  initTL.to(
+    "#introHero",
+    { y: 100, opacity: 0, duration: 1, ease: "expo.in" },
+    "+=1"
+  );
+  initTL.to(
+    "#emlogo",
+    {
+      y: -200,
+      scale: 1,
+      transformOrigin: "center",
+      duration: 1,
+      ease: "expo.in",
     },
-    "#people_1": {
-      x: 500,
-      y: 150,
-      d: "-=1.5",
-    },
-    "#location_1": {
-      x: 150,
-      y: -300,
-      d: "-=0.5",
-    },
-    "#location_3": {
-      x: 150,
-      y: -300,
-      d: "-=0.5",
-    },
-    "#product_1": {
-      x: 80,
-      y: 450,
-      d: "-=2",
-    },
-    "#product_2": {
-      x: 100,
-      y: 450,
-      d: "-=2",
-    },
-    "#product_3": {
-      x: 400,
-      y: 50,
-      d: "+=2",
-    },
-    "#product_6": {
-      x: 320,
-      y: -250,
-      d: "+=3.5",
-    },
-    "#project_1": {
-      x: -180,
-      y: 350,
-      d: "-=0.5",
-    },
-    "#project_5": {
-      x: -180,
-      y: 320,
-      d: "-=0.5",
-    },
-    "#product_4": {
-      x: -50,
-      y: 400,
-      d: "-=2.5",
-    },
-    "#product_5": {
-      x: 50,
-      y: 400,
-      d: "-=1.5",
-    },
-    "#event_2": {
-      x: -50,
-      y: -300,
-      d: "-=2",
-    },
-    "#location_6": {
-      x: 200,
-      y: -320,
-      d: "-=1",
-    },
-    "#event_4": {
-      x: 80,
-      y: -380,
-      d: "-=3",
-    },
-    "#event_3": {
-      x: -230,
-      y: 200,
-      d: "+=2",
-    },
-    "#project_2": {
-      x: 220,
-      y: 380,
-      d: "+=2",
-    },
-    "#people_2": {
-      x: 0,
-      y: -380,
-      d: "+=3",
-    },
-    "#people_3": {
-      x: 0,
-      y: -280,
-      d: "+=3.5",
-    },
-    "#people_4": {
-      x: 420,
-      y: 50,
-      d: "-=1",
-    },
-    "#people_6": {
-      x: 0,
-      y: -350,
-      d: "+=2.5",
-    },
-    "#people_7": {
-      x: 100,
-      y: -350,
-      d: "+=2",
-    },
-    "#people_5": {
-      x: 250,
-      y: 350,
-      d: "-=3.5",
-    },
-    "#location_4": {
-      x: 400,
-      y: -50,
-      d: "-=3.5",
-    },
-    "#location_2": {
-      x: 400,
-      y: -50,
-      d: "-=3.5",
-    },
-    "#location_5": {
-      x: 400,
-      y: 0,
-      d: "-=4",
-    },
-    "#project_3": {
-      x: -300,
-      y: -100,
-      d: "-=3.5",
-    },
-    "#project_4": {
-      x: -300,
-      y: -100,
-      d: "-=3.5",
-    },
-    "#project_6": {
-      x: -300,
-      y: 50,
-      d: "-=2",
-    },
-  };
+    "<"
+  );
+  initTL.set("#images", { opacity: 1 });
+  initTL.set("#folders", { opacity: 1 });
+
   var images = document.querySelectorAll("#images image");
-  gsap.set("#animation-container", {
-    display: "block",
-  });
 
   gsap.set("#images image", { scale: 0 });
-  var imgTl = gsap.timeline({ ease: "none", delay: 1 });
+  var imgTl = gsap.timeline({ ease: "none", delay: 3.5 });
   images.forEach((image, i) => {
-    image.classList.add("idx-" + i);
     var coords = imageCoords[i];
     imgTl.to(
       image,
@@ -234,27 +127,28 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 
-  gsap.to("#backdrop", { opacity: 0, duration: 3, delay: 4.5 });
-  imgTl.addLabel("collapse", "-=0.5");
-  Object.keys(collapseCoords).forEach((key) => {
-    var img = document.querySelector(key);
-    imgTl.to(
-      img,
-      {
-        duration: 1,
-        x: collapseCoords[key].x,
-        y: collapseCoords[key].y,
-        scale: 0.1,
-        onComplete: function () {
-          img.remove();
-        },
-      },
-      "collapse" + collapseCoords[key].d
-    );
-  });
+  // gsap.to("#backdrop", { opacity: 0, duration: 3, delay: 6.5 });
+
   var tl = gsap.timeline({
     ease: "none",
-    delay: 5,
+    delay: 6.5,
+    onReverseComplete: function () {
+      var endTL = gsap.timeline();
+      endTL.to("#folders", { opacity: 0, duration: 0 });
+      endTL.to("#emlogo", {
+        y: -500,
+        scale: 0.8,
+        transformOrigin: "center",
+        duration: 1,
+        ease: "expo.in",
+      });
+      endTL.to("#introHero", { y: -50, opacity: 1, duration: 1 }, "<");
+      endTL.to(
+        "#introHero text",
+        { opacity: 1, stagger: 0.1, duration: 0.25 },
+        "<"
+      );
+    },
   });
   var folders = [
     "#anEvents",
@@ -279,82 +173,80 @@ document.addEventListener("DOMContentLoaded", function () {
       "<"
     );
   }
-  tl.to("#folders", {
-    duration: 15,
-    rotate: -360,
-    repeat: -1,
-    transformOrigin: "center",
-    ease: "none",
+
+  var collapseCoords = {
+    ".location_img": {
+      x: 360,
+      y: -145,
+      target: "#anLocations",
+      delay: 6,
+    },
+    ".event_img": {
+      x: 0,
+      y: -375,
+      target: "#anEvents",
+      delay: 4,
+    },
+    ".project_img": {
+      x: -372,
+      y: -70,
+      target: "#anProjects",
+      delay: 4,
+    },
+    ".product_img": {
+      x: -160,
+      y: 380,
+      target: "#anProducts",
+      delay: 5,
+    },
+    ".people_img": {
+      x: 290,
+      y: 290,
+      target: "#anPeople",
+      delay: 2,
+    },
+  };
+
+  var delay = 12.5;
+
+  Object.keys(collapseCoords).forEach((key) => {
+    var cc = collapseCoords[key];
+    var images = document.querySelectorAll(key);
+
+    var imTL = gsap.timeline({
+      delay: delay,
+      onStart: function () {
+        images.forEach((img) => {
+          img.classList.add("glow");
+        });
+      },
+      onComplete: function () {
+        if (key === ".people_img") tl.reverse();
+      },
+    });
+
+    images.forEach((img, idx) => {
+      imTL.to(
+        img,
+        {
+          duration: 1,
+          x: cc.x,
+          y: cc.y,
+          scale: 0.2,
+          transformOrigin: "center",
+          onComplete: function () {
+            img.remove();
+          },
+        },
+        "-=0.75"
+      );
+      imTL.fromTo(
+        cc.target,
+        { scale: 1.1 },
+        { scale: 1, duration: 0.5, ease: "elastic.out(1, 0.2)" },
+        "-=0.2"
+      );
+    });
+    delay += images.length * 0.25 + 2;
   });
-  tl.to(
-    "#folders image",
-    {
-      duration: 15,
-      rotate: 360,
-      repeat: -1,
-      transformOrigin: "center",
-      ease: "none",
-    },
-    "<"
-  );
-  var endDelay = 17;
-  gsap.to("#backdrop", { opacity: 0.85, duration: 2, delay: endDelay });
-  var introTl = gsap.timeline({ delay: endDelay });
-  introTl.to("#folders image", {
-    duration: 3,
-    scale: 0.1,
-    x: -40,
-    y: -140,
-    ease: "none",
-    onComplete: function () {
-      imgTl.kill();
-      tl.kill();
-      document.querySelector("#folders").remove();
-    },
-  });
-  gsap.set("#introDiv", { css: { opacity: 0 } });
-  introTl.to("#emlogo", {
-    scale: 0.65,
-    y: -500,
-    duration: 1,
-    transformOrigin: "center",
-    ease: "expo.in",
-    onComplete: function () {},
-  });
-  var offset = document.querySelector("#emlogo").getBoundingClientRect();
-  introTl.to(
-    "#introDiv",
-    {
-      duration: 1,
-      css: { opacity: 1, top: offset.bottom - 400 },
-      ease: "expo.in",
-    },
-    "<"
-  );
-  gsap.to("#bg1", { opacity: 0.5, duration: 3, delay: endDelay + 1 });
-  gsap.to("#bg2", { opacity: 0.5, duration: 3, delay: endDelay + 1 });
-  var bgTl = gsap.timeline({ delay: endDelay + 1, repeat: -1 });
-  bgTl.fromTo(
-    "#bg1",
-    {
-      xPercent: 0,
-    },
-    {
-      duration: 30,
-      xPercent: -100,
-      ease: "none",
-    }
-  );
-  bgTl.fromTo(
-    "#bg2",
-    {
-      xPercent: 100,
-    },
-    {
-      duration: 30,
-      xPercent: 0,
-      ease: "none",
-    },
-    "<"
-  );
 });
