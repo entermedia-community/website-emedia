@@ -35,7 +35,12 @@
   
   <property id="time" index="true" editable="true" stored="true"  viewtype="datetime" datatype="date" >New
     <name>
-      <language id="en"><![CDATA[Date]]></language>
+      <language id="en"><![CDATA[Meeting Date]]></language>
+    </name>
+  </property>
+  <property id="requestdate" index="true" editable="true" stored="true"  viewtype="datetime" datatype="date" >New
+    <name>
+      <language id="en"><![CDATA[Request Date]]></language>
     </name>
   </property>
   <property id="meetingdepartment" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">

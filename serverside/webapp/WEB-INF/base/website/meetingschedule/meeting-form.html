@@ -1,6 +1,4 @@
-<div class="modal fade" id="meetingModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-  aria-labelledby="meetingModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="space-2" id="contact">
         <div class="mb-4 w-md-80 mx-md-auto text-center">
@@ -11,7 +9,7 @@
           style="right: 8px;top:8px;position: absolute;">
           <i class="fas fa-times"></i>
         </button>
-        <form class="container js-validate" action="/website/app/components/schedulemeeting/save.html" method="post">
+        <form class="container js-validate form-request" action="/meetingschedule/save.html" method="post">
           <div class="w-md-80 mx-md-auto">
             <div class="row mx-n2 mb-3">
               <div class="col-sm-6 px-2">
@@ -56,15 +54,15 @@
 					<input type="hidden" name="field" value="meetingdepartment" />
                   <div class="form-check form-check-inline">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="sales" class="custom-control-inputX" value="meetingdepartment.value" value="sales" >
-                      <label class="custom-control-labelX" for="sales" value="sales">Sales/Introductions</label>
+                      <input type="radio" id="salesm" class="custom-control-inputX" name="meetingdepartment.value" value="sales" checked >
+                      <label class="custom-control-labelX" for="salesm" value="sales">Sales/Introductions</label>
                     </div>
                  
                   </div>
                   <div class="form-check form-check-inline">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="marketing" class="custom-control-inputX" name="meetingdepartment.value" value="support">
-                      <label class="custom-control-labelX" for="support">Technical Support</label>
+                      <input type="radio" id="supportm" class="custom-control-inputX" name="meetingdepartment.value" value="support">
+                      <label class="custom-control-labelX" for="supportm">Technical Support</label>
                     </div>
                   </div>
                 </div>
@@ -98,10 +96,16 @@
               </div>
             </div>
             <button type="submit" class="btn btn-sm btn-primary" style="width: 150px">Submit</button>
-          </div>
+          
           <input name="save"  type="hidden" value="true" />
+          
+          <input type="hidden" name="name" value="" />
+          <input class="form-field-email" type="text" name="email" value="" />
+          </div>
+          $context.putSessionValue("clientform", "meetingrequest")
         </form>
       </div>
     </div>
-  </div>
 </div>
+
+
