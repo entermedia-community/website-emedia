@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+  <property id="name"/>
+  <property id="lastchecked"/>
+  <property id="monitoringstatus"/>
+  
+  
+   <property id="servermemory" />
+  <property id="loadaverage"  />
+  <property id="heapusedpercent"  />
+ 
+  <property id="heapused"  />
+   <property id="disktotal" />
+    <property id="diskfree" />
+    <property id="diskavailable"/>
+  
+  
+  
+</root>

@@ -1,0 +1,10 @@
+<page>
+	
+	<path-action name="DataEditModule.saveData" allowduplicates="true" >
+			<searchtype>clientmeeting</searchtype>
+    </path-action>
+	
+	<property name="reloadprofile">true</property>
+
+			
+</page>

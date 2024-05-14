@@ -7,5 +7,10 @@
   <property name="applicationid">website</property>
   
   
+  <path-action name="Admin.autoLogin"/>
+  <path-action name="MediaArchiveModule.loadApplicationId"/>
+  <path-action name="MediaArchiveModule.loadComponentHome" />
+  
 
+  
 </page>

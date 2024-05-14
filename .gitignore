@@ -1,1 +1,10 @@
 .DS_store
+serverside/webapp/WEB-INF/data/
+
+serverside/webapp/WEB-INF/temp/
+
+serverside/etc/
+
+logs/
+
+serverside/webapp/website/find/components/javascript/index.js

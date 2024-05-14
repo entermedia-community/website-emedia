@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <page>
-	<property name="eclipsepath">/home/cristobal/eclipse/eclipse</property>
-	<property name="local">true</property>
+	<property name="localopencommand">/home/cristobal/eclipse/eclipse</property>
+
 
 
   <path-action name="MediaArchiveModule.loadApplicationId" />

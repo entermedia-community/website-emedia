@@ -9,8 +9,8 @@
   <div class="header-section">
     <div id="logoAndNav" class="container-fluid">
       <nav class="js-mega-menu navbar navbar-expand-lg">
-        <a class="navbar-brand" href="$applink/index.html" aria-label="Entermedia">
-          <img src="$applink/assets/images/logo.png" alt="Entermedia" />
+        <a class="navbar-brand" href="$sitelink/index.html" aria-label="Entermedia">
+          <img src="$sitelink/assets/images/logo.png" alt="Entermedia" />
         </a>
         <!-- <button type="button" class="btn btn-xs btn-soft-secondary text-white ml-3" data-toggle="modal" data-target="#meetingModal">
           <i class="far fa-calendar-alt mr-1"></i>
@@ -35,16 +35,16 @@
           <div class="navbar-body header-abs-top-inner">
             <ul class="navbar-nav">
               <li class="navbar-nav-item">
-                <a class="nav-link #if($collectivesection == 'features') active #end" href="$applink/features.html">Features</a>
+                <a class="nav-link #if($collectivesection == 'features') active #end" href="$sitelink/features.html">Features</a>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link #if($collectivesection == 'hosting') active #end" href="$applink/hosting.html">Hosting</a>
+                <a class="nav-link #if($collectivesection == 'hosting') active #end" href="$sitelink/hosting.html">Hosting</a>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link #if($collectivesection == 'pricing') active #end" href="$applink/pricing.html">Pricing</a>
+                <a class="nav-link #if($collectivesection == 'pricing') active #end" href="$sitelink/pricing.html">Pricing</a>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link #if($collectivesection == 'documentation') active #end" href="$applink/documentation.html">Documentation</a>
+                <a class="nav-link #if($collectivesection == 'documentation') active #end" href="$sitelink/documentation.html">Documentation</a>
               </li>
               <li class="hs-has-mega-menu navbar-nav-item"
                 data-hs-mega-menu-item-options='{
@@ -63,7 +63,7 @@
                     <div class="navbar-promo-card navbar-promo-item">
                       <a class="navbar-promo-link" href="https://em11.entermediadb.org/videoproduction/find">
                         <div class="media align-items-center">
-                          <img class="navbar-promo-icon" src="$applink/assets/images/video.svg" />
+                          <img class="navbar-promo-icon" src="$sitelink/assets/images/video.svg" />
                           <div class="media-body">
                             <span class="navbar-promo-title">Video Production</span>
                             <span class="navbar-promo-text">Video and Photography Production</span>
@@ -74,7 +74,7 @@
                     <div class="navbar-promo-card navbar-promo-item">
                       <a class="navbar-promo-link" href="https://em11.entermediadb.org/hub/find">
                         <div class="media align-items-center">
-                          <img class="navbar-promo-icon" src="$applink/assets/images/media.svg" />
+                          <img class="navbar-promo-icon" src="$sitelink/assets/images/media.svg" />
                           <div class="media-body">
                             <span class="navbar-promo-title">Media Hubs</span>
                             <span class="navbar-promo-text">Marketplace app demo</span>
@@ -87,7 +87,7 @@
                     <div class="navbar-promo-card navbar-promo-item">
                       <a class="navbar-promo-link" href="https://em11.entermediadb.org/products/find">
                         <div class="media align-items-center">
-                          <img class="navbar-promo-icon" src="$applink/assets/images/product.svg" />
+                          <img class="navbar-promo-icon" src="$sitelink/assets/images/product.svg" />
                           <div class="media-body">
                             <span class="navbar-promo-title">Product Hub</span>
                             <span class="navbar-promo-text">Product Information Databases</span>
@@ -98,7 +98,7 @@
                     <div class="navbar-promo-card navbar-promo-item">
                       <a class="navbar-promo-link" href="https://em11.entermediadb.org/finder/find">
                         <div class="media align-items-center">
-                          <img class="navbar-promo-icon" src="$applink/assets/images/marketing.svg" />
+                          <img class="navbar-promo-icon" src="$sitelink/assets/images/marketing.svg" />
                           <div class="media-body">
                             <span class="navbar-promo-title">Marketing Hub</span>
                             <span class="navbar-promo-text">Marketing Departments</span>
@@ -115,14 +115,23 @@
                     <i class="far fa-calendar-alt"></i>
                     <span class="ml-1">Schedule a Meeting</span>                  
                   </button> 
-                  <a class="btn btn-xs btn-soft-secondary text-white m-1 #if($collectivesection == 'login') active #end" href="$applink/login.html">
+                  #if($user)
+                  <a class="btn btn-xs btn-soft-secondary text-white m-1 #if($collectivesection == 'login') active #end" 
+                  	href="$sitelink/app/authentication/logout.html">
+                    <i class="fas fa-user"></i>
+                    <span>Logout</span>
+                  </a>
+                  #else
+                  <a class="btn btn-xs btn-soft-secondary text-white m-1 #if($collectivesection == 'login') active #end" 
+                  	href="$sitelink/app/authentication/login.html">
                     <i class="fas fa-user"></i>
                     <span>Login</span>
                   </a>
-                  <a class="btn btn-xs btn-soft-secondary text-white m-1 #if($collectivesection == 'signup') active #end" href="$applink/signup.html">
+                  <a class="btn btn-xs btn-soft-secondary text-white m-1 #if($collectivesection == 'signup') active #end" href="$sitelink/signup.html">
                     <i class="fas fa-user-plus"></i>
                     <span>Signup</span>
                   </a>
+                  #end
                 </div>
               </li> 
             </ul>
@@ -133,3 +142,6 @@
   </div>
 </header>
 <div class="padder"></div>
+
+
+
