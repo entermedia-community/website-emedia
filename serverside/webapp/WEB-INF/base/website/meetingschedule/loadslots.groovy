@@ -16,6 +16,9 @@ MediaArchive archive = context.getPageValue("mediaarchive");
 	List nextthree = new ArrayList();
 	
 	int day = 0;
+	if(now.get(Calendar.HOUR_OF_DAY) > 9) {
+		day = 1; //starts next day
+	}
 	while(nextthree.size() < 3 && day < 14)
 	{
 		today1.set(Calendar.DAY_OF_YEAR,now.get(Calendar.DAY_OF_YEAR) + day);
