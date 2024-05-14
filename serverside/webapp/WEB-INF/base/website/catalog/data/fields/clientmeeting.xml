@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties beanname="dataSearcher" prefix="clientinvoice"> 
+<properties beanname="dataSearcher" > 
   <property id="id" index="true" internalfield="true" editable="true" stored="true" sortable="true" filter="false" keyword="false">New
     <name> 
       <language id="de"><![CDATA[Id]]></language>  
@@ -33,12 +33,12 @@
     </name> 
   </property>  
   
-  <property id="time" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="date" autocreatefromexif="false" keyword="false" writenametoexif="false">New
+  <property id="time" index="true" editable="true" stored="true"  viewtype="datetime" datatype="date" >New
     <name>
       <language id="en"><![CDATA[Date]]></language>
     </name>
   </property>
-  <property id="meetingdepartment" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New
+  <property id="meetingdepartment" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">
     <name> 
       <language id="en"><![CDATA[Meeting Department]]></language> 
     </name> 
@@ -46,11 +46,6 @@
   <property id="user" index="true" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false">New
     <name> 
       <language id="en"><![CDATA[User]]></language> 
-    </name> 
-  </property>  
-  <property id="librarycollection" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="false" filter="false" multilanguage="false" deleted="false" datatype="list" autocreatefromexif="false" keyword="false" writenametoexif="false" listid="librarycollection">New
-    <name> 
-      <language id="en"><![CDATA[Collection ID]]></language> 
     </name> 
   </property>  
 </properties>

@@ -56,14 +56,15 @@
 					<input type="hidden" name="field" value="meetingdepartment" />
                   <div class="form-check form-check-inline">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="sales" class="custom-control-input" name="meetingdepartment.value" checked>
-                      <label class="custom-control-label" for="sales" value="sales">Sales</label>
+                      <input type="radio" id="sales" class="custom-control-inputX" value="meetingdepartment.value" value="sales" >
+                      <label class="custom-control-labelX" for="sales" value="sales">Sales/Introductions</label>
                     </div>
+                 
                   </div>
                   <div class="form-check form-check-inline">
                     <div class="custom-control custom-radio">
-                      <input type="radio" id="marketing" class="custom-control-input" name="meetingdepartment.value" value="marketing">
-                      <label class="custom-control-label" for="support">Support</label>
+                      <input type="radio" id="marketing" class="custom-control-inputX" name="meetingdepartment.value" value="support">
+                      <label class="custom-control-labelX" for="support">Technical Support</label>
                     </div>
                   </div>
                 </div>
@@ -76,9 +77,9 @@
 					<input type="hidden" name="field" value="time" />
                   <select class="form-control custom-select" name="time.value" required
                     data-msg="Please select a time slot." id="timeSlot">
-                    <option value="2024-04-10T09:00:00">April 10, 2024 at 9:00 AM</option>
-                    <option value="2024-04-10T10:00:00">April 10, 2024 at 10:00 AM</option>
-                    <option value="2024-04-10T11:00:00">April 10, 2024 at 11:00 AM</option>
+                    #foreach( $date in $founddays)
+                    <option value="$mediaarchive.getDateStorageUtil().formatForStorage($date)">$context.getDateTime($date)</option>
+                    #end
                     <option value="custom">Other (subject to availability)</option>
                   </select>
                 </div>
