@@ -505,6 +505,7 @@ main#documentation {
   justify-content: center;
   overflow: hidden;
   background-color: #0c223b;
+  position: relative;
   /* background-size: 10px 10px;
   background-image: repeating-linear-gradient(
     45deg,
@@ -580,6 +581,7 @@ svg #images image {
   transition: opacity 0.25s ease-in-out;
 }
 svg #images image.glow {
+  opacity: 1;
   -webkit-filter: drop-shadow(0 0 10px #30aad6);
   filter: drop-shadow(0 0 10px #30aad6);
   animation: fadeIn 0.5s ease-in-out forwards;
@@ -594,5 +596,40 @@ svg #images image.glow {
   }
 }
 
-.form-request { position: relative; z-index: 2;}
-.form-field-email { position:absolute; left: -1000px; z-index: 1;}
+.form-request {
+  position: relative;
+  z-index: 2;
+}
+.form-field-email {
+  position: absolute;
+  left: -1000px;
+  z-index: 1;
+}
+.captions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.captions > div {
+  position: relative;
+  height: 200px;
+}
+.captions > div .candidate {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+#test {
+  text-align: center;
+}
+.captionText {
+  stroke-width: 1;
+  stroke: #000;
+  fill: #fff;
+  filter: drop-shadow(0 0 4px #000);
+}
