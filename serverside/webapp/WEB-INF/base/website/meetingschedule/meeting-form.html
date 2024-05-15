@@ -1,6 +1,6 @@
 <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
-      <div class="space-2" id="contact">
+      <div class="space-2 overflow-y" id="contact">
         <div class="mb-4 w-md-80 mx-md-auto text-center">
           <h2>Get to Know Us</h2>
           <p class="lead fw-thin">Schedule a meeting with our team to discuss your project</p>
@@ -73,8 +73,7 @@
                 </p>
                 <div class="form-group"> 
 					<input type="hidden" name="field" value="time" />
-                  <select class="form-control custom-select" name="time.value" required
-                    data-msg="Please select a time slot." id="timeSlot">
+                  <select class="form-control custom-select" id="meetingtime" name="time.value" required data-msg="Please select a time slot." >
                     #foreach( $date in $founddays)
                     <option value="$mediaarchive.getDateStorageUtil().formatForStorage($date)">$context.getDateTime($date)</option>
                     #end
@@ -83,7 +82,7 @@
                 </div>
                 <div class="collapse" id="customTimeSlot">
                   <div class="w-100">
-                    <input id="datetimepicker" type="text">
+                    <input id="datetimepicker" name="customtime.value" type="text">
                   </div>
                 </div>
               </div>
@@ -101,11 +100,13 @@
           
           <input type="hidden" name="name" value="" />
           <input class="form-field-email" type="text" name="email" value="" />
+          
+          
           </div>
           $context.putSessionValue("clientform", "meetingrequest")
         </form>
       </div>
     </div>
 </div>
-
+<script src="$sitelink/assets/js/meetingform.js"></script>
 

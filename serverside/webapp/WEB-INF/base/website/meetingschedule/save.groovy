@@ -51,6 +51,11 @@ public void init() {
 	meeting.setProperty("requestdate", DateStorageUtil.getStorageUtil().formatForStorage(new Date())); 
 	meetingsearcher.saveData(meeting);
 	String[] fields = context.getRequestParameters("field");
+	String time = context.getRequestParameter("customtime.value");
+	if (time == null ) {
+		time = context.getRequestParameter("time.value");
+	}
+	context.setRequestParameter("time.value", time);
 	meetingsearcher.updateData(context,fields, meeting);
 	meetingsearcher.saveData(meeting);
 	log.info("Saving Meeting Schedule Request");	
@@ -62,7 +67,7 @@ public void init() {
 	htmlfields.put("email", context.getRequestParameter("email.value"));
 	htmlfields.put("notes", context.getRequestParameter("notes.value"));
 	htmlfields.put("department", context.getRequestParameter("meetingdepartment.value"));
-	htmlfields.put("date", context.getRequestParameter("time.value"));
+	htmlfields.put("date", time);
 	//Message requester info
 	context.putPageValue("messagetime", new Date() );
 	context.putPageValue("fields", htmlfields);
