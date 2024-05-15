@@ -32,7 +32,7 @@ public void init() {
 
 	MediaArchive archive = context.getPageValue("mediaarchive");
 	Boolean valid = true;
-	String field1 = context.getRequestParameter("name");
+	String field1 = context.getRequestParameter("username"); //Fake fields for spamm control
 	if(field1 != null) {
 		valid = false;
 	}
