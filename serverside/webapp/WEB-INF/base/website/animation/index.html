@@ -9,8 +9,8 @@
       </filter>
     </defs> -->
 
-    <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg1" />
-    <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0" id="bg2" />
+    <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0.05" id="bg1" class="anBG" />
+    <image href="$applink/animation/images/bg.png" x="-480" y="-270" width="2880" height="1620"  opacity="0.05" id="bg2" class="anBG" />
 
     <g id="spirals" >
       <path id="f4" class="st0" d="M963.6,558c0,0,43.2-187.9-144.2-231.4S588.6,470.5,588.6,470.5" />
@@ -69,15 +69,20 @@
 
     <g id="introHero" opacity="0"> 
         <path d="M590,540 h740 a36,36 0 0 1 36,36 v340 a36,36 0 0 1 -36,36 h-740 a36,36 0 0 1 -36,-36 v-340 a36,36 0 0 1 36,-36 z" fill="rgba(32,97,172,0.05)" opacity="0.75"  />
-        <text x="680" y="640" fill="white" font-size="50" font-family="Roboto, Arial, sans-serif" font-weight="600">The Smart</text>
-        <text id="organize" x="930" y="640" fill="white" font-size="50" font-family="Roboto, Arial, sans-serif" font-weight="600">File Organizer</text>
+        <text x="640" y="640" fill="white" font-size="50" font-family="Roboto, Arial, sans-serif" font-weight="600">eMedia Smart File Organizer</text>
         <text x="590" y="720" fill="white" font-size="24" font-family="Roboto, Arial, sans-serif">Easy storing and searching of files helps everyone take control of their</text>
         <text x="650" y="750" fill="white" font-size="24" font-family="Roboto, Arial, sans-serif">file storage with an easy to use platform and methodology</text>
         <text x="600" y="850" fill="white" font-size="20" font-family="Roboto, Arial, sans-serif">We believe in autonomous ownership of media files. Protecting creative files from</text>
         <text x="640" y="875" fill="white" font-size="20" font-family="Roboto, Arial, sans-serif">censorship or unauthorized use. See</text>
         <a href="#" class=""><text x="968" y="875" fill="#377dff" font-size="20" font-family="Roboto, Arial, sans-serif">Community Projects</text></a>
         <text x="1153" y="875" fill="white" font-size="20" font-family="Roboto, Arial, sans-serif">in action</text>
-    </g> 
+    </g>  
+    <!-- <rect width="740" height="120" rx="13" fill="rgba(32,97,172,0.05)" opacity="0.75"/> -->
+    <g id="caption">
+      <text class="captionText" id="introHeroSolo" x="640" y="600" font-size="50" fill="#f2f2f2" font-family="Roboto, Arial, sans-serif" font-weight="700">eMedia Smart File Organizer</text> 
+      <text class="captionText" id="introHeroSolo1" x="630" y="600" font-size="40" fill="#f2f2f2" font-family="Roboto, Arial, sans-serif" font-weight="700" opacity="0">Create custom folders for your needs</text>
+      <text class="captionText" id="introHeroSolo2" x="630" y="600" font-size="40" fill="#f2f200" font-family="Roboto, Arial, sans-serif" font-weight="700" opacity="0">Create custom folders for your needs</text>
+    </g>
     <!-- <circle cx="588" cy="470" r="10" fill="#377dff" />
     <circle cx="1320" cy="395" r="10" fill="#ff7d37" />
     <circle cx="1250" cy="830" r="10" fill="#37ff7d" />
