@@ -524,13 +524,21 @@ main#documentation {
     background-size: 15px 15px;
   }
 }
+@media screen and (max-width: 600px) {
+  #animation-container {
+    height: 600px;
+  }
+  .backdrop-rect {
+    display: none;
+  }
+}
 text#intro {
   fill: #fff;
   font: bold 72px Arial;
 }
 svg#animation {
   width: 100%;
-  min-width: 700px;
+  min-width: 800px;
   height: 100%;
 }
 #emedia {
@@ -620,50 +628,56 @@ svg #images image.glow {
 }
 .captions > div .candidate {
   position: absolute;
-.overflow-x,
-.overflow-y,
-.overflow-xy,
-.scrollview,
-.table-autoresize-inner,
-.emselectablemodule {
-  scrollbar-width: thin;
-  scrollbar-color: #8090b3 #efefef;
-}
-.overflow-x::-webkit-scrollbar,
-.overflow-y::-webkit-scrollbar,
-.overflow-xy::-webkit-scrollbar,
-.scrollview::-webkit-scrollbar,
-.table-autoresize-inner::-webkit-scrollbar,
-.emselectablemodule::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background-color: #efefef;
-}
-.overflow-x::-webkit-scrollbar-thumb,
-.overflow-y::-webkit-scrollbar-thumb,
-.overflow-xy::-webkit-scrollbar-thumb,
-.scrollview::-webkit-scrollbar-thumb,
-.table-autoresize-inner::-webkit-scrollbar-thumb,
-.emselectablemodule::-webkit-scrollbar-thumb {
-  background-color: #8090b3;
-}
-.overflow-x::-webkit-scrollbar-track,
-.overflow-y::-webkit-scrollbar-track,
-.overflow-xy::-webkit-scrollbar-track,
-.scrollview::-webkit-scrollbar-track,
-.table-autoresize-inner::-webkit-scrollbar-track,
-.emselectablemodule::-webkit-scrollbar-track {
-  background-color: #efefef;
-}
-.modal-content {
-	height: 100%!important;
-	
-}
-.modal-content .space-2 {
-	overflow-y: auto!important;
-}
-.form-request { position: relative; z-index: 2;}
-.form-field-email { position:absolute; left: -1000px; z-index: 1;}
+  .overflow-x,
+  .overflow-y,
+  .overflow-xy,
+  .scrollview,
+  .table-autoresize-inner,
+  .emselectablemodule {
+    scrollbar-width: thin;
+    scrollbar-color: #8090b3 #efefef;
+  }
+  .overflow-x::-webkit-scrollbar,
+  .overflow-y::-webkit-scrollbar,
+  .overflow-xy::-webkit-scrollbar,
+  .scrollview::-webkit-scrollbar,
+  .table-autoresize-inner::-webkit-scrollbar,
+  .emselectablemodule::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #efefef;
+  }
+  .overflow-x::-webkit-scrollbar-thumb,
+  .overflow-y::-webkit-scrollbar-thumb,
+  .overflow-xy::-webkit-scrollbar-thumb,
+  .scrollview::-webkit-scrollbar-thumb,
+  .table-autoresize-inner::-webkit-scrollbar-thumb,
+  .emselectablemodule::-webkit-scrollbar-thumb {
+    background-color: #8090b3;
+  }
+  .overflow-x::-webkit-scrollbar-track,
+  .overflow-y::-webkit-scrollbar-track,
+  .overflow-xy::-webkit-scrollbar-track,
+  .scrollview::-webkit-scrollbar-track,
+  .table-autoresize-inner::-webkit-scrollbar-track,
+  .emselectablemodule::-webkit-scrollbar-track {
+    background-color: #efefef;
+  }
+  .modal-content {
+    height: 100% !important;
+  }
+  .modal-content .space-2 {
+    overflow-y: auto !important;
+  }
+  .form-request {
+    position: relative;
+    z-index: 2;
+  }
+  .form-field-email {
+    position: absolute;
+    left: -1000px;
+    z-index: 1;
+  }
 
   left: 50%;
   transform: translateX(-50%);
@@ -672,8 +686,16 @@ svg #images image.glow {
   text-align: center;
 }
 .captionText {
-  stroke-width: 1;
-  stroke: #000;
+  /* stroke-width: 1; */
+  /* stroke: #000; */
   fill: #fff;
-  filter: drop-shadow(0 0 4px #000);
+  filter: drop-shadow(0 0 4px #30aad6) drop-shadow(4px 4px 0 #000);
+}
+.gradient-bg {
+  height: 50px;
+  background: linear-gradient(to bottom, transparent 0%, #0f2747 100%);
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
 }

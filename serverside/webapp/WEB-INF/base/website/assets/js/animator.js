@@ -75,16 +75,26 @@ document.addEventListener("DOMContentLoaded", function () {
   initTL.set("#images", { opacity: 1 });
   initTL.set("#folders", { opacity: 1 });
 
-  initTL.to("#introHeroSolo", { opacity: 0, duration: 0.5 });
+  initTL.to("#intro_1", { opacity: 0, duration: 0.5 });
+  initTL.to("#intro_rect", { opacity: 0, duration: 0.5 }, "<");
 
-  initTL.to("#introHeroSolo1", { opacity: 1, duration: 0.5 }, "+=2.2");
-  initTL.to("#introHeroSolo1", { opacity: 0, duration: 0.5 }, "+=4");
+  initTL.to("#intro_2", { opacity: 1, duration: 0.5 }, "+=2.2");
+  initTL.to("#intro_rect", { opacity: 1, duration: 0.5 }, "<");
 
-  initTL.to("#introHeroSolo2", { opacity: 1, duration: 0.5 }, "+=1");
-  initTL.to("#introHeroSolo2", { opacity: 0, duration: 0.5 }, "+=3");
+  initTL.to("#intro_2", { opacity: 0, duration: 0.5 }, "+=4");
+  initTL.to("#intro_rect", { opacity: 0, duration: 0.5 }, "<");
 
-  initTL.to("#introHeroSolo3", { opacity: 1, duration: 0.5 }, "+=1");
-  initTL.to("#introHeroSolo3", { opacity: 0, duration: 0.5 }, "+=2");
+  initTL.to("#intro_3", { opacity: 1, duration: 0.5 }, "+=1");
+  initTL.to("#intro_rect", { opacity: 1, duration: 0.5 }, "<");
+
+  initTL.to("#intro_3", { opacity: 0, duration: 0.5 }, "+=3");
+  initTL.to("#intro_rect", { opacity: 0, duration: 0.5 }, "<");
+
+  initTL.to("#intro_4", { opacity: 1, duration: 0.5 }, "+=1");
+  initTL.to("#intro_rect", { opacity: 1, duration: 0.5 }, "<");
+
+  initTL.to("#intro_4", { opacity: 0, duration: 0.5 }, "+=2");
+  initTL.to("#intro_rect", { opacity: 0, duration: 0.5 }, "<");
 
   var images = document.querySelectorAll("#images image");
 
