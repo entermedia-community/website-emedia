@@ -2,10 +2,13 @@
 
 <page>
   <property name="catalogid">website/catalog</property>
-  <property name="fallbackdirectory">/WEB-INF/base/eminstitute/mediadb</property>
+  <property name="fallbackdirectory">/WEB-INF/base/mediadb</property>
   <property name="applicationid">website/mediadb</property>
   <property name="title">Site Manager</property>
   <permission name="view">
-    <group id="administrators"/>
+  	<or>
+  	<group id="administrators"/>
+  	<user />
+  	</or>	
   </permission>
 </page>
