@@ -23,7 +23,9 @@ $(document).ready(function () {
       $('.js-inline-video-player').each(function() {
         var videoPlayer = new HSVideoPlayer($(this)).init();
       });
-     
+      $(".up-login").click(function(){
+	      $(this).parent().parent().find('.collapse').toggle(); // toggle collapse
+	    });
 
       AOS.init({
         duration: 600,

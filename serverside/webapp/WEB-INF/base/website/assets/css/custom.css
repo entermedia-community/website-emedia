@@ -699,3 +699,8 @@ svg #images image.glow {
   top: -50px;
   width: 100%;
 }
+
+
+.login-area .text-error {
+	background-color: #660000;
+}
