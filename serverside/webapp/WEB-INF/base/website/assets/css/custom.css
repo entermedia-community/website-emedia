@@ -319,9 +319,18 @@ code {
 .js-header-fix-moment .action-btn i.fas {
   margin-right: 0;
 }
-main#documentation {
+.documentation {
   margin-top: 72px;
+  color: #111;
 }
+.documentation h1,
+.documentation h2,
+.documentation h3,
+.documentation h4 {
+	color: #000;
+	margin: 0.5em 0 1em;
+}
+
 #sidebarNav .dropdown-item {
   white-space: normal;
 }
