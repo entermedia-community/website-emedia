@@ -11,6 +11,5 @@
   <path-action name="MediaArchiveModule.loadApplicationId"/>
   <path-action name="MediaArchiveModule.loadComponentHome" />
   
-
   
 </page>
