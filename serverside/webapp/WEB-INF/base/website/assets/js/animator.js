@@ -50,12 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { y: 50, opacity: 1, duration: 1 },
     "<"
   );
-  // initTL.fromTo(
-  //   "#introHero text",
-  //   { opacity: 0 },
-  //   { opacity: 1, stagger: 0.1, duration: 0.25 },
-  //   "<"
-  // );
   initTL.to("#caption", { y: 100, duration: 1, ease: "expo.in" }, "+=1");
   initTL.to(
     "#emlogo",
@@ -153,8 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "-=4.75"
     );
   });
-
-  // gsap.to("#backdrop", { opacity: 0, duration: 3, delay: 6.5 });
 
   var tl = gsap.timeline({
     ease: "none",
@@ -314,36 +306,4 @@ document.addEventListener("DOMContentLoaded", function () {
       "<"
     );
   });
-  // splitText("#caption1");
-  // splitText("#caption2");
-  var textTl = gsap.timeline();
-  textTl.fromTo(
-    "#caption1",
-    { xPercent: 100 },
-    { xPercent: 0, duration: 1, delay: 1 }
-  );
-  textTl.reverse();
-  // textTl.fromTo(
-  //   "#caption2",
-  //   { opacity: 0, xPercent: 100 },
-  //   { opacity: 1, xPercent: 0, duration: 1, delay: 3 }
-  // );
-  // textTl.fromTo(
-  //   "#caption2 span",
-  //   { opacity: 0 },
-  //   { opacity: 1, stagger: 0.1, duration: 0.25, delay: 3 },
-  //   "<"
-  // );
 });
-
-function splitText(selector) {
-  var text = document.querySelector(selector);
-  var textContent = text.textContent;
-  var textArray = textContent.split("");
-  var newText = textArray
-    .map(function (letter) {
-      return "<span>" + letter + "</span>";
-    })
-    .join("");
-  text.innerHTML = newText;
-}
