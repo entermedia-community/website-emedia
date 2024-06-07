@@ -755,3 +755,12 @@ svg #images image.glow {
 .login-area .text-error {
   background-color: #660000;
 }
+
+
+.userchatbox .chatterbox {
+	height: 100%;
+}
+.chatterbox-messages {
+    height: calc(100% - 68px);
+    min-height: 250px;
+}
