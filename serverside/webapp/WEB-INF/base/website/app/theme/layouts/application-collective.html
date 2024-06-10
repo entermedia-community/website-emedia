@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="$sitelink/assets/css/theme.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="$sitelink/assets/css/aos.css" />
+  <link rel="stylesheet" href="$sitelink/assets/css/profile.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/custom.css" />
   
   	$pages.include("/${applicationid}/theme/layouts/includes.html")
@@ -58,16 +59,11 @@
 	>
 	
 	<div id="applicationcontent" class="applicationcontent applicationcollective #if($browser.inApp()) inapp #end">
-		#set( $usersidebarhidden = $userprofile.get("usersidebarhidden"))
-		#if (!$usersidebarhidden)
-			#set( $usersidebarhidden = 'false') 
-		#end
-		
 		#if($canviewsettings && !$browser.inApp())
 			##$pages.include("$apphome/components/sidebars/user/index.html")
 		#end
 		
-		<div class="emrightcontent #if($user && $usersidebarhidden == 'false') empushcontent #end emmaincontent" >
+		<div class="emrightcontent emmaincontent" >
             $pages.includeContent()
         </div>
     </div>
