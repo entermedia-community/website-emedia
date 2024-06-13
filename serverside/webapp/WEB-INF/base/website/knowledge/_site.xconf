@@ -21,7 +21,7 @@
   <path-action alltypes="true" name="MediaArchiveModule.getMediaArchive"/>
   
   <property name="section">knowledge</property>
-  
-  <property name="collectivesection">docs</property>
+
+  <property name="collectivesection">documentation</property>
   
 </page>
