@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<properties> 
+<properties beanname="dataSearcher"> 
   <property id="post_title" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
       <language id="en"><![CDATA[post_title]]></language> 
