@@ -8,7 +8,7 @@
   <property name="applicationid">website/knowledge</property>
   <property name="catalogid">website/catalog</property>
   
-  <property name="fallbackdirectory">/WEB-INF/base/website/app/knowledge</property>
+  <property name="fallbackdirectory">/WEB-INF/base/website/knowledge</property>
   
   <inner-layout>${applicationid}/layout.html</inner-layout> 
     
