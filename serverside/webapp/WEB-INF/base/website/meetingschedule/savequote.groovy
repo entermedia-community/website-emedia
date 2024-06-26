@@ -14,7 +14,7 @@ public void init() {
 	
 	//Notify to Email:
 	
-	String notifyemail = "cristobal@entermediadb.org";  //get it from catalog settings?
+	String notifyemail = "sales@entermediadb.org";  //get it from catalog settings?
 	
 	
 	
@@ -54,7 +54,7 @@ public void init() {
 	htmlfields.put("company", context.getRequestParameter("company.value"));
 	htmlfields.put("product", context.getRequestParameter("product.value"));
 	htmlfields.put("month", context.getRequestParameter("month.value"));
-	htmlfields.put("date", time);
+	
 	//Message requester info
 	context.putPageValue("messagetime", new Date() );
 	context.putPageValue("fields", htmlfields);
