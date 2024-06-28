@@ -1,2 +1,60 @@
+#if(!$selecteduser)
+	#set($selecteduser = $user)
+	$context.putPageValue("selecteduser", $selecteduser)
+#end
 
-$pages.include("$apphome/users/index.html", $context)
+#if( $user.getId() == $selecteduser.getId() || $canviewsettings)
+	#set($canedituserinfo = true)
+#end
+
+#set( $userimageurl = $mediaarchive.asLinkToUserProfile($selecteduser) )
+
+#if(!$userimageurl)
+	#set( $userimageurl = "$applink/theme/images/user.svg" )
+#end
+
+
+#set($librarycollection = $mediaarchive.getCachedData("librarycollection", "user1"))
+$context.putPageValue("librarycol", $librarycollection)
+
+<div class="p-2 p-lg-4 mx-auto" style="max-width: 1400px;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8 profile-credentials">
+				<a href="$apphome/users/edit/edit.html?userid=$selecteduser.getId()" 
+					class="btn btn-soft-primary edit-profile emdialog"
+					title="[[Edit User Account]]">
+					<i class="fas fa-edit mr-2"></i>
+					[[Edit Profile]]
+				</a>
+				<img src="$userimageurl" alt="User Image" class="profile-image" />
+				#if( $user)
+				
+					<h1>$!selecteduser.get("firstName") $!selecteduser.get("lastName")</h1>
+				#else
+				
+					<h1>$selecteduser.getAnonNickName()</h1>						
+				#end
+				<a class="email d-flex align-items-center">
+					<i class="fas fa-envelope mr-2"></i>
+					<span>$!selecteduser.get("email")</span>
+				</a>
+				#if($selecteduser.get("companyname"))
+				<p class="position">
+					<i class="fas fa-briefcase mr-2"></i>
+					<span>
+						$!selecteduser.get("companyname")
+					</span>
+				</p>
+				#end
+				
+				##Subscriptions Area TODO
+				##$pages.include("$apphome/account/subscriptions.html", $context)
+				
+			</div>
+			
+			$pages.include("$apphome/account/supportchat.html", $context)
+			
+		</div>
+	</div>
+</div>

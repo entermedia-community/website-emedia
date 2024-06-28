@@ -3,8 +3,8 @@ body {
   font-family: Roboto, sans-serif !important;
 }
 .profile-image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 16px 0;
   object-fit: cover;
   border-radius: 50%;
@@ -76,12 +76,11 @@ h2.pf-chat-header {
 }
 .chat-messages {
   flex: 1;
-  min-height: 400px;
-  max-height: 600px;
+height: calc(100% - 110px);
+max-height: 500px;
   overflow-y: auto;
   padding: 8px;
-  display: flex;
-  flex-direction: column-reverse;
+  
   scrollbar-width: thin;
   scrollbar-color: #2962a1 #13345b;
 }
@@ -117,7 +116,7 @@ h2.pf-chat-header {
   background-color: #377dff;
   color: white;
   display: inline-block;
-  max-width: 80%;
+  max-width: 95%;
 }
 .chat-message-content p {
   margin: 0;
@@ -145,8 +144,8 @@ h2.pf-chat-header {
 }
 .chat-message-content video,
 .chat-message-content img {
-  width: 100%;
-  height: auto;
+ /* width: 100%;
+  height: auto;*/
 }
 .chat-message-content object {
   width: min-content;
@@ -160,3 +159,29 @@ h2.pf-chat-header {
 .chat-input button {
   cursor: pointer;
 }
+
+.chat-author  {
+	flex-direction: column;
+	justify-items: end;
+}
+.chat-author a {
+	color: #ccc;
+}
+.chat-author a:hover {
+	color:#eee;
+	}
+
+.author-icon img {
+	width: 40px;
+	
+}
+
+
+/* PLEASE REORGANIZE CSS */
+.modal-content {
+	 background-color:#0d2847;
+}   
+
+
+
+

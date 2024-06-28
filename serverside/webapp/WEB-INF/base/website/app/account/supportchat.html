@@ -1,0 +1,30 @@
+<div class="col-sm-4">
+	<div class="profile-chat">
+		<h2 class="pf-chat-header">
+			<i class="fas fa-comments mr-2"></i>
+			Support Chat
+		</h2>
+			
+		#set($collectionid = "user1")
+
+		<div class="chatterbox h-100" 
+		data-collectionid="$!collectionid" 
+		data-renderurl="$applink/chatterbox/index.html" 
+		data-rendermessageurl="$applink/chatterbox/message.html"
+		data-channel="$!{currenttopic.getId()}" 
+		data-channeltype="community" 
+		data-user="$!{user.id}" 
+		data-catalogid="$!{catalogid}">
+		</div>
+		
+	</div>
+</div>
+
+			
+			
+			
+			
+			
+			
+
+			
