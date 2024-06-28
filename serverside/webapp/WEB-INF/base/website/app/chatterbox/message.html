@@ -14,8 +14,6 @@
 
 <div id="chatter-message-$chat.id" class="chat-message me">
 	<div class="chat-message-content"> 
-
-		
 		<div class="message-menu">
 		<div class="d-flex align-items-center">
 			<div class="pickemoticon message-menu-link" data-collectionid="$collectionid" data-messageid="$chat.id" data-showurl="$applink/chatterbox/smiles.html" data-toggleurl="$applink/chatterbox/smilessave.html">
@@ -71,6 +69,8 @@
 		</div>
 		<div id="attach-${chat.id}"></div>
 	</div>
+	
+	<div class="chat-msg">
 	
 	<div class="chat-author d-flex pb-1">
 		#set( $userimageurl = $mediaarchive.asLinkToUserProfile($chatuser))
@@ -153,12 +153,13 @@
 			#end
 		</div>
 	#end
-
 	
 		<div class="timestamp">
 			<span class="chat-timestamp">$context.getDateTime($chat.date)</span>
 			<i class="fas fa-check ml-1"></i>
 		</div>
+		
+	</div>
 	</div>
 </div>
 
