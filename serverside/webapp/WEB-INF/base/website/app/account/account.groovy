@@ -16,21 +16,46 @@ public void init()
 	UserProfile userprofile = context.getUserProfile();
 	String  usercollectionid = userprofile.get("usercollection");
 	Data usercollection = null;
-	if(usercollectionid == null) {
+	
+	usercollection = collectionsearcher.searchById(usercollectionid);
+	
+	
+	if(usercollection == null) {
 		//create collection
 		usercollection = collectionsearcher.createNewData();
 		usercollection.setId(user.getId());
+		usercollection.setValue("name", user.getName());
 		usercollection.setValue("owner", user.getId());
 		usercollection.setValue("library","userscollections");
 		collectionsearcher.saveData(usercollection);
 		userprofile.addValue("usercollection", usercollection.getId());
 		log.info("User collection created");
 		
+		//add to librarycollectionusers
+		BaseSearcher lcusearcher = mediaArchive.getSearcher("librarycollectionusers");
+		Data lcu = lcusearcher.createNewData();
+		lcu.setValue("collectionid",usercollection.getId());
+		lcu.setValue("followeruser",user.getId());
+		lcu.setValue("ontheteam",true);
+		lcusearcher.saveData(lcu);
+		
+		//add client Support local user agent
+		
+		String localclientsupportuser = "dienekes";
+		Data lcu2 = lcusearcher.createNewData();
+		lcu2.setValue("collectionid",usercollection.getId());
+		lcu2.setValue("followeruser", localclientsupportuser);
+		lcu2.setValue("ontheteam",true);
+		lcusearcher.saveData(lcu2);
+		
+		
+		//Send Welcome Message
+		
 	}
 	else {
-		 usercollection = collectionsearcher.searchById(usercollectionid);
+		 
 	}
-	context.putPageValue("collection", usercollection);
+	context.putPageValue("librarycol", usercollection);
 	context.putPageValue("collectionid", usercollection.getId());
 	
 	//topic

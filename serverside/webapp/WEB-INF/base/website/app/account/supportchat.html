@@ -5,10 +5,10 @@
 			Support Chat
 		</h2>
 			
-		#set($collectionid = "user1")
+		
 
 		<div class="chatterbox h-100" 
-		data-collectionid="$!collectionid" 
+		data-collectionid="$!librarycol.getId()" 
 		data-renderurl="$applink/chatterbox/index.html" 
 		data-rendermessageurl="$applink/chatterbox/message.html"
 		data-channel="$!{currenttopic.getId()}" 
