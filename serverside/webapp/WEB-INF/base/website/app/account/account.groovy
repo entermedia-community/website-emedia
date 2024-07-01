@@ -56,7 +56,7 @@ public void init()
 		chat.setValue("user", localclientsupportuser);
 		chat.setValue("collectionid", usercollection.getId());
 		chat.setValue("channel", usercollection.getId());
-		cbsearcher.savedata(chat);
+		cbsearcher.saveData(chat);
 		
 	}
 	else {
