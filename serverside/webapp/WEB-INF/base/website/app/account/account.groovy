@@ -50,6 +50,13 @@ public void init()
 		
 		
 		//Send Welcome Message
+		BaseSearcher cbsearcher = mediaArchive.getSearcher("chatterbox");
+		Data chat = cbsearcher.createNewData();
+		chat.setValue("message", "Hello, I'm your account manager. Let me know if you have any questions.");
+		chat.setValue("user", localclientsupportuser);
+		chat.setValue("collectionid", usercollection.getId());
+		chat.setValue("channel", usercollection.getId());
+		cbsearcher.savedata(chat);
 		
 	}
 	else {
