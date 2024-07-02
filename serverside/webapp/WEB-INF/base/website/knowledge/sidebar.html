@@ -6,9 +6,11 @@
 #end
 <div class="mt-5 mt-lg-0 p-2"> 
 	 <h2 class="h4 text-dark mt-3 mb-1">[[Versions]]</h2>  
-		<a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="$sitelink/knowledge/index.html">EnterMedia Library</a>
-		<a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="$sitelink/knowledge/10/index.html">EnterMedia Version 10</a>
-		<a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="$sitelink/knowledge/9/index.html">EnterMedia Version 9</a>
+	 <div class="d-flex " style="flex-direction: column;">
+		<a class='dropdown-item  #if($version  == "project11") current#end' href="$sitelink/knowledge/index.html">EnterMedia Library</a>
+		<a class="dropdown-item " href="$sitelink/knowledge/10/index.html">EnterMedia Version 10</a>
+		<a class="dropdown-item " href="$sitelink/knowledge/9/index.html">EnterMedia Version 9</a>
+	</div>
 </div>
 
 #set( $cats = $mediaarchive.query("postdata_category_learning").match("postdata_project",$version).sort("orderingDown").search() )

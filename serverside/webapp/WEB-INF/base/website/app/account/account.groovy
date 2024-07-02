@@ -10,6 +10,11 @@ import org.openedit.data.Searcher
 public void init()
 {
 
+	if (user == null)
+	{
+		return;
+	}
+
 	MediaArchive mediaArchive = context.getPageValue("mediaarchive");//Search for all files looking for videos
 	
 	BaseSearcher collectionsearcher = mediaArchive.getSearcher("librarycollection");
@@ -56,6 +61,8 @@ public void init()
 		chat.setValue("user", localclientsupportuser);
 		chat.setValue("collectionid", usercollection.getId());
 		chat.setValue("channel", usercollection.getId());
+		Date now = new Date();
+		chat.setValue("date", now);
 		cbsearcher.saveData(chat);
 		
 	}

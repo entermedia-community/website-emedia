@@ -334,6 +334,10 @@ code {
 #sidebarNav .dropdown-item {
   white-space: normal;
 }
+#sidebarNav .current {
+	font-weight: bold;
+	color:#215189;
+}
 .key-ft h3 {
   color: #2a5cab;
 }
