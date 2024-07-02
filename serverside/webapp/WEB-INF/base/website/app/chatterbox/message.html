@@ -11,8 +11,8 @@
 #set( $goal = $goalsinmessages.get($chat.id))
 #set( $chatuser = $mediaarchive.getUser($chat.user) ) 
 
-
-<div id="chatter-message-$chat.id" class="chat-message me">
+ 
+<div id="chatter-message-$chat.id" class="chat-message #if($chatuser == $user.getId())me#end">
 	<div class="chat-message-content"> 
 		<div class="message-menu">
 		<div class="d-flex align-items-center">

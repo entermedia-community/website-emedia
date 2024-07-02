@@ -285,9 +285,17 @@ code {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
-.navbar-nav .nav-link {
+.navbar-nav .nav-link,
+.navbar-nav .btn-xs  {
   font-size: 0.9rem;
   /* font-weight: 700; */
+}
+.navbar-nav .dropdown:hover .dropdown-menu {
+	display: block;
+	left:-10px;
+	}
+.navbar-nav .dropdown-item a {
+	display: block;
 }
 .platforms .card-header {
   padding: 0;

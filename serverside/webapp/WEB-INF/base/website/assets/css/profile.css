@@ -96,7 +96,7 @@ max-height: 500px;
   background-color: #13345b;
 }
 .chat-message {
-  margin: 8px;
+  margin: 12px 6px;
 }
 .chat-message.me {
   text-align: right;

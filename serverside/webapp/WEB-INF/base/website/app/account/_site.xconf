@@ -6,5 +6,7 @@
 	
 	<inner-layout>/website/app/account/layout.html</inner-layout>
 	
-
+	<permission name="view">
+		<userprofile property="viewsettings" equals="true" />
+	</permission>
 </page>
