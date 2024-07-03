@@ -1,7 +1,6 @@
 <page>
 
-    		<!-- move to exact page where needed -->
- 	<script cancel="true" id="chatterbox" src="/website/app/components/chatterbox/chatterbox.js" />
+
 
 <page-action name="Script.run">
 	

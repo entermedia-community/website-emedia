@@ -4,5 +4,11 @@
   <property name="catalogid">website/catalog</property>
   <property name="fallbackdirectory">/WEB-INF/base/mediadb</property>
   <property name="applicationid">website/mediadb</property>
-
+  <property name="title">Site Manager</property>
+  <permission name="view">
+  	<or>
+  	<group id="administrators"/>
+  	<user />
+  	</or>	
+  </permission>
 </page>

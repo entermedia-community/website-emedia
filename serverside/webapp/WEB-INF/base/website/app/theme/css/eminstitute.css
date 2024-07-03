@@ -919,7 +919,7 @@ a.primary:hover .fas {
 }
 
 .chatterbox {
-	
+	height: calc(100% - 120px);
 }
 
 .chatterbox-chat {
@@ -1076,11 +1076,11 @@ a.primary:hover .fas {
 
 .msg-body-content {
 	white-space: pre-wrap;
-	line-height: 1.1rem;
+	line-height: 1rem;
 }
 
 .chatterbox-messages {
-	height: 100%;
+	height: calc(100% - 68px);
 	min-height: 250px;
 
 }
@@ -1097,6 +1097,8 @@ a.primary:hover .fas {
 }
 
 .chat-msg {
+	margin-left: 50px;
+	padding-top: 1px;
 	word-break: break-word;
 }
 
