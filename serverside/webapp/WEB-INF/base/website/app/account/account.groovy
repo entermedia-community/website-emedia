@@ -58,7 +58,7 @@ public void init()
 		//Send Welcome Message
 		BaseSearcher cbsearcher = mediaArchive.getSearcher("chatterbox");
 		Data chat = cbsearcher.createNewData();
-		chat.setValue("message", "Hello, I'm your account manager. Let me know if you have any questions.");
+		chat.setValue("message", "Hi there! I'm Dieneke, your account manager here at eMedia Library. How can I assist you today? Whether you have questions about our services, need help with your account, I'm here to help. Feel free to ask me anything.");
 		chat.setValue("user", localclientsupportuser);
 		chat.setValue("collectionid", usercollection.getId());
 		chat.setValue("channel", usercollection.getId());
