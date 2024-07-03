@@ -19,11 +19,12 @@ public void init()
 	
 	BaseSearcher collectionsearcher = mediaArchive.getSearcher("librarycollection");
 	UserProfile userprofile = context.getUserProfile();
-	String  usercollectionid = userprofile.get("usercollection");
 	Data usercollection = null;
 	
+	String  usercollectionid = userprofile.get("usercollection");
 	usercollection = collectionsearcher.searchById(usercollectionid);
 	
+	log.info("User collection: " + usercollection);
 	
 	if(usercollection == null) {
 		//create collection
