@@ -35,7 +35,7 @@ public void init()
 		usercollection.setValue("library","userscollections");
 		collectionsearcher.saveData(usercollection);
 		userprofile.addValue("usercollection", usercollection.getId());
-		log.info("User collection created");
+		log.info("User collection created: " + usercollection.getId());
 		
 		//add to librarycollectionusers
 		BaseSearcher lcusearcher = mediaArchive.getSearcher("librarycollectionusers");
