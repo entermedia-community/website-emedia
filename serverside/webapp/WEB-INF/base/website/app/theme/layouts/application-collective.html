@@ -17,6 +17,7 @@
 		##$pages.include("/${applicationid}/components/map/includes.html")
 	##end
 
+	<script src="$sitelink/assets/js/datetimepicker.full.min.js"></script>
   <link rel="stylesheet" href="$sitelink/assets/css/font-awesome/all.min.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/hs-mega-menu.min.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/slick.css" />
@@ -35,6 +36,7 @@
 <body id="page-top">
 #if(!$browser.inApp())
 
+	$context.putPageValue("accountpage", "true")
 	$pages.include("/website/views/layouts/header.html", $context)
 
 #end

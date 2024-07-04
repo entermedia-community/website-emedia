@@ -1,23 +1,20 @@
 // File for your custom JavaScript
 
 $(document).ready(function () {
-  var header = new HSHeader($("#header")).init();
-  var megaMenu = new HSMegaMenu($(".js-mega-menu"), {
+  new HSHeader($("#header")).init();
+  new HSMegaMenu($(".js-mega-menu"), {
     desktop: {
       position: "left",
     },
   }).init();
   $(".js-slick-carousel").each(function () {
-    var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+    $.HSCore.components.HSSlickCarousel.init($(this));
   });
   $(".js-go-to").each(function () {
-    var goTo = new HSGoTo($(this)).init();
+    new HSGoTo($(this)).init();
   });
   $(".js-validate").each(function () {
-    var validation = $.HSCore.components.HSValidation.init($(this));
-  });
-  $(".js-inline-video-player").each(function () {
-    var videoPlayer = new HSVideoPlayer($(this)).init();
+    $.HSCore.components.HSValidation.init($(this));
   });
   $(".up-login").click(function () {
     $(this).parent().parent().find(".collapse").toggle(); // toggle collapse
@@ -27,28 +24,6 @@ $(document).ready(function () {
     duration: 600,
     once: true,
   });
-  function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
-    }
-    return array.join("");
-  }
-  function animateOrganize() {
-    var orig = $("#organize").text();
-    var orgArr = orig.split(""); //["O", "r", "g", "a", "n", "i", "z", "e"];
-    var int = setInterval(function () {
-      $("#organize").text(shuffleArray(orgArr));
-    }, 200);
-    setTimeout(function () {
-      clearInterval(int);
-      $("#organize").text(orig);
-    }, 1500);
-  }
-  animateOrganize();
-
   $("a.emdialog").on("click", function (event) {
     event.preventDefault();
     emdialog($(this), event);
@@ -59,7 +34,6 @@ $(document).ready(function () {
       event.stopPropagation();
     }
     var dialog = dialog;
-    var hidescrolling = dialog.data("hidescrolling");
 
     var width = dialog.data("width");
     var maxwidth = dialog.data("maxwidth");
