@@ -948,6 +948,9 @@ h2.pf-chat-header {
 .chat-message.me {
   text-align: right;
 }
+.msg-body-content {
+  text-align: left;
+}
 .chat-message .timestamp {
   font-size: smaller;
   color: #eee;
@@ -989,11 +992,7 @@ h2.pf-chat-header {
   transform: scaleX(-1);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M30,0H.6A.58.58,0,0,0,.18,1L30,30Z' fill='%23294669'/%3E%3C/svg%3E");
 }
-.chat-message-content video,
-.chat-message-content img {
-  /* width: 100%;
-  height: auto;*/
-}
+
 .chat-message-content object {
   width: min-content;
   height: min-content;
@@ -1008,18 +1007,23 @@ h2.pf-chat-header {
 }
 
 .chat-author {
-  flex-direction: column;
-  justify-items: end;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4px;
 }
 .chat-author a {
   color: #ccc;
+  font-size: 0.8rem;
 }
 .chat-author a:hover {
   color: #eee;
 }
 
 .author-icon img {
-  width: 40px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
 /* PLEASE REORGANIZE CSS */
