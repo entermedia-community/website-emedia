@@ -11,13 +11,16 @@
   <link rel="stylesheet" href="$sitelink/assets/css/font-awesome/all.min.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/hs-mega-menu.min.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/slick.css" />
-  <link rel="stylesheet" href="$sitelink/assets/css/bootstrap-custom.css" />
+  <link rel="stylesheet" href="$sitelink/assets/css/theme.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="$sitelink/assets/css/aos.css" />
+  <link rel="stylesheet" href="$sitelink/assets/css/profile.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/custom.css" />
   
   	$pages.include("/${applicationid}/theme/layouts/includes.html")
+  	
 	##$pages.include("/${applicationid}/collective/opengraphmetadata.html", $context)
+	
 	#if($content.usemap == "true")
 		##$pages.include("/${applicationid}/components/map/includes.html")
 	#end
@@ -37,7 +40,7 @@
 #end
 
 <div id="application" 
-	class="eminstitutecollective"
+	class="emedialibraryapplication"
 	data-user="$!user.getId()"
 	data-home="$siteroot"
 	data-siteroot="$siteroot" 

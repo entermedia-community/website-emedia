@@ -7,94 +7,130 @@
 	#set($canedituserinfo = true)
 #end
 
-		<div class="container-fluid py-4">
-    	<div class="row">
-			<div class="col-sm-12 col-lg-5 userchatbox border-right">
-				
-					$pages.include("$apphome/collective/community/chatbox.html", $context)
-				
-			</div>
-			<div class="col-sm-12 col-lg-6">
-				#if($selecteduser)
-					<div class="pl-6">
-					<div class="row no-gutters">
-						<div class="col-sm-12 col-lg-2 sidebarNavCol">
-							#set( $userimageurl = $mediaarchive.asLinkToUserProfile($selecteduser) )
-							#if(!$userimageurl)
-								#set( $userimageurl = "$applink/theme/images/user.svg" )
-							#end
-				
-							<div class="profile-username">
-								<div class="profile-imagecontainer">
-										#if($canedituserinfo)
-											<div class="">
-											<a href="#" id="filePicker" class="" title="[[Upload square image for better results]]">
-													<img src="$userimageurl" alt="$selecteduser.getAnonNickName()" class="profile-userimage" />
-											</a>
-											</div>
-										#else
-											<img src="$userimageurl" alt="$selecteduser.getAnonNickName()" class="profile-userimage" />
-										#end
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 col-lg-9 pl-6">
-							#if( $user)
-							<h3>$!selecteduser.getName()</h3>
-							<i class="far fa-user"></i> $selecteduser.getAnonNickName() &nbsp;
-							<i class="far fa-envelope"></i> $selecteduser.email<br>
-							#else
-							<h4>$selecteduser.getAnonNickName()</h4>						
-							#end
-							
-							
-							#if($canedituserinfo)
-									<form id="uploaddata" 
-										name="wizard" 
-										method="post" 
-										enctype="multipart/form-data"
-										action="$applink/users/uploadsave.html" 
-										>
-										<input type="hidden" name="userid" value="$selecteduser.getId()" />
-										<input type="hidden" name="sourcepath" value="userprofiles/$selecteduser.getId()/" />
-										<input id="upload_field" name="file" type="file" style="position:absolute; top:-1000px;" >
-									</form>
-									<script>
-										$('#upload_field').change(function() {
-										  $('#uploaddata').submit();
-										});
-									</script>
-							#end
-									
-							<div class="">
-									
-											#if( $user  && $selecteduser.getId() != $user.getId())
-												$pages.include("$apphome/users/block/toggle.html")
-												<br>
-											#end
-											#if($canedituserinfo) 
-												<br>
-												<a href="$applink/users/edit/edit.html?userid=$selecteduser.getId()" class="emdialog " title="[[Edit User Profile]]">
-												<i class="fas fa-user"></i> [[Edit Profile]]
-												</a>
-												#if($canviewsettings)
-												<br><a href="$applink/users/preferences/delete.html?userid=$selecteduser.getId()" class="emdialog  " title="[[Delete Account]]">
-												<i class="fas fa-cog"></i> [[Delete Account]]
-												</a>
-												#end
-											#end
-									</div>
-						</div>
-					</div>
-					</div>
-				
-			
+#set( $userimageurl = $mediaarchive.asLinkToUserProfile($selecteduser) )
 
+#if(!$userimageurl)
+	#set( $userimageurl = "$applink/theme/images/user.svg" )
+#end
+
+
+#set($librarycollection = $mediaarchive.getCachedData("librarycollection", "user1"))
+$context.putPageValue("librarycol", $librarycollection)
+
+<div class="p-2 p-lg-4 mx-auto" style="max-width: 1400px;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8 profile-credentials">
+				<a href="$apphome/users/edit/edit.html?userid=$selecteduser.getId()" 
+					class="btn btn-soft-primary edit-profile emdialog"
+					title="[[Edit User Account]]">
+					<i class="fas fa-edit mr-2"></i>
+					[[Edit Profile]]
+				</a>
+				<img src="$userimageurl" alt="User Image" class="profile-image" />
+				#if( $user)
+					<h1>$!selecteduser.getName()</h1>
+				#else
+					<h1>$selecteduser.getAnonNickName()</h1>						
 				#end
+				<a class="email d-flex align-items-center">
+					<i class="fas fa-envelope mr-2"></i>
+					<span>$!selecteduser.get("email")</span>
+				</a>
+				#if($selecteduser.get("companyname"))
+				<p class="position">
+					<i class="fas fa-briefcase mr-2"></i>
+					<span>
+						$!selecteduser.get("companyname")
+					</span>
+				</p>
+				#end
+				<!-- <h2 class="subscriptions">
+					<i class="fas fa-star mr-2"></i>
+					Current Subscriptions
+				</h2> -->
+				<div class="text-center mb-3">
+					<span class="divider divider-text text-white"><i class="fas fa-star mr-2"></i> Current Subscriptions</span>
+				</div>
+				<div class="d-flex flex-column mb-3">
+					<div class="d-flex flex-wrap">
+						<div class="d-flex flex-column flex-grow-1 pr-2 m-1">
+							<p class="sub">
+								Hosted eMediaLibrary Instance
+							</p>
+							<a class="sub-link">
+								<i class="fas fa-external-link-alt mr-2"></i>
+								https://cbc.entermediadb.net/finder
+							</a>
+						</div>
+						<div class="d-flex align-items-center flex-column m-1">
+							<button class="btn btn-soft-primary">
+								<i class="fas fa-file-alt mr-2"></i>
+								[[Invoices]]
+								<span class="badge badge-pill badge-light ml-2">4</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex flex-column mb-3">
+					<div class="d-flex flex-wrap">
+						<div class="d-flex flex-column flex-grow-1 pr-2 m-1">
+							<p class="sub">
+								[[Community Support]]
+							</p>
+							<a class="sub-link">
+								<i class="fas fa-external-link-alt mr-2"></i>
+								https://emedia.openinstitute.org
+							</a>
+						</div>
+						<div class="d-flex align-items-center flex-column m-1">
+							<button class="btn btn-soft-success">
+								<i class="fas fa-check mr-2"></i>
+								Free
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex flex-column mb-3">
+					<div class="d-flex flex-wrap">
+						<div class="d-flex flex-column flex-grow-1 pr-2 m-1">
+							<p class="sub">
+								Basic Hosting Support
+							</p>
+							<small class="text-muted">
+								Includes Major Releases, unlimited upgrades, access to chat and communities
+							</small>
+						</div>
+						<div class="d-flex align-items-center flex-column m-1">
+							<button class="btn btn-soft-success">
+								<i class="fas fa-check mr-2"></i>
+								Included
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="d-flex flex-column mb-3">
+					<div class="d-flex flex-wrap">
+						<div class="d-flex flex-column flex-grow-1 pr-2 m-1">
+							<p class="sub">
+								Extended Support
+							</p>
+							<small class="text-success">
+								Active
+							</small>
+						</div>
+						<div class="d-flex align-items-center flex-column m-1">
+							<button class="btn btn-soft-primary">
+								<i class="fas fa-file-alt mr-2"></i>
+								Invoices
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			$pages.include("$apphome/users/supportchat.html", $context)
+			
+		</div>
 	</div>
-		</div>
-		</div>
 </div>
-
-
-
