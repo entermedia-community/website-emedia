@@ -199,35 +199,10 @@ body {
   font-weight: bold;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #434343;
-  border-color: #434343;
-}
-
 .btn-light {
   color: #111;
   background-color: #f8f9fa;
   border-color: #d3d3d3;
-}
-
-.btn-primary:hover,
-.btn-primary:not([disabled]):not(.disabled).active,
-.btn-primary:not([disabled]):not(.disabled):active,
-.show > .btn-primary.dropdown-toggle {
-  background-color: #000 !important;
-  border-color: #000 !important;
-  color: #fff;
-}
-
-.btn-primary:not([disabled]):not(.disabled).active,
-.btn-primary:not([disabled]):not(.disabled):active,
-.show > .btn-primary.dropdown-toggle,
-.btn-primary.focus,
-.btn-primary:focus,
-.btn.focus,
-.btn:focus {
-  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.5);
 }
 
 .badge-primary {
@@ -392,28 +367,12 @@ a {
   font-size: 0.8rem;
 }
 
-.btn-xs {
-  padding: 0.25rem 0.35rem;
-  font-size: 0.725rem;
-  font-weight: normal;
-  line-height: 1;
-  border-radius: 0.2rem;
-}
-
 .btn-xxs {
   padding: 0.1rem 0.2rem;
   font-size: 0.725rem;
   font-weight: normal;
   line-height: 1.1;
   border-radius: 0.2rem;
-}
-
-.btn-secondary,
-.btn-primary,
-.btn-warning,
-.btn-danger,
-.badge-primary {
-  color: #fff !important;
 }
 
 .btn-lg {
@@ -457,10 +416,6 @@ a {
 .btn-file {
   position: relative;
   overflow: hidden;
-}
-
-.btn-sm {
-  line-height: 1.2;
 }
 
 .form-check-label-right {
@@ -556,10 +511,6 @@ h3 {
 
 .modal-title {
   display: inline-block;
-}
-
-.dropdown-menu {
-  padding: 0;
 }
 
 .dropdown-submenu {
@@ -666,17 +617,6 @@ select.form-control + .select2-container {
   padding: 0 !important;
 }
 
-#header .navbar-toggler {
-  padding: 0.15rem 0.5rem;
-  font-size: 1rem;
-  background-color: #2680a0;
-  margin: 5px 3px;
-  right: 0;
-  top: 0;
-  position: absolute;
-  z-index: 1001;
-}
-
 #header .navbar-collapse.show .navbar-nav {
   margin-top: 10px;
 }
@@ -717,15 +657,6 @@ select.form-control + .select2-container {
   border: 0 none;
 }
 
-#header .dropdown-menu {
-  padding: 0;
-  border: 0;
-}
-
-#header ul.dropdown-menu li {
-  float: none;
-}
-
 #header .navlinks li > a {
   position: relative;
   padding: 0 5px;
@@ -734,11 +665,6 @@ select.form-control + .select2-container {
 
 #header .navlinks li > a:hover {
   text-decoration: none;
-}
-
-#header .navlinks > ul li.dropdown:last-child .dropdown-menu {
-  right: 0;
-  left: auto;
 }
 
 #header .navlinks .dropdown-item {

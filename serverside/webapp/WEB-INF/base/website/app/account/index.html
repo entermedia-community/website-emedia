@@ -15,14 +15,22 @@
 
 <div class="p-2 p-lg-4 mx-auto" style="max-width: 1400px;">
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-8 profile-credentials">
-				<a href="$apphome/users/edit/edit.html?userid=$selecteduser.getId()" 
-					class="btn btn-soft-primary edit-profile emdialog"
-					title="[[Edit User Account]]">
-					<i class="fas fa-edit mr-2"></i>
-					[[Edit Profile]]
-				</a>
+		<div class="row acc-row">
+			<div class="col-sm-12 col-md-8 profile-credentials">
+				<div class="edit-profile d-flex align-items-center">
+					<a href="$apphome/users/edit/edit.html?userid=$selecteduser.getId()" 
+						class="btn btn-xs btn-soft-primary emdialog"
+						title="[[Edit User Account]]">
+						<i class="fas fa-edit mr-2"></i>
+						[[Edit Profile]]
+					</a>
+					<button class="btn btn-xs btn-primary ml-2 d-md-none" type="button" data-toggle="collapse" data-target="#supportchat" aria-controls="supportchat" id="chatToggler">
+						#if($haspendingmessages) ##TODO
+							<span class="mr-1">4</span>
+						#end
+						<i class="fas fa-comment-alt"></i>
+					</button>
+				</div>
 				<img src="$userimageurl" alt="User Image" class="profile-image" />
 				#if( $user)
 				
