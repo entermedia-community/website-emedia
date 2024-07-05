@@ -18,23 +18,20 @@ public void init()
 	MediaArchive mediaArchive = context.getPageValue("mediaarchive");//Search for all files looking for videos
 	
 	BaseSearcher collectionsearcher = mediaArchive.getSearcher("librarycollection");
-	UserProfile userprofile = context.getUserProfile();
-	Data usercollection = null;
 	
-	String  usercollectionid = userprofile.get("usercollection");
-	usercollection = collectionsearcher.searchById(usercollectionid);
+	Data usercollection = mediaarchive.getCachedData("librarycollection", "account"+ user.getId());
 	
 	log.info("User collection: " + usercollection);
 	
 	if(usercollection == null) {
 		//create collection
 		usercollection = collectionsearcher.createNewData();
-		usercollection.setId(user.getId());
+		usercollection.setId("account" + user.getId());
 		usercollection.setValue("name", user.getName());
 		usercollection.setValue("owner", user.getId());
 		usercollection.setValue("library","userscollections");
 		collectionsearcher.saveData(usercollection);
-		userprofile.addValue("usercollection", usercollection.getId());
+
 		log.info("User collection created: " + usercollection.getId());
 		
 		//add to librarycollectionusers
