@@ -71,13 +71,13 @@ public void init()
 	context.putPageValue("collectionid", usercollection.getId());
 	
 	//topic
-	String defaultusertopic = user.getId();
+	String defaultusertopic = "supportchat" + user.getId();
 	BaseSearcher topicsearcher = mediaArchive.getSearcher("collectiveproject");
 	Data currenttopic = topicsearcher.query().exact("id", defaultusertopic).searchOne();
 	if (currenttopic == null) {
 		currenttopic = topicsearcher.createNewData();
 		currenttopic.setValue("parentcollectionid",usercollection.getId())
-		currenttopic.setName(defaultusertopic);
+		currenttopic.setName("Support Chat");
 		currenttopic.setId(defaultusertopic);
 		topicsearcher.saveData(currenttopic)
 	}
