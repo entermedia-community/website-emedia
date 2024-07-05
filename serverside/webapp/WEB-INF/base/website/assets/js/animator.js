@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  gsap.config({
+    nullTargetWarn: false,
+  });
   gsap.registerPlugin(MotionPathPlugin);
   var imageCoords = {
     0: [-655, -345],
