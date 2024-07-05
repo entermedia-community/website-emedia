@@ -1061,3 +1061,11 @@ h2.pf-chat-header {
   }
 }
 /* profile end */
+.themed-btn {
+  color: #fff;
+  background-color: #377dff;
+  border-color: #377dff;
+}
+.themed-btn:hover {
+  color: #fff;
+}

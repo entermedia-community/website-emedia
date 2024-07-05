@@ -2824,7 +2824,7 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
 }
-
+.themed-btn,
 .btn-primary {
   color: #fff;
   background-color: #377dff;
