@@ -7,6 +7,6 @@
 	<inner-layout>/website/app/account/layout.html</inner-layout>
 	
 	<permission name="view">
-		<userprofile property="viewsettings" equals="true" />
+		<userprofile property="viewmyaccount" equals="true" />
 	</permission>
 </page>
