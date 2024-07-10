@@ -29,7 +29,7 @@
   
   
   
-    <style cancel="true"  id="bootstrap" href="/${applicationid}/components/javascript/bootstrap/5.2.1/css/bootstrap.min.css" />
+    <style id="bootstrap" href="/${applicationid}/components/javascript/bootstrap/5.2.1/css/bootstrap.min.css" />
     <style cancel="true" id="oi2" href="/${applicationid}/theme/css/oi2.css" />
   	<style cancel="true" id="oi_landing" href="/${applicationid}/theme/css/oi-landing.css" />
   	<style cancel="true"  id="oi3" href="/${applicationid}/theme/css/oi3.css" />

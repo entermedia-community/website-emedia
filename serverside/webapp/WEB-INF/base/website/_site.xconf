@@ -11,5 +11,5 @@
   <path-action name="MediaArchiveModule.loadApplicationId"/>
   <path-action name="MediaArchiveModule.loadComponentHome" />
   
-  
+  <style id="bootstrap" href="/${applicationid}/components/javascript/bootstrap/5.2.1/css/bootstrap.min.css" />
 </page>

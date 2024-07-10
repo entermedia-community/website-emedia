@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="$sitelink/assets/css/font-awesome/all.min.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/hs-mega-menu.min.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/slick.css" />
-  <link rel="stylesheet" href="$sitelink/assets/css/bootstrap-custom.css" />
+  ##<link rel="stylesheet" href="$sitelink/assets/css/bootstrap-custom.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="$sitelink/assets/css/aos.css" />
   <link rel="stylesheet" href="$sitelink/assets/css/custom.css" />
@@ -61,7 +61,7 @@
 	
 	<div id="applicationcontent" class="applicationcontent applicationcollective #if($browser.inApp()) inapp #end">
 		#if($canviewsettings && !$browser.inApp())
-			##$pages.include("$apphome/components/sidebars/user/index.html")
+			$pages.include("$apphome/components/sidebars/user/index.html")
 		#end
 		
 		<div class="emrightcontent emmaincontent" >
