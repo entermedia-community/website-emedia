@@ -6,10 +6,12 @@
   <property name="catalogid">website/catalog</property>
   <property name="applicationid">website</property>
   
-  
   <path-action name="Admin.autoLogin"/>
   <path-action name="MediaArchiveModule.loadApplicationId"/>
   <path-action name="MediaArchiveModule.loadComponentHome" />
   
+  <path-action name="ProjectModule.trackReferralCode" />
+  
+   
   <style id="bootstrap" href="/${applicationid}/components/javascript/bootstrap/5.2.1/css/bootstrap.min.css" />
 </page>

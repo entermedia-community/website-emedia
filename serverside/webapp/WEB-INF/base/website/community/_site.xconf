@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<page>
+
+  <property name="fallbackdirectory">/WEB-INF/base/eminstitute/community</property>
+  
+  
+   
+  <property name="catalogid">website/catalog</property>
+  <property name="applicationid">website/app</property>
+
+</page>
