@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <page>
+
   <!-- Need it for saving -->
   <property name="siteid">website</property>
   <property name="applicationid">website/knowledge</property>
   <property name="catalogid">website/catalog</property>
+  <property name="section">knowledge</property>
+  <property name="collectivesection">documentation</property>
 
   <property name="fallbackdirectory">/WEB-INF/base/website/app</property>
   
   <inner-layout>/WEB-INF/base/website/knowledge/layout.html</inner-layout> 
     
   <property name="virtual">true</property>
-   
+  <path-action name="PostModule.loadPost"/>
   <path-action alltypes="true" name="MediaArchiveModule.getMediaArchive"/>
   
-  <property name="section">knowledge</property>
-
-  <property name="collectivesection">documentation</property>
-  
-  <path-action name="PostModule.loadPost"/>
   
 </page>
