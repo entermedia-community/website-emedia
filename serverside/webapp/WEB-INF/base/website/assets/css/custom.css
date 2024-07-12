@@ -635,7 +635,7 @@ table th {
   background-color: #fff;
 }
 
-.form-control {
+.form-control.search-doc {
   display: block;
   width: 100%;
   height: calc(1.6em + 1.625rem);
