@@ -105,7 +105,7 @@
 									var oldBody = body[0],
 										newBody = oldBody.substring(0, oldBody.length - 3) + (settings.type !== 'doughnut' ? ',' : '') + oldBody.substring(oldBody.length - 3);
 
-									innerHtml += (settings.options.tooltips.hasIndicator ? '<span class="d-inline-block rounded-circle mr-1" style="width: 10px; height: 10px; background-color: '+ tooltipModel.labelColors[0].backgroundColor +'"></span>' : '') + settings.options.tooltips.prefix + (oldBody.length > 3 ? newBody : body) + settings.options.tooltips.postfix;
+									innerHtml += (settings.options.tooltips.hasIndicator ? '<span class="d-inline-block rounded-circle me-1" style="width: 10px; height: 10px; background-color: '+ tooltipModel.labelColors[0].backgroundColor +'"></span>' : '') + settings.options.tooltips.prefix + (oldBody.length > 3 ? newBody : body) + settings.options.tooltips.postfix;
 								});
 
 								innerHtml += '</div>';

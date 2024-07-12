@@ -17,7 +17,7 @@
     <div class="row">
       <div class="col-sm-12 col-lg-3 sidebarNavCol border-right">
         <div class="navbar-expand-lg navbar-expand-lg-collapse-block">
-          <button type="button" class="navbar-toggler btn rounded-circle p-3 mt-2" data-toggle="collapse" data-target="#sidebarNav">
+          <button type="button" class="navbar-toggler btn rounded-circle p-3 mt-2" data-bs-toggle="collapse" data-bs-target="#sidebarNav">
             <span class="d-flex justify-content-between align-items-center">
               <span class="navbar-toggler-default">
                 <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@
                   #else
                     #foreach ($subitem in $item.keySet())
                       <div class="position-relative">
-                        <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-toggle="collapse" aria-expanded="false" data-target="#sidebarNav${idx}">
+                        <a class="dropdown-nav-link dropdown-toggle dropdown-toggle-collapse" href="javascript:;" role="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#sidebarNav${idx}">
                           $subitem
                         </a>
                       </div>
@@ -76,8 +76,8 @@
 
                 #if($kdx == 6) 
                   <a class="link link-collapse small font-size-1 font-weight-bold pt-1" data-toggle="collapse" href="#collapsedSubMenu${jdx}" role="button" aria-expanded="false" aria-controls="collapsedSubMenu${jdx}">
-                    <span class="link-collapse-default">View more <span class="link-icon ml-1">+</span></span>
-                    <span class="link-collapse-active">View less <span class="text-primary ml-1">&mdash;</span></span>
+                    <span class="link-collapse-default">View more <span class="link-icon ms-1">+</span></span>
+                    <span class="link-collapse-active">View less <span class="text-primary ms-1">&mdash;</span></span>
                   </a>
                   #set($jdx = $jdx + 1)
                 #end
@@ -101,14 +101,14 @@
                     <i class="fas fa-search"></i>
                   </span>
                 </div>
-                <input type="search" class="form-control" placeholder="Search the knowledge base..." aria-label="Search the knowledge base..." aria-describedby="askQuestions">
+                <input type="search" class="form-control search-doc" placeholder="Search the knowledge base..." aria-label="Search the knowledge base..." aria-describedby="askQuestions">
               </form>
               
               <p class="font-size-1 text-navy">
                 Popular topics:
                 <a class="font-weight-bold" href="#">pricing,</a>
-                <a class="font-weight-bold ml-1" href="#">upgrade,</a>
-                <a class="font-weight-bold ml-1" href="#">hosting,</a>
+                <a class="font-weight-bold ms-1" href="#">upgrade,</a>
+                <a class="font-weight-bold ms-1" href="#">hosting,</a>
               </p>
             </div>
 
