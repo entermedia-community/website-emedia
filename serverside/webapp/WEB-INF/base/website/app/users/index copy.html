@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-sm-12 col-lg-6">
 		#if($selecteduser)
-			<div class="pl-6">
+			<div class="ps-6">
 				<div class="row no-gutters">
 					<div class="col-sm-12 col-lg-2 sidebarNavCol">
 					#set( $userimageurl = $mediaarchive.asLinkToUserProfile($selecteduser) )
@@ -32,7 +32,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-12 col-lg-9 pl-6">
+					<div class="col-sm-12 col-lg-9 ps-6">
 					#if( $user)
 						<h3>$!selecteduser.getName()</h3>
 						<i class="far fa-user"></i> $selecteduser.getAnonNickName() &nbsp;

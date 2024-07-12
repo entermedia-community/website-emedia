@@ -30,6 +30,7 @@ $(document).ready(function () {
   });
 
   emdialog = function (dialog, event) {
+    console.log("emdialog");
     if (event) {
       event.stopPropagation();
     }
@@ -85,19 +86,18 @@ $(document).ready(function () {
 
         var modalinstance;
         if (modalkeyboard) {
-          modalinstance = modaldialog.modal({
-            closeExisting: false,
-            show: true,
+          modalinstance = new bootstrap.Modal(modaldialog[0], {
+            // closeExisting: false,
             backdrop: modalbackdrop,
           });
         } else {
-          modalinstance = modaldialog.modal({
+          modalinstance = new bootstrap.Modal(modaldialog[0], {
             keyboard: false,
-            closeExisting: false,
-            show: true,
+            // closeExisting: false,
             backdrop: modalbackdrop,
           });
         }
+        modalinstance.show();
 
         var firstform = $("form", modaldialog);
         firstform.data("openedfrom", openfrom);
@@ -130,7 +130,7 @@ $(document).ready(function () {
         } else {
           //backup url
           var currenturl = window.location.href;
-          modalinstance.data("oldurlbar", currenturl);
+          $(modalinstance).data("oldurlbar", currenturl);
           //Update Address Bar
           var updateurl = dialog.data("updateurl");
           if (updateurl) {
