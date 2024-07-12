@@ -635,6 +635,24 @@ table th {
   background-color: #fff;
 }
 
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.6em + 1.625rem);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1e2022;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0.0625rem solid #e7eaf3;
+  border-radius: 0.3125rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.font-weight-bold {
+  font-weight: 600 !important;
+}
 /*------------------------------------
   Accessibility
 ------------------------------------*/
@@ -9653,7 +9671,9 @@ label.btn {
 .border-3 {
   border-width: 0.1875rem !important;
 }
-
+.border-right {
+  border-right: 0.0625rem solid #e7eaf3 !important;
+}
 /*------------------------------------
   Position Spaces
 ------------------------------------*/
@@ -11409,13 +11429,24 @@ code {
 
 #sidebarNav .dropdown-item {
   white-space: normal;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #677788;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
 }
+#sidebarNav .knowledge-current,
 #sidebarNav .current {
   font-weight: bold;
-  color: #215189;
+  color: #377dff;
 }
 .key-ft h3 {
-  color: #2a5cab;
+  color: #377dff;
 }
 @media (max-width: 1280px) {
   .pitch-deck-slide {
