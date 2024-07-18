@@ -8,5 +8,9 @@
    
   <property name="catalogid">website/catalog</property>
   <property name="applicationid">website/app</property>
+  
+  	<permission name="view">
+		<userprofile property="viewmyaccount" equals="true" />
+	</permission>
 
 </page>
