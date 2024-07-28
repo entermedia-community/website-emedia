@@ -40,15 +40,16 @@
   font-display: swap;
   src: url("../fonts/Roboto-Italic.ttf") format("truetype");
 }
-
-:root {
+.bg-emdark {
   --bg-color: #0c223b;
   --text-color: #ffffff;
   --text-color-dim: #d3d6d9;
+  
+  color: var(--text-color);
 }
 body {
-  background-color: var(--bg-color) !important;
-  color: var(--text-color);
+  background-color:#0c223b !important;
+  
   font-family: Roboto, sans-serif !important;
 }
 #application {
@@ -11871,7 +11872,7 @@ select.form-control:not([size]):not([multiple]) {
 .userchatbox .chatterbox {
   height: 100%;
 }
-.chatterbox-messages {
+.supportchat .chatterbox-messages {
   height: 100%;
   min-height: 250px;
 }
@@ -11901,12 +11902,12 @@ select.form-control:not([size]):not([multiple]) {
   display: table-row;
 }
 
-.chatterbox-body {
+.supportchat .chatterbox-body {
   display: table-row;
   background-color: #fff;
 }
 
-.chatterbox-inputarea {
+.supportchat .chatterbox-inputarea {
   height: 36px;
   display: table-row;
 }
@@ -12009,10 +12010,10 @@ h2.pf-chat-header {
   padding: 8px;
   text-align: center;
 }
-.chat-msg {
+.supportchat .chat-msg {
   margin-left: 0;
 }
-.chat-messages {
+.supportchat .chat-messages {
   flex: 1;
   height: 100%;
   max-height: 508px;
@@ -12022,34 +12023,34 @@ h2.pf-chat-header {
   scrollbar-width: thin;
   scrollbar-color: #2962a1 #13345b;
 }
-.chat-messages::-webkit-scrollbar {
+.supportchat .chat-messages::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   background-color: #13345b;
 }
-.chat-messages::-webkit-scrollbar-thumb {
+.supportchat .chat-messages::-webkit-scrollbar-thumb {
   background-color: #2962a1;
 }
-.chat-messages::-webkit-scrollbar-track {
+.supportchat .chat-messages::-webkit-scrollbar-track {
   background-color: #13345b;
 }
-.chat-message {
+.supportchat .chat-message {
   margin: 12px 6px;
 }
-.chat-message.me {
+.supportchat .chat-message.me {
   text-align: right;
 }
-.msg-body-content {
+.supportchat .msg-body-content {
   text-align: left;
 }
-.chat-message .timestamp {
+.supportchat .chat-message .timestamp {
   font-size: smaller;
   color: #eee;
   line-height: 1;
   margin-top: 8px;
   text-align: right;
 }
-.chat-message-content {
+.supportchat .chat-message-content {
   position: relative;
   padding: 8px;
   border-radius: 8px;
@@ -12060,15 +12061,15 @@ h2.pf-chat-header {
   max-width: 95%;
   min-width: 50%;
 }
-.chat-message-content p {
+.supportchat .chat-message-content p {
   margin: 0;
 }
-.chat-message.me .chat-message-content {
+.supportchat .chat-message.me .chat-message-content {
   background-color: #294769;
   border-top-left-radius: 8px;
   border-top-right-radius: 0;
 }
-.chat-message-content::after {
+.supportchat .chat-message-content::after {
   position: absolute;
   left: -10px;
   top: 0;
@@ -12078,44 +12079,47 @@ h2.pf-chat-header {
   color: red;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M30,0H.6A.58.58,0,0,0,.18,1L30,30Z' fill='%23377dff'/%3E%3C/svg%3E");
 }
-.chat-message.me .chat-message-content::after {
+.supportchat .chat-message.me .chat-message-content::after {
   left: auto;
   right: -10px;
   transform: scaleX(-1);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M30,0H.6A.58.58,0,0,0,.18,1L30,30Z' fill='%23294669'/%3E%3C/svg%3E");
 }
 
-.chat-message-content object {
+.supportchat .chat-message-content object {
   width: min-content;
   height: min-content;
 }
-.chat-input {
+.supportchat .chat-input {
   display: flex;
   background-color: #1d4c87;
   position: relative;
 }
-.chat-input button {
+.supportchat .chat-input button {
   cursor: pointer;
 }
 
-.chat-author {
+.supportchat .chat-author {
   flex-direction: row;
   align-items: center;
   margin-bottom: 4px;
 }
-.chat-author a {
+.supportchat .chat-author a {
   color: #ccc;
-  font-size: 0.8rem;
+  font-size: 0.95em;
 }
-.chat-author a:hover {
+.supportchat .chat-author a:hover {
   color: #eee;
 }
+.supportchat .author-name {
+	align-self: flex-end;
+}
 
-.author-icon img {
-  width: 26px;
-  height: 26px;
+.supportchat .author-icon img {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 .modal-content {
