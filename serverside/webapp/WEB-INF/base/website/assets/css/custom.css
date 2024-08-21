@@ -12221,3 +12221,12 @@ h2.pf-chat-header {
   font-weight: bold;
   color: #14eded;
 }
+table.referrals {
+  color: #444444;
+}
+table.referrals th {
+  color: #377dff;
+}
+table.referrals tr:hover td {
+  color: #377dff;
+}

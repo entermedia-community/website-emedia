@@ -5,7 +5,11 @@
       <h3 class="h3 mt-4 mb-5" style="font-weight: 100;">Create a secure, centralized library with smart organizer</h3>
       <div class="try-free mb-5">
         <h4 class="h1">Create Your Library Today!</h4>
+        #if($user)
+        <a class="btn btn-primary" href="$sitelink/community/emediawebsite/account/">Try for Free!</a>
+        #else
         <a class="btn btn-primary" href="$sitelink/community/emediawebsite/authentication/login.html">Try for Free!</a>
+        #end
         <!-- <a class="small" href="">Learn More</a> -->
       </div>
     </div>
