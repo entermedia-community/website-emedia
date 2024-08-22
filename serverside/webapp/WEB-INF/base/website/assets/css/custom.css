@@ -962,9 +962,9 @@ header {
 }
 
 /* Nav Item */
-.header .navbar-nav-item:first-child .nav-link {
+/* .header .navbar-nav-item:first-child .nav-link {
   padding-left: 0;
-}
+} */
 .nav-link:focus,
 .nav-link:hover,
 .navbar-nav-item:hover .nav-link,
@@ -12229,4 +12229,18 @@ table.referrals th {
 }
 table.referrals tr:hover td {
   color: #377dff;
+}
+.extra-large-icon {
+  font-size: 5rem;
+  margin: 1rem;
+  color: white;
+}
+.os {
+  border-radius: 1.5rem;
+  transform: translateY(2.5rem);
+}
+.os.active {
+  transform: translateY(0);
+  border: 3px solid #377dff44;
+  background-color: #377dff11;
 }
