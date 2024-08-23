@@ -71,6 +71,7 @@ body {
 }
 #application {
   height: auto !important;
+  min-height: calc(100vh - 84px);
 }
 
 .w-25 {
@@ -12012,6 +12013,7 @@ a.sub-link {
 .profile-chat {
   height: 100%;
   min-height: 638px;
+  max-height: 638px;
   background-color: #13345b;
   border-radius: 8px;
   display: flex;
