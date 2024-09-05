@@ -10,14 +10,8 @@ import org.entermediadb.email.TemplateWebEmail
 
 public void init() {
 
-	
-	
 	//Notify to Email:
-	
-	String notifyemail = "tech@entermediadb.org";  //get it from catalog settings?
-	
-	
-	
+	String notifyemail = "sales@entermediadb.org";  //get it from catalog settings?
 
 	//prevent re-submition
 	 String clientform = context.getSessionValue("clientform");
@@ -45,34 +39,18 @@ public void init() {
 		return;
 	}
 	
-	//Save form
-	Searcher meetingsearcher = archive.getSearcher("clientmeeting");
-	Data meeting = meetingsearcher.createNewData();
-	meeting.setProperty("requestdate", DateStorageUtil.getStorageUtil().formatForStorage(new Date())); 
-	meetingsearcher.saveData(meeting);
-	String[] fields = context.getRequestParameters("field");
-	String time = context.getRequestParameter("customtime.value");
-	if (time == null ) {
-		time = context.getRequestParameter("time.value");
-	}
-	if(time != null) {
-		context.setRequestParameter("time.value", time);
-	}
-	meetingsearcher.updateData(context,fields, meeting);
-	meetingsearcher.saveData(meeting);
-	log.info("Saving Meeting Schedule Request");	
 	
 	
-	context.putPageValue("subject", "Meeting Request");
+	context.putPageValue("subject", "Library Request");
 	HashMap htmlfields = new HashMap();
-	htmlfields.put("name", context.getRequestParameter("name.value"));
-	htmlfields.put("email", context.getRequestParameter("email.value"));
-	htmlfields.put("notes", context.getRequestParameter("notes.value"));
-	htmlfields.put("department", context.getRequestParameter("meetingdepartment.value"));
-	htmlfields.put("date", time);
+	htmlfields.put("user", context.getRequestParameter("user"));
+	htmlfields.put("libraryname", context.getRequestParameter("projectname"));
+	htmlfields.put("currentproject", context.getRequestParameter("project"));
+	
+	context.putPageValue("fields", htmlfields);
+	
 	//Message requester info
 	context.putPageValue("messagetime", new Date() );
-	context.putPageValue("fields", htmlfields);
 	String ipaddress = context.getRequest().getRemoteAddr();
 	String senderinfo = "Url: "+context.getPageValue("siteroot");
 	if (context.getPageValue("referringPage") != null) {
@@ -84,8 +62,13 @@ public void init() {
 	senderinfo = senderinfo + " Ip: " + ipaddress;
 	context.putPageValue("senderinfo",   senderinfo);
 	
-	sendEmail(context.getPageMap(), notifyemail,"/website/meetingschedule/notifyemail.html");
+	sendEmail(context.getPageMap(), notifyemail,"/website/meetingschedule/notifyemailnewlibrary.html");
 }
+
+
+
+
+
 
 protected void sendEmail(Map pageValues, String email, String templatePage){
 	//send e-mail
