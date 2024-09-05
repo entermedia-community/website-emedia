@@ -12246,3 +12246,8 @@ table.referrals tr:hover td {
   border: 3px solid #377dff44;
   background-color: #377dff11;
 }
+@media screen and (max-width: 768px) {
+  .os.active {
+    transform: translateY(2.5rem);
+  }
+}
