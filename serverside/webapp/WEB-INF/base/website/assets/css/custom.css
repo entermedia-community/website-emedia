@@ -12029,6 +12029,10 @@ h2.pf-chat-header {
   padding: 8px;
   text-align: center;
 }
+.supportchat .chatterbox {
+	height: calc(100% - 129px);
+}
+
 .supportchat .chat-msg {
   margin-left: 0;
 }
