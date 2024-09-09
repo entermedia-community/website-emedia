@@ -12255,3 +12255,6 @@ table.referrals tr:hover td {
     transform: translateY(2.5rem);
   }
 }
+.text-left {
+	text-align: left;
+}
