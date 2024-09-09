@@ -1,3 +1,8 @@
+
+#set( $currrentversion = $mediaarchive.query("desktopversions").all().sort("orderingDown").searchOne() )
+#set( $version = $currrentversion.versionnumber )
+
+
 <div class="container space-2 space-lg-3"> 
 <div class="bg-navy rounded mx-3 mx-md-8">
   <div class="container space-2">
@@ -23,8 +28,8 @@
               beta
             </span>
           </div>
-          <a class="btn btn-primary rounded-pill transition-3d-hover" href="https://emedialibrary.com/website/mediadb/services/module/asset/downloads/originals/Documentation/Setup/eMedia Library-2.3.0-arm64.dmg/eMedia Library-2.3.0-arm64.dmg">Download for M1/M2 Chip</a>
-          <a class="small mt-1" href="https://emedialibrary.com/website/mediadb/services/module/asset/downloads/originals/Documentation/Setup/eMedia Library-2.3.0.dmg/eMedia Library-2.3.0.dmg">Intel x64 Version</a>
+          <a class="btn btn-primary rounded-pill transition-3d-hover" href="https://emedialibrary.com/website/mediadb/services/module/asset/downloads/originals/Documentation/Setup/eMedia Library-${version}-arm64.dmg/eMedia Library-${version}-arm64.dmg">Download for M1/M2 Chip</a>
+          <a class="small mt-1" href="https://emedialibrary.com/website/mediadb/services/module/asset/downloads/originals/Documentation/Setup/eMedia Library-${version}.dmg/eMedia Library-${version}.dmg">Intel x64 Version</a>
         </div> 
       </div>
       <div class="col-md-4 mb-3 pb-4 mb-md-0 os" id="linuxOS">
@@ -41,7 +46,15 @@
       </div>
     </div>
   </div>
+<p>Version:
+<b>  $currrentversion.versionnumber </b> <i>$currrentversion.name</i> 
+	$!currrentversion.longcaption
+</p>	
+
 </div> 
+
+
+
 </div>
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {

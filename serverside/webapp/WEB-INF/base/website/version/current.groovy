@@ -13,7 +13,7 @@ public void init(){
 	
 	MediaArchive mediaarchive = context.getPageValue("mediaarchive");
 	
-	Data currrentversion = mediaarchive.query("desktopversions").all().sort("ordering").searchOne();
+	Data currrentversion = mediaarchive.query("desktopversions").all().sort("orderingDown").searchOne();
 	
 	log.info("Found " + currrentversion);
 	
