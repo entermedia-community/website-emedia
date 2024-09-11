@@ -14,7 +14,7 @@ public void init() {
 	
 	//Notify to Email:
 	
-	String notifyemail = "tech@entermediadb.org";  //get it from catalog settings?
+	String notifyemail = "sales@entermediadb.org";  //get it from catalog settings?
 	
 	
 	
