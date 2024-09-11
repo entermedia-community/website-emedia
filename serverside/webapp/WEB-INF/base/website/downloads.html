@@ -45,12 +45,12 @@
         </div> 
       </div>
     </div>
+    #ifnotnull($currrentversion)
+    <p class="text-center m-0">
+      Version: <b>$currrentversion.versionnumber </b> <i>$currrentversion.name</i> $!currrentversion.longcaption
+    </p>
+    #end
   </div>
-<p>Version:
-<b>  $currrentversion.versionnumber </b> <i>$currrentversion.name</i> 
-	$!currrentversion.longcaption
-</p>	
-
 </div> 
 
 
