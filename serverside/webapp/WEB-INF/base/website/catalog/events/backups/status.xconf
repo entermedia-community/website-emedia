@@ -5,6 +5,6 @@
   <property name="virtual">true</property>
   <property name="eventdescription">Check for problems on sites</property>
   <property name="eventname">Monitor sites for outages</property>
-  <property name="enabled">true</property>
+  <property name="enabled">false</property>
   <path-action name="SiteModule.checkSites"/>
 </page>
