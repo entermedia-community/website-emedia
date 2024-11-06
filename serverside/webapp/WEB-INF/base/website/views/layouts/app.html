@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="$!context.getLocale()">
 
 <head>
-  <title>Smart File Organizer - eMediaLibrary</title>
+
+#set( $title = "#text($content.title) - eMediaLibrary")
+
+  <title>$title</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <meta name="title" content="Smart File Organizer - eMediaLibrary">
-  <meta name="description" content="eMediaLibrary is a smart file organizer that helps you organize your files in categorized, searchable, and shareable folders.">
-  <meta name="keywords" content="file organizer, smart file organizer, file manager, file sharing, file categorization, file search, file storage, file management, file organization, file categorization, file sharing, file search, file storage, file management, file organization">
-  <meta name="og:title" content="Smart File Organizer - eMediaLibrary">
-  <meta name="og:description" content="eMediaLibrary is a smart file organizer that helps you organize your files in categorized, searchable, and shareable folders.">
+  <meta name="title" content="$title">
+  <meta name="description" content="$content.description">
+  <meta name="keywords" content="$content.keywords">
+  <meta name="og:title" content="$title">
+  <meta name="og:description" content="$content.description">
   <meta name="og:image" content="https://emedialibrary.com/assets/emedia-banner.png"> <!-- This needs to be full URL -->
   <meta name="og:url" content="https://emedialibrary.com">
   <meta name="og:site_name" content="eMediaLibrary">
   <meta name="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Smart File Organizer - eMediaLibrary">
-  <meta name="twitter:description" content="eMediaLibrary is a smart file organizer that helps you organize your files in categorized, searchable, and shareable folders.">
+  <meta name="twitter:title" content="$title">
+  <meta name="twitter:description" content="$content.description">
   <meta name="twitter:image" content="https://emedialibrary.com/assets/emedia-banner.png"> <!-- This needs to be full URL -->
   <meta name="twitter:url" content="https://emedialibrary.com">
   <!-- <meta name="twitter:site" content="@eMediaLibrary">  --> <!-- Add twitter handle if there is one -->

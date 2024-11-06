@@ -11209,7 +11209,7 @@ hr {
   border-color: #0d2847;
 }
 .padder {
-  height: 68px;
+  height: 0px;
 }
 @media screen and (max-width: 991px) {
   .padder {
