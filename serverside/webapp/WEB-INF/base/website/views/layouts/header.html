@@ -38,16 +38,13 @@
                 <a class="nav-link #if($collectivesection == 'features') active #end" href="$sitelink/features.html">Features</a>
               </li>
               <li class="navbar-nav-item">
-                <a class="nav-link #if($collectivesection == 'downloads') active #end" href="$sitelink/downloads.html">Downloads</a>
-              </li>
-              <li class="navbar-nav-item">
-                <a class="nav-link #if($collectivesection == 'hosting') active #end" href="$sitelink/hosting.html">Hosting</a>
-              </li>
-              <li class="navbar-nav-item">
                 <a class="nav-link #if($collectivesection == 'pricing') active #end" href="$sitelink/pricing.html">Pricing</a>
               </li>
               <li class="navbar-nav-item">
                 <a class="nav-link #if($collectivesection == 'documentation') active #end" href="$sitelink/knowledge/index.html">Documentation</a>
+              </li>
+              <!-- <li class="navbar-nav-item">
+                <a class="nav-link #if($collectivesection == 'hosting') active #end" href="$sitelink/hosting.html">Hosting</a>
               </li>
               #if($context.getPageValue("accountpage") != "true")
               <li class="hs-has-mega-menu navbar-nav-item"
@@ -58,7 +55,7 @@
                     }
                 }'>
                 <a id="demosMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle " href="javascript:;"
-                  aria-haspopup="true" aria-expanded="false">Featured Libraries</a>
+                  aria-haspopup="true" aria-expanded="false">Libraries</a>
                 <div class="hs-mega-menu dropdown-menu " aria-labelledby="demosMenu">
                   <h4 style="margin:12px 12px 0 12px;color: #1e2022;" class="text-center ">
                     Community Driven Public Libraries<br/><small class="text-muted" style="font-size: 16px;">&mdash;sponsored by eMedia Library</small>
@@ -106,20 +103,29 @@
                           </div>
                         </div>
                       </a>
-                    </div> -->
+                    </div> 
                 </div>
               </li>
               #end
               <li class="navbar-nav-item">
                 <a class="nav-link ps-0" style="color: #5de34f;" href="https://em11.entermediadb.org/finder/find/authentication/login.html?accountname=admin&password=admin" title="A sandbox for testing eMedia Library with full administrative access">Sandbox</a>
-              </li>
+              </li> -->
               <li class="navbar-nav-item action-btn">
                 <div class="d-flex align-items-center flex-wrap">
-					        <a href="$sitelink/meetingschedule/meeting-form.html" rel="nofollow" class="btn btn-primary btn-xs m-1 emdialog">
-                    <i class="far fa-calendar-alt"></i>
-                    <span class="ms-1"> Schedule a Meeting</span>                  
+					        <a href="$sitelink/meetingschedule/meeting-form.html" rel="nofollow" class="nav-link emdialog">
+                    Schedule a Meeting            
                   </a> 
                 </div>
+              </li>
+              <!-- <li class="navbar-nav-item">
+                <a class="nav-link #if($collectivesection == 'downloads') active #end" href="$sitelink/downloads.html">
+                  Desktop App
+                </a>
+              </li> -->
+              <li class="navbar-nav-item">
+                <a href="$sitelink/libraries.html" rel="nofollow" class="btn btn-primary btn-xs mx-2">
+                  View Libraries
+                </a> 
               </li>
               <li class="navbar-nav-item action-btn dropdown">
                 #if($user)
