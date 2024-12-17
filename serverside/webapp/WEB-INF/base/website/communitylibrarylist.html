@@ -1,0 +1,31 @@
+<div class="d-flex flex-column align-items-center">
+  <h3 class="mb-4">Community Libraries &mdash; sponsored by eMedia Library</h3>
+	<div id="savedLibraries">
+
+    #set($librarires = [
+      ["eBooks", "https://ebooks.emedialibrary.com/find"],
+      ["eInnovation", "https://einnovation.com/find"],
+      ["Common Roots", "http://commonroots.emedialibrary.com/find"]
+    ])
+    #foreach ($library in $librarires)
+    <div class="library-card active" data-url="${library[1]}" title="${library[1]}">
+      <img src="${library[1]}/theme/lighttheme/logo.png" alt="${library[0]}">
+      <h3>${library[0]}</h3>
+    </div>
+    #end
+    
+  </div>
+
+	<div class="h4 text-center mt-5 fw-light">
+		Need a Private Hub of Your Own?
+	</div>
+	<p class="text-center text-muted px-3" style="max-width: 800px">
+		We provide services to help you securely host, manage, and share creative
+		assets with ease. Tailored to your specific needs, our private hosting keeps
+		your work organized, accessible, and 100% in your control.
+	</p> 
+	<button type="button" class="btn btn-success fs-6">
+		<i class="bi bi-send-fill me-1"></i>
+		Contact Us
+	</button>
+</div>
