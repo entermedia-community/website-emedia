@@ -1,11 +1,21 @@
 <div class="d-flex flex-column align-items-center">
   <h3 class="mb-2">Sandbox Libraries</h3>
 	<div id="savedLibraries">
-
-    <div class="library-card active" data-url="https://sandbox.emedialibrary.com/find" title="https://sandbox.emedialibrary.com/find">
-      <img src="https://sandbox.emedialibrary.com/find" alt="Sandbox">
-      <h3>Sandbox</h3>
-    </div> 
+		#set($sandboxes = [
+			["Video Production", "https://em11.entermediadb.org/videoproduction/find"],
+			["Photo Studio", "https://em11.entermediadb.org/photostudio/find"],
+			["TV Media Hub", "https://em11.entermediadb.org/tvhub/find"],
+			["Music Studio", "https://em11.entermediadb.org/musicstudio/find"],
+			["Publishing Products Catalog", "https://em11.entermediadb.org/publishing/find"],
+			["Marketing Department", "https://em11.entermediadb.org/marketing/find"],
+			["University Department", "https://em11.entermediadb.org/university/find"]
+		])
+    #foreach ($sandbox in $sandboxes)
+    <div class="library-card active" data-url="${sandbox[1]}" title="${sandbox[1]}">
+      <img src="${sandbox[1]}/theme/lighttheme/logo.png" alt="${sandbox[0]}">
+      <h3>${sandbox[0]}</h3>
+    </div>
+    #end
     
   </div>
 
