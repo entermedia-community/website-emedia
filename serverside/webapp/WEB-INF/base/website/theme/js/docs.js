@@ -54,7 +54,7 @@ sidebarLinks.forEach((sidebarLink) => {
 });
 
 var spy = new Gumshoe("#docs-nav a", {
-	offset: 69,
+	offset: 72,
 });
 
 var lightbox = new SimpleLightbox(".simplelightbox-gallery a", {});
