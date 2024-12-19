@@ -12369,10 +12369,10 @@ a.text-link:hover {
 .docs-sidebar {
 	display: none;
 	width: 300px;
-	position: fixed;
+	position: absolute;
 	z-index: 10;
-	top: 82px;
-	/* height: calc(100% - 72px); */
+	/* top: 72px; */
+	height: 100%;
 	background: #fff;
 	overflow-y: auto;
 	/* Forefox scrollbar */
