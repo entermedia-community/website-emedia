@@ -906,6 +906,7 @@ button:focus {
 	left: 0;
 	width: 100%;
 	z-index: 1001;
+	background-color: #0a172c;
 }
 header {
 	box-shadow: none;
@@ -11169,6 +11170,14 @@ h6,
 	font-family: Roboto, sans-serif !important;
 	color: var(--text-color);
 }
+.text-dark h1,
+.text-dark h2,
+.text-dark h3,
+.text-dark h4,
+.text-dark h5,
+.text-dark h6 {
+	color: #1e2022 !important;
+}
 h1 > u {
 	position: relative;
 	text-decoration: none;
@@ -11352,7 +11361,7 @@ footer {
 	color: #377dff;
 	position: relative;
 }
-.nav-link.active::after {
+header .nav-link.active::after {
 	content: " ";
 	position: absolute;
 	left: 0;
