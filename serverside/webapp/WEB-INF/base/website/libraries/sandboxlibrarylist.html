@@ -1,3 +1,10 @@
+#set($fromDesktop = $context.getRequestParameter("from") == "desktop")
+#if($fromDesktop)
+	<style>
+		$pages.include("${sitelink}/theme/css/desktop-library.css")
+	</style>
+#end
+
 <div class="d-flex flex-column align-items-center">
   <h3 class="mb-2 text-dark">Sandbox Libraries</h3>
 	<div id="savedLibraries">
