@@ -1,17 +1,20 @@
 <div class="d-flex flex-column align-items-center">
-  <h3 class="mb-2">Community Libraries &mdash; sponsored by eMedia Library</h3>
+  <h3 class="mb-2 text-dark">Community Libraries &mdash; sponsored by eMedia Library</h3>
 	<div id="savedLibraries">
 
     #set($librarires = [
-      ["eBooks", "https://ebooks.emedialibrary.com/find"],
-      ["eInnovation", "https://einnovation.com/find"],
-      ["Common Roots", "http://commonroots.emedialibrary.com/find"]
+      ["eBooks", "https://ebooks.emedialibrary.com/find", "Professional publishing solutions for authors, by authors. Get your book to market faster with our comprehensive platform."],
+      ["eInnovation", "https://einnovation.com/find", "Effortlessly manage your marketing content, collaborate with editors, and publish to all platforms."],
+      ["Common Roots", "http://commonroots.emedialibrary.com/find", "Singer song writers connecting across cultures, locations and generations. We celebrate our shared humanity and we share our stories and songs for future generation to build upon."]
     ])
     #foreach ($library in $librarires)
-    <div class="library-card active" data-url="${library[1]}" title="${library[1]}">
-      <img src="${library[1]}/theme/lighttheme/logo.png" alt="${library[0]}">
+    <a class="library-card active" href="${library[1]}" title="${library[1]}">
+      <div class="library-thumb">
+        <img src="${library[1]}/theme/lighttheme/logo.png" alt="${library[0]}">
+      </div>
       <h3>${library[0]}</h3>
-    </div>
+      <p>${library[2]}</p>
+    </a>
     #end
     
   </div>

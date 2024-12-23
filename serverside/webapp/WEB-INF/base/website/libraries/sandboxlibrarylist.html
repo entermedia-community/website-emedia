@@ -1,20 +1,23 @@
 <div class="d-flex flex-column align-items-center">
-  <h3 class="mb-2">Sandbox Libraries</h3>
+  <h3 class="mb-2 text-dark">Sandbox Libraries</h3>
 	<div id="savedLibraries">
 		#set($sandboxes = [
-			["Video Production", "https://em11.entermediadb.org/videoproduction/find"],
-			["Photo Studio", "https://em11.entermediadb.org/photostudio/find"],
-			["TV Media Hub", "https://em11.entermediadb.org/tvhub/find"],
-			["Music Studio", "https://em11.entermediadb.org/musicstudio/find"],
-			["Publishing Products Catalog", "https://em11.entermediadb.org/publishing/find"],
-			["Marketing Department", "https://em11.entermediadb.org/marketing/find"],
-			["University Department", "https://em11.entermediadb.org/university/find"]
+			["Video Production", "https://em11.entermediadb.org/videoproduction/find", "A sandbox platform to efficiently store, organize, and manage video assets."],
+			["Photo Studio", "https://em11.entermediadb.org/photostudio/find", "A sandbox hub to organize, store, and manage high-quality image assets."],
+			["TV Media Hub", "https://em11.entermediadb.org/tvhub/find", "A sandbox platform designed to manage and organize vast libraries of video, audio, and graphic assets."],
+			["Music Studio", "https://em11.entermediadb.org/musicstudio/find", "A sandbox repository for audio tracks, stems, project files, and associated assets."],
+			["Publishing Products Catalog", "https://em11.entermediadb.org/publishing/find", "A sandbox platform for organizing, storing, and managing catalogs, book covers, manuscripts, illustrations, and marketing materials."],
+			["Marketing Department", "https://em11.entermediadb.org/marketing/find", "A sandbox platform designed to organize, store, and manage marketing assets like images, videos, campaigns, and branding materials."],
+			["University Department", "https://em11.entermediadb.org/university/find", "A sandbox platform to organize, store, and manage academic and administrative assets."]
 		])
     #foreach ($sandbox in $sandboxes)
-    <div class="library-card active" data-url="${sandbox[1]}" title="${sandbox[1]}">
-      <img src="${sandbox[1]}/theme/lighttheme/logo.png" alt="${sandbox[0]}">
+    <a class="library-card active" href="${sandbox[1]}" title="${sandbox[1]}">
+			<div class="library-thumb">
+				<img src="${sandbox[1]}/theme/lighttheme/logo.png" alt="${sandbox[0]}">
+			</div>
       <h3>${sandbox[0]}</h3>
-    </div>
+			<p>${sandbox[2]}</p>
+    </a>
     #end
     
   </div>

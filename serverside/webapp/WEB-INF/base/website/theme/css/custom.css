@@ -12330,6 +12330,9 @@ main.container {
 	display: flex;
 	flex-direction: column;
 }
+.library-container .btn {
+	border: none !important;
+}
 .config-content {
 	height: 100%;
 	padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -12343,43 +12346,61 @@ main.container {
 }
 #savedLibraries {
 	width: 100%;
-	max-width: 800px;
+	max-width: 840px;
 	padding: 16px;
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
 }
 .library-card {
 	width: 220px;
-	height: 120px;
+	/* height: 100%; */
 	margin: 8px;
-	border-radius: 1rem;
-	position: relative;
 	text-align: center;
 	cursor: pointer;
-}
-.library-card img {
-	background-color: rgb(250, 250, 250);
+	color: #444444;
+	background-color: #ffffff;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25),
 		-1px -1px 4px rgba(255, 255, 255, 0.15);
 	width: 100%;
-	height: 80px;
+	max-width: 250px;
 	object-fit: contain;
-	border: 8px solid rgb(250, 250, 250);
-	border-radius: 1rem;
-	margin-bottom: 4px;
+	border-radius: 0.5rem;
 	overflow: hidden;
+	position: relative;
+	transition: all 0.2s ease-in-out;
 }
-.library-card h4 {
-	font-size: 14px;
-	color: #444444;
-	margin: 0;
+
+a.library-card:hover {
+	color: #555555;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25),
+		-2px -2px 8px rgba(255, 255, 255, 0.15);
+	transform: translateY(-4px);
+}
+
+.library-card .library-thumb {
+	height: 80px;
+	width: 100%;
+	padding: 10px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f1f1f1;
+}
+.library-card img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
 }
 .library-card h3 {
-	font-size: 16px;
 	color: #444444;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 8px;
+}
+.library-card p {
+	padding: 0 8px 6px;
 	margin: 0;
 }
 .library-card button {
