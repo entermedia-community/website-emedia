@@ -11193,7 +11193,7 @@ h1 > u::after {
 	transform: translateY(65%);
 	width: 100%;
 	height: 23px;
-	background-image: url(../assets/line.svg);
+	background-image: url(../theme/line.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	transform: translateY(80%);

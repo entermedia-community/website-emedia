@@ -14,7 +14,7 @@
 	$.HSCore.components.HSDropzone = {
 		defaults: {
 			// Default variables
-			url: "../../assets/include/dropzone-upload.html",
+			url: "../../theme/include/dropzone-upload.html",
 			thumbnailWidth: 300,
 			thumbnailHeight: 300,
 			previewTemplate: $('<div>' +
