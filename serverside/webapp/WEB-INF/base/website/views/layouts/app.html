@@ -44,7 +44,16 @@
   <link rel="stylesheet" href="$sitelink/theme/css/custom.css" />
   <link rel="stylesheet" href="$sitelink/theme/css/desktop-library.css" />
   
-  ##$pages.include("/website/app/theme/layouts/includes.html")
+  <script type="importmap">
+    {
+      "imports": {
+        "ckeditor5": "/openedit/components/javascript/ckeditor5/ckeditor5.js",
+        "ckeditor5/": "/openedit/components/javascript/ckeditor5/"
+      }
+    }
+  </script>
+  <script type="module" src="/openedit/components/javascript/ckLoader.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="/openedit/components/javascript/ckeditor5/ckeditor5.css" />
 </head>
 
 <body>
