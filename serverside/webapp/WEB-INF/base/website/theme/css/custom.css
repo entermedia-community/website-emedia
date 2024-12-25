@@ -11446,6 +11446,7 @@ code {
 }
 .documentation {
 	color: #111;
+	padding-top: 80px;
 }
 .documentation h1,
 .documentation h2,
