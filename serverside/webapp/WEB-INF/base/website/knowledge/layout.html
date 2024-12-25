@@ -38,9 +38,17 @@
 					$pages.include("./index.html")
 				#end
 				#if($user.oe_edit_mode == "postedit")
-					<form action="${sitelink}/website/find/views/modules/postdata/editors/data/save.html">
+					<form id="edit-$!{postdata.id}" method="post" action="${sitelink}/website/find/views/modules/postdata/editors/data/save.html"
+						class="ajaxform" data-targetdiv="savedok"
+						>
+						<input type="hidden" name="save" value="true" />
+						<input type="hidden" name="id" value="${postdata.id}" />
+						
+						<input type="hidden" name="field" value="post_title" />
 						<input type="text" name="post_title.value" value="$!postdata.post_title" class="w-100 px-3 py-2 h1 text-dark" style="font-size: 1.2rem;font-weight: bold;border-style: dotted;" />
-						<div class="oe-editable" id="edit-$!{postdata.id}" data-dataid="$!{postdata.id}" data-field="maincontent" data-searchtype="postdata" data-viewtype="html">
+
+						<input type="hidden" name="field" value="maincontent" />
+						<div class="oe-editable" id="edit-$!{postdata.id}" data-dataid="$!{postdata.id}" data-field="maincontent" data-viewtype="html">
 							$!postdata.maincontent
 						</div>
 					</form>
@@ -50,6 +58,8 @@
 				#if( $user.oe_edit_mode == "postedit" )
 					<div class="d-flex align-items-center py-3">
 						<button class="btn btn-success me-2" type="submit" form="edit-$!{postdata.id}">[[Save]]</button>
+						
+						<div id="savedok"></div>
 						##set($editurl = "${sitelink}/website/find/views/modules/postdata/edit/edit.html?id=${postdata.id}&viewid=postdatageneral&viewpath=postdata/postdatageneral&searchtype=postdata&detailsreadonly=false&preview=true") 
 						#set($editurl = "${sitelink}/website/find/views/settings/lists/datamanager/edit/edit.html?id=${postdata.id}&searchtype=postdata")
 						<a href="$editurl" class="btn btn-primary">[[Edit]]</a>
