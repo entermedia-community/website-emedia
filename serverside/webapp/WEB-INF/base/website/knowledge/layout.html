@@ -47,8 +47,19 @@
 						<input type="hidden" name="field" value="post_title" />
 						<input type="text" name="post_title.value" value="$!postdata.post_title" class="w-100 px-3 py-2 h1 text-dark" style="font-size:1.5rem;font-weight:bold;border-style:dashed;border-width:1px" />
 
+						<input type="hidden" value="metatitle" name="field">
+						<input type="text" autocomplete="off" class="form-control textinput mb-2" value="" id="metatitle.value" name="metatitle.value" placeholder="[[Meta Title]]">
+
+						<input type="hidden" value="metadescription" name="field">
+						<input type="text" autocomplete="off" class="form-control textinput mb-2" value="" id="metadescription.value" name="metadescription.value" placeholder="[[Meta Description]]">
+						
+						<input type="hidden" value="metatags" name="field">
+						<input type="text" autocomplete="off" class="form-control textinput mb-2" value="" id="metatags.value" name="metatags.value" placeholder="[[Meta Tags]]">
+						
+
+						
 						<input type="hidden" name="field" value="maincontent" />
-						<div class="oe-editable" id="edit-$!{postdata.id}" data-dataid="$!{postdata.id}" data-field="maincontent" data-viewtype="html">
+						<div class="oe-editable py-1 px-2" id="edit-$!{postdata.id}" data-dataid="$!{postdata.id}" data-field="maincontent" data-viewtype="html">
 							$!postdata.maincontent
 						</div>
 					</form>
