@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <page>
     <property name="collectivesection">login</property>
-    <property name="loginroot">/$applicationid/components/authentication</property>
+    <property name="loginroot">/$applicationid/authentication</property>
     <inner-layout>/${siteid}/views/layouts/app.html</inner-layout>
 </page>
