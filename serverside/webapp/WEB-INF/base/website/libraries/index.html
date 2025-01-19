@@ -4,7 +4,6 @@
 #end
 
 <div class="bg-white space-2">
-
   <main class="container library-container">
     <div class="w-100 text-center my-2 pad-left">
       #if($tab == 'communitylibrarylist')
@@ -21,12 +20,16 @@
     </div>
     <div class="d-flex h-100">
       <div class="d-flex flex-column" style="min-width: 200px">
-        <a class="btn btn-wide #if($tab == 'communitylibrarylist') active #end" href="$sitelink/libraries?tab=communitylibrarylist" data-targetdivinner="configcontent">
-          <i class="fas fa-users"></i>
+        <a class="btn btn-wide" href="#" data-targetdivinner="configcontent" id="privateLibraries">
+          <i class="bi bi-shield-lock fas fa-shield-alt"></i>
+          <span>Your Libraries</span>
+        </a>
+        <a class="btn btn-wide #if($tab == 'communitylibrarylist') active #end" href="$sitelink/libraries?tab=communitylibrarylist" data-targetdivinner="configcontent" id="communityLibraries">
+          <i class="bi bi-people fas fa-users"></i>
           <span>Community Libraries</span>
         </a>
-        <a class="btn btn-wide #if($tab == 'sandboxlibrarylist') active #end" href="$sitelink/libraries?tab=sandboxlibrarylist" data-targetdivinner="configcontent">
-          <i class="fas fa-box"></i>
+        <a class="btn btn-wide #if($tab == 'sandboxlibrarylist') active #end" href="$sitelink/libraries?tab=sandboxlibrarylist" data-targetdivinner="configcontent" id="sandbox">
+          <i class="bi bi-box fas fa-box"></i>
           <span>Sandbox</span>
         </a>
       </div>

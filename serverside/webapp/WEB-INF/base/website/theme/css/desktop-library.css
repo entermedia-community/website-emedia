@@ -66,6 +66,9 @@ main.container {
 	margin: 0 auto;
 	text-align: center;
 }
+#privateLibraries {
+	display: none;
+}
 #savedLibraries {
 	width: 100%;
 	max-width: 840px;
