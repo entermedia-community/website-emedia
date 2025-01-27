@@ -2,7 +2,8 @@
 
 <page>
 	<property name="fallbackdirectory">/WEB-INF/base/system/commonbase</property>
-	
+	 <page-loader loader="projectLoader" />
+ 
   <path-action name="MediaArchiveModule.loadApplicationId" />
   <property name="siteid">website</property>
   <property name="catalogid">website/catalog</property>
