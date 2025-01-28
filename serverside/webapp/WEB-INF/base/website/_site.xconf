@@ -2,13 +2,13 @@
 
 <page>
 	<property name="fallbackdirectory">/WEB-INF/base/system/commonbase</property>
-	 <page-loader loader="projectLoader" />
- 
-  <path-action name="MediaArchiveModule.loadApplicationId" />
+	 
   <property name="siteid">website</property>
   <property name="catalogid">website/catalog</property>
   <property name="applicationid">website</property>
   <property name="findroot">/${siteid}/blockfind</property>
+  
+  <page-loader loader="projectLoader" />
     
   <property name="title">Smart File Organizer</property>
   <property name="description">eMediaLibrary is a smart file organizer that helps you organize your files in categorized, searchable, and shareable folders.</property>

@@ -1,0 +1,8 @@
+<page>
+
+	<property name="oisection">community</property>
+ 	<property name="catalogid">website/catalog</property>
+	
+    <style id="oi2" cancel="true" />
+    <style id="oi3" cancel="true" />
+</page>
