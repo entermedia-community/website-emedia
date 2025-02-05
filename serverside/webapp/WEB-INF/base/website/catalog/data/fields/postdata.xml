@@ -3,17 +3,17 @@
 <properties beanname="dataSearcher"> 
   <property id="post_title" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[post_title]]></language> 
+      <language id="en"><![CDATA[Title]]></language> 
     </name> 
   </property>  
   <property id="post_author" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[post_author]]></language> 
+      <language id="en"><![CDATA[Author]]></language> 
     </name> 
   </property>  
   <property id="knowledgebase_category" index="true" deleted="false" editable="true" stored="true" internalfield="false" isbadge="false" viewtype="list" rendertype="list" required="false" filter="false" multilanguage="false" listid="postdata_category_learning" highlight="false" autocreatefromexif="false" keyword="false" writenametoexif="false">New 
     <name> 
-      <language id="en"><![CDATA[knowledgebase_category]]></language> 
+      <language id="en"><![CDATA[Category]]></language> 
     </name> 
   </property>  
   <property id="recordmodificationdate" index="true" deleted="false" editable="false" stored="true" viewtype="time" sortable="true" searchcomponent="datesearch" datatype="date">New 
@@ -24,22 +24,22 @@
   </property>  
   <property id="post_date" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[post_date]]></language> 
+      <language id="en"><![CDATA[Date]]></language> 
     </name> 
   </property>  
   <property id="postcontent" index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[postcontent]]></language> 
+      <language id="en"><![CDATA[Post Content]]></language> 
     </name> 
   </property>  
     <property id="maincontent" index="true" deleted="false" editable="true" stored="true">New
     <name>
-      <language id="en"><![CDATA[maincontent]]></language>
+      <language id="en"><![CDATA[Content]]></language>
     </name>
   </property>
-  <property id="knowledgebase_tag" index="true" deleted="false" editable="true" stored="true">New 
+  <property id="knowledgebase_tag" viewtype="tageditor"  index="true" deleted="false" editable="true" stored="true">New 
     <name> 
-      <language id="en"><![CDATA[knowledgebase_tag]]></language> 
+      <language id="en"><![CDATA[Post Tags]]></language> 
     </name> 
   </property>  
   <property id="sourcepath" index="true" internalfield="false" editable="true" isbadge="false" sortable="true" required="false" filter="false" multilanguage="false" highlight="false" deleted="false" stored="true" autocreatefromexif="false" keyword="false" writenametoexif="false">New
