@@ -1,0 +1,99 @@
+##Verify if user was tracked
+#if( !$selecteduser)
+	#set($selecteduser = $user)
+#end
+
+#set ($usertracked = $selecteduser.getValue("gatracked"))
+#if(!$usertracked)
+	#set( $usersearcher = $mediaarchive.getSearcher("user") )
+	$!user.setValue("gatracked", "true")
+	$!usersearcher.saveData($user,null)
+
+	$content.setValue("GAtrakingcode", "GA-conversionuser.html")
+#else
+	$content.setValue("GAtrakingcode", "")
+#end
+#set( $organizationsuser = $mediaarchive.query("librarycollectionusers").exact("followeruser",$selecteduser.getId()).exact("ontheteam","true").search($context) )
+	#set($oids = [])
+	#foreach( $organization in $organizationsuser )
+			#set($x = $oids.add($organization.collectionid))
+	#end
+	#if(!$oids)
+		<h3>[[Welcome to Entermedia]]</h3>	
+		<p>
+		Welcome to EnterMedia! To start, click <strong>Add a Workspace</strong>.
+		</p>
+	#end
+
+   #if( $selecteduser.getId() == $user.getId()) 
+   <h3 	> [[Active Workspaces]]</h3>
+   #else
+   <h3 	> [[Common Workspaces]]</h3>
+   #end
+
+<div class="project-grid ">
+ 	#if($oids)
+ 		##.exact("library","workspaces")
+		#set( $organizations = $mediaarchive.query("librarycollection").exact("organizationstatus","active").ids($oids).sort("name").hitsPerPage(200).search($context) )
+		##set( $modcollections = $chatManager.loadCollectionsModified($organizations, $selecteduser.getId() ) )
+		#foreach( $organization in $organizations )
+			#set($link = false)
+			#if($organization.assetportrait)
+				#set($asset = $mediaarchive.getAsset($organization.assetportrait))
+				#set($link = $mediaarchive.asLinkToPreview($asset,"image200x200.jpg"))
+			#end
+			<div class="project-item1 " style='border:2px solid #ddd; background-color:#fff; float:left; margin:0 10px 10px 0; width:320px; height: 160px;'>
+				#set( $servers = $mediaarchive.query("entermedia_instances").match("librarycollection", $organization.getId()).search($context) )
+				<div style="padding:5px; border-bottom:#eee;">
+				<strong>$organization.name</strong>
+				</div>
+				<div style="overflow-y:auto; height: 120px;"> 
+				#foreach($instance in $servers)
+					   <div class="project-item-box1 " style="padding:5px;">
+						
+						#if($organization.library == "workspaces")
+							#set($instanceurl = "${instance.instanceurl}/finder/find/startmediaboat.html")
+						#else
+							#set($instanceurl = "${instance.instanceurl}/theme/emshare2/index.html")
+						#end
+						
+						##chatlink-> "$sitelink/app/collective/community/index.html?collectionid=$organization.id&goaltrackerstaff=*"
+						
+						<form action="$instanceurl" name="launchinstance" method="post">
+						<input type="hidden" name="entermediacloudkey" value="$tempentermediakey" />
+						<input type="hidden" name="collectionid" value="$organization.getId()" />
+						<input type="hidden" name="workspacetype" value="$organization.library" />
+						<a href="#" 
+							class="submitlaunchinstance" 
+							style="display: block" 
+							>
+							${instance.instanceurl}
+						</a>
+						</form>
+						</div>
+					#end
+				</div>
+			</div>
+			#end
+	#end
+	#if( $selecteduser.getId() == $user.getId()) 
+	<div class="project-item project-item-add">
+	<a href="$applink/workspaces/create/createsite.html" class="project-add" title="[[Add a Project]]">
+	<i class="fas fa-plus" style="font-size:.8em;"></i> [[Add a Workspace]]</a>
+	</div>
+	#end
+	<div class="clearfix"></div>
+</div>
+<script>
+$(document).ready(function(){
+	$(".submitlaunchinstance").click(function(e){
+		e.preventDefault();
+		var theform = $(this).closest('form');
+		theform.submit();
+		
+	});
+	
+});
+</script>
+
+
