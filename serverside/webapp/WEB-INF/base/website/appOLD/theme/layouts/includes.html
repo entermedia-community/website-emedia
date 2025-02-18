@@ -12,7 +12,9 @@
 
 
 <!-- move to exact page where needed -->
- 	<script cancel="true" id="chatterbox" src="/website/app/components/chatterbox/chatterbox.js"></script>
+<script type="text/javascript" src="/${applicationid}/components/chatterbox/chatterbox.js"></script>
+<link rel="stylesheet" type="text/css" src="/${applicationid}/components/chatterbox/chatterbox.css" />
+<script type="text/javascript" src="/${applicationid}/components/javascript/twemoji/twemoji.js" defer="true"></script>
 
 ##This is misc content NOT already included
 #foreach( $script in $pageManager.getScriptPathsWithoutApp($content))

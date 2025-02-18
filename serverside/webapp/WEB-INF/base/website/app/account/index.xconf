@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <page>
 
-    		<!-- move to exact page where needed -->
- 	<script cancel="true" id="chatterbox" src="/website/app/components/chatterbox/chatterbox.js" />
+	<script cancel="true" id="chatterbox" />
+	<style cancel="true" id="chatterbox" />
+	<script cancel="true" id="twemoji" />
 
-<page-action name="Script.run">
-	
-	<script>./account.groovy</script>
-
-</page-action>
+	<page-action name="Script.run">
+		<script>./account.groovy</script>
+	</page-action>
 
 </page>

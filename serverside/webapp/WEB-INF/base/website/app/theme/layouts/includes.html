@@ -7,14 +7,13 @@
 
 <script type="text/javascript" defer src="/openedit/components/html/ckeditor/ckeditor.js"></script>
 
-
 <script type="text/javascript" src="$applink/components/javascript/index.js" ></script>
 
-
 <!-- move to exact page where needed -->
- 	<script cancel="true" id="chatterbox" src="/website/app/components/chatterbox/chatterbox.js"></script>
+<script type="text/javascript" src="/${applicationid}/components/chatterbox/chatterbox.js"></script>
+<link rel="stylesheet" type="text/css" src="/${applicationid}/components/chatterbox/chatterbox.css" />
+<script type="text/javascript" src="/${applicationid}/components/javascript/twemoji/twemoji.js" defer="true"></script>
 
-##This is misc content NOT already included
 #foreach( $script in $pageManager.getScriptPathsWithoutApp($content))
 	<script type="text/javascript" src="#if(!$script.startsWith("http"))$home#end$script"></script>
 #end
@@ -27,4 +26,3 @@
 
 <script type="text/javascript" defer src="$applink/components/javascript/multidate/moment.js" ></script>
 <script type="text/javascript" defer src="$applink/components/javascript/multidate/jquery.daterangepicker.min.js" ></script>
-<!-- <link rel="stylesheet" type="text/css" href="$applink/components/javascript/multidate/daterangepicker.min.css" /> -->
