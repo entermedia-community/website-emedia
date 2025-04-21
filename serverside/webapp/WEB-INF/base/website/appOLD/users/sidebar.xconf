@@ -1,5 +1,0 @@
-<page>
-	<page-action name="ChatModule.getChatManager"/>
-	<path-action name="ProjectModule.loadCollection"></path-action>
-	
-</page>

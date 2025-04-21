@@ -1,7 +1,0 @@
-<page>
-    <path-action name="Script.run">
-		<script>./verifyurl.groovy</script>
-	</path-action>
-	
-	<inner-layout></inner-layout>
-</page>
