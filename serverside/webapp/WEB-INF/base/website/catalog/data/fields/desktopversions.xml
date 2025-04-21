@@ -17,22 +17,22 @@
     </name> 
   </property>  
   
-  <property id="downloadwindows" index="true" editable="true" stored="true"  > 
+  <property id="downloadwindows" index="true" editable="true" stored="true" type="asset" > 
     <name> 
       <language id="en"><![CDATA[Windows URL]]></language> 
     </name> 
   </property>  
-<property id="downloadapple64" index="true" editable="true" stored="true"  > 
+<property id="downloadapple64" index="true" editable="true" stored="true"  type="asset" > 
     <name> 
       <language id="en"><![CDATA[Apple 64x]]></language> 
     </name> 
   </property>  
-  <property id="downloadappleintel" index="true" editable="true" stored="true"  > 
+  <property id="downloadappleintel" index="true" editable="true" stored="true" type="asset"  > 
     <name> 
       <language id="en"><![CDATA[Apple Intel]]></language> 
     </name> 
   </property>  
-  <property id="downloadlinux64" index="true" editable="true" stored="true"  > 
+  <property id="downloadlinux64" index="true" editable="true" stored="true" type="asset"  > 
     <name> 
       <language id="en"><![CDATA[Linux URL]]></language> 
     </name> 
