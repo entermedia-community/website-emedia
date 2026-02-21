@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<properties beanname="dataSearcher"> 
+  <property id="versionnumber" index="true" editable="true" stored="true" internalfield="false" isbadge="false" required="true" multilanguage="false"  autoincrement="false" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[Version Number]]></language> 
+    </name> 
+  </property>  
+  <property id="name" index="true" multilanguage="false"  internalfield="false" autoincrement="false" editable="true" stored="true" isbadge="false" keyword="true" required="true">New 
+    <name>
+      <language id="en"><![CDATA[Release Title]]></language>
+    </name>
+  </property>  
+  <property id="ordering" index="true" editable="true" stored="true" multilanguage="false"  datatype="number" autoincrement="true" keyword="false">New 
+    <name> 
+      <language id="en"><![CDATA[Sequence]]></language> 
+    </name> 
+  </property>  
+  
+  <property id="downloadwindows" index="true" editable="true" stored="true" type="asset" > 
+    <name> 
+      <language id="en"><![CDATA[Windows URL]]></language> 
+    </name> 
+  </property>  
+<property id="downloadapple64" index="true" editable="true" stored="true"  type="asset" > 
+    <name> 
+      <language id="en"><![CDATA[Apple 64x]]></language> 
+    </name> 
+  </property>  
+  <property id="downloadappleintel" index="true" editable="true" stored="true" type="asset"  > 
+    <name> 
+      <language id="en"><![CDATA[Apple Intel]]></language> 
+    </name> 
+  </property>  
+  <property id="downloadlinux64" index="true" editable="true" stored="true" type="asset"  > 
+    <name> 
+      <language id="en"><![CDATA[Linux URL]]></language> 
+    </name> 
+  </property>  
+  
+  <property id="longcaption" index="true" internalfield="false" editable="true" isbadge="false" viewtype="textarea" rendertype="textarea" required="false" multilanguage="false"  autoincrement="false" stored="true" keyword="true">New 
+    <name> 
+      <language id="en"><![CDATA[Release Notes]]></language> 
+    </name> 
+  </property> 
+</properties>
